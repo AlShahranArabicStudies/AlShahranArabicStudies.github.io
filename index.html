@@ -2,7 +2,7 @@
 <html lang="ur" id="htmlTag"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Shahran Cultural & Research Center</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"><link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet"><style>
 *{margin:0;padding:0;box-sizing:border-box}body{font-family:'Segoe UI',Amiri,sans-serif;background:#f8f5f0;color:#1e1e1e}.container{width:90%;max-width:1200px;margin:auto}
 header{background:#1a4d2e;padding:12px 0;position:sticky;top:0;z-index:1000;box-shadow:0 2px 10px rgba(0,0,0,.2)}header .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
-.logo h1{color:#fff;font-size:22px}.logo .subtitle{color:#c9a84c;font-size:12px;display:block;font-family:Amiri,serif;margin-top:2px}.logo .foundation{color:#a8d5ba;font-size:11px;display:block;font-style:italic;margin-top:1px}
+.logo h1{color:#fff;font-size:22px}.logo .foundation{color:#a8d5ba;font-size:11px;display:block;font-style:italic;margin-top:2px}
 nav ul{display:flex;list-style:none;gap:5px;align-items:center;flex-wrap:wrap}nav ul li a{color:#fff;padding:8px 16px;border-radius:30px;font-size:14px;text-decoration:none;transition:.3s}
 nav ul li a:hover,nav ul li a.active{background:#c9a84c;color:#1a4d2e}nav ul li a.admin{background:#c0392b;color:#fff}nav ul li a.admin:hover{background:#e74c3c}
 .lang-btn{background:0 0;border:2px solid #c9a84c;color:#fff;padding:6px 14px;border-radius:30px;cursor:pointer;font-size:13px;transition:.3s;font-weight:700}.lang-btn:hover{background:#c9a84c;color:#1a4d2e}
@@ -38,13 +38,13 @@ form{max-width:600px;margin:auto;background:#fff;padding:30px;border-radius:15px
 <body>
 
 <!-- HEADER -->
-<header><div class="container"><div class="logo"><h1 id="siteTitle">🏛️ Shahran Cultural & Research Center</h1><span class="subtitle" id="urduSub">ثقافت و تحقیق</span><span class="foundation" id="foundationTag">📌 A Unit of Shahran Foundation</span></div><nav><ul><li><a href="#" class="active" id="navHome">Home</a></li><li><a href="#about" id="navAbout">About</a></li><li><a href="#courses" id="navCourses">Courses</a></li><li><a href="#booking" id="navRegister">Register</a></li><li><a href="#contact" id="navContact">Contact</a></li><li><a href="#admin" class="admin" onclick="checkAdmin(event)" id="navAdmin">Admin</a></li><li><button class="lang-btn" onclick="toggleLanguage()" id="langToggle">اردو</button></li></ul></nav><div class="hamburger" onclick="toggleMenu()">☰</div></div></header>
+<header><div class="container"><div class="logo"><h1 id="siteTitle">🏛️ Shahran Cultural & Research Center</h1><span class="foundation" id="foundationTag">📌 A Unit of Shahran Foundation</span></div><nav><ul><li><a href="#" class="active" id="navHome">Home</a></li><li><a href="#about" id="navAbout">About</a></li><li><a href="#courses" id="navCourses">Courses</a></li><li><a href="#booking" id="navRegister">Register</a></li><li><a href="#contact" id="navContact">Contact</a></li><li><a href="#admin" class="admin" onclick="checkAdmin(event)" id="navAdmin">Admin</a></li><li><button class="lang-btn" onclick="toggleLanguage()" id="langToggle">اردو</button></li></ul></nav><div class="hamburger" onclick="toggleMenu()">☰</div></div></header>
 
 <!-- PASSWORD POPUP -->
 <div id="passwordPopup" class="password-overlay" style="display:none"><div class="password-box"><h2 id="popupTitle">🔒 Admin Access</h2><p id="popupDesc">Enter password to view bookings</p><input type="password" id="adminPassword" placeholder="Enter Password" onkeydown="if(event.key==='Enter')verifyPassword()"><button class="btn btn-primary" onclick="verifyPassword()" id="popupBtn">Unlock</button><div id="passwordError" class="password-error">❌ Wrong password! Try again.</div></div></div>
 
 <!-- HERO -->
-<section class="hero"><div class="container"><h1 id="heroTitle">Shahran Cultural & Research Center</h1><div class="foundation-tag" id="heroFoundation">📌 A Unit of Shahran Foundation</div><p class="sub" id="heroSub">Learn Urdu & Arabic – Preserve Heritage</p><div><a href="#booking" class="btn btn-primary" id="heroBtn1">Enroll Today</a><a href="#courses" class="btn btn-secondary" id="heroBtn2">View Courses</a></div><div class="stats"><div><span>6+</span> <span id="stat1">Courses</span></div><div><span>100+</span> <span id="stat2">Students</span></div><div><span>10+</span> <span id="stat3">Years</span></div></div></div></section>
+<section class="hero"><div class="container"><h1 id="heroTitle">Shahran Cultural & Research Center</h1><div class="foundation-tag" id="heroFoundation">📌 A Unit of Shahran Foundation</div><p class="sub" id="heroSub">Learn Urdu & Arabic – Preserve Heritage</p><div><a href="#booking" class="btn btn-primary" id="heroBtn1">Enroll Today</a><a href="#courses" class="btn btn-secondary" id="heroBtn2">View Courses</a></div><div class="stats"><div><span>6+</span> <span id="stat1">Courses</span></div><div><span>100+</span> <span id="stat2">Students</span></div></div></div></section>
 
 <!-- ABOUT -->
 <section id="about" class="container"><h2 class="section-title" id="aboutTitle">About Us</h2><div style="background:#fff;padding:30px;border-radius:15px;margin-bottom:30px"><p style="font-size:18px;line-height:1.8" id="aboutText"><strong>Shahran Cultural & Research Center</strong> <span style="color:#1a4d2e;font-weight:bold;">(A Unit of Shahran Foundation)</span> is dedicated to preserving and teaching <strong>Urdu</strong> and <strong>Arabic</strong> languages. Located in Hazur Nagar, Muzaffarnagar, we offer quality education from nursery to intermediate levels.</p><p style="margin-top:15px" id="aboutVision"><strong>Vision:</strong> To create a generation fluent in classical languages while staying rooted in culture.</p><p id="aboutMission"><strong>Mission:</strong> Affordable, accessible, and excellent language education for all.</p></div></section>
@@ -73,7 +73,6 @@ form{max-width:600px;margin:auto;background:#fff;padding:30px;border-radius:15px
 const langData = {
     en: {
         siteTitle: '🏛️ Shahran Cultural & Research Center',
-        urduSub: 'Saqafat & Tehqeeq',
         foundationTag: '📌 A Unit of Shahran Foundation',
         navHome: 'Home', navAbout: 'About', navCourses: 'Courses', navRegister: 'Register', navContact: 'Contact', navAdmin: 'Admin',
         langBtn: 'اردو',
@@ -81,7 +80,7 @@ const langData = {
         heroFoundation: '📌 A Unit of Shahran Foundation',
         heroSub: 'Learn Urdu & Arabic – Preserve Heritage',
         heroBtn1: 'Enroll Today', heroBtn2: 'View Courses',
-        stat1: 'Courses', stat2: 'Students', stat3: 'Years',
+        stat1: 'Courses', stat2: 'Students',
         aboutTitle: 'About Us',
         aboutText: '<strong>Shahran Cultural & Research Center</strong> <span style="color:#1a4d2e;font-weight:bold;">(A Unit of Shahran Foundation)</span> is dedicated to preserving and teaching <strong>Urdu</strong> and <strong>Arabic</strong> languages. Located in Hazur Nagar, Muzaffarnagar, we offer quality education from nursery to intermediate levels.',
         aboutVision: '<strong>Vision:</strong> To create a generation fluent in classical languages while staying rooted in culture.',
@@ -118,7 +117,6 @@ const langData = {
     },
     ur: {
         siteTitle: '🏛️ شہران کلچرل اینڈ ریسرچ سینٹر',
-        urduSub: 'ثقافت و تحقیق',
         foundationTag: '📌 شہران فاؤنڈیشن کا ایک یونٹ',
         navHome: 'ہوم', navAbout: 'تعارف', navCourses: 'کورسز', navRegister: 'رجسٹریشن', navContact: 'رابطہ', navAdmin: 'ایڈمن',
         langBtn: 'English',
@@ -126,7 +124,7 @@ const langData = {
         heroFoundation: '📌 شہران فاؤنڈیشن کا ایک یونٹ',
         heroSub: 'اردو اور عربی سیکھیں – ورثہ کو محفوظ رکھیں',
         heroBtn1: 'آج داخلہ لیں', heroBtn2: 'کورسز دیکھیں',
-        stat1: 'کورسز', stat2: 'طلباء', stat3: 'سال',
+        stat1: 'کورسز', stat2: 'طلباء',
         aboutTitle: 'ہمارا تعارف',
         aboutText: '<strong>شہران کلچرل اینڈ ریسرچ سینٹر</strong> <span style="color:#1a4d2e;font-weight:bold;">(شہران فاؤنڈیشن کا ایک یونٹ)</span> <strong>اردو</strong> اور <strong>عربی</strong> زبانوں کے فروغ اور تحفظ کے لیے وقف ہے۔ ہزار نگر، مظفرنگر، یوپی میں واقع، ہم نرسری سے انٹرمیڈیٹ سطح تک معیاری تعلیم فراہم کرتے ہیں۔',
         aboutVision: '<strong>نظریہ:</strong> کلاسیکی زبانوں میں روانی رکھنے والی نسل تیار کرنا جو اپنی ثقافت سے جڑی رہے۔',
@@ -169,25 +167,16 @@ let currentLang = 'en';
 function toggleLanguage() {
     currentLang = (currentLang === 'en') ? 'ur' : 'en';
     applyLanguage(currentLang);
-    
-    // Update button text (no flags)
     document.getElementById('langToggle').textContent = (currentLang === 'en') ? 'اردو' : 'English';
-    
-    // Update HTML direction
     const html = document.getElementById('htmlTag');
     html.dir = langData[currentLang].direction;
     html.lang = currentLang;
-    
-    // Add/remove class for Urdu styling
     document.body.classList.toggle('lang-urdu', currentLang === 'ur');
 }
 
 function applyLanguage(lang) {
     const data = langData[lang];
-    
-    // Header
     document.getElementById('siteTitle').textContent = data.siteTitle;
-    document.getElementById('urduSub').textContent = data.urduSub;
     document.getElementById('foundationTag').textContent = data.foundationTag;
     document.getElementById('navHome').textContent = data.navHome;
     document.getElementById('navAbout').textContent = data.navAbout;
@@ -195,8 +184,6 @@ function applyLanguage(lang) {
     document.getElementById('navRegister').textContent = data.navRegister;
     document.getElementById('navContact').textContent = data.navContact;
     document.getElementById('navAdmin').textContent = data.navAdmin;
-    
-    // Hero
     document.getElementById('heroTitle').textContent = data.heroTitle;
     document.getElementById('heroFoundation').textContent = data.heroFoundation;
     document.getElementById('heroSub').textContent = data.heroSub;
@@ -204,15 +191,10 @@ function applyLanguage(lang) {
     document.getElementById('heroBtn2').textContent = data.heroBtn2;
     document.getElementById('stat1').textContent = data.stat1;
     document.getElementById('stat2').textContent = data.stat2;
-    document.getElementById('stat3').textContent = data.stat3;
-    
-    // About
     document.getElementById('aboutTitle').textContent = data.aboutTitle;
     document.getElementById('aboutText').innerHTML = data.aboutText;
     document.getElementById('aboutVision').innerHTML = data.aboutVision;
     document.getElementById('aboutMission').innerHTML = data.aboutMission;
-    
-    // Courses
     document.getElementById('coursesTitle').textContent = data.coursesTitle;
     document.getElementById('c1').textContent = data.c1;
     document.getElementById('c1d').textContent = data.c1d;
@@ -226,8 +208,6 @@ function applyLanguage(lang) {
     document.getElementById('c5d').textContent = data.c5d;
     document.getElementById('c6').textContent = data.c6;
     document.getElementById('c6d').textContent = data.c6d;
-    
-    // Booking
     document.getElementById('bookingTitle').textContent = data.bookingTitle;
     document.getElementById('lblName').textContent = data.lblName;
     document.getElementById('lblAge').textContent = data.lblAge;
@@ -244,31 +224,20 @@ function applyLanguage(lang) {
     document.getElementById('batch1').textContent = data.batch1;
     document.getElementById('batch2').textContent = data.batch2;
     document.getElementById('bookBtn').textContent = data.bookBtn;
-    
-    // Testimonials
     document.getElementById('testTitle').textContent = data.testTitle;
     document.getElementById('test1').innerHTML = data.test1;
     document.getElementById('test2').innerHTML = data.test2;
     document.getElementById('test3').innerHTML = data.test3;
-    
-    // Contact
     document.getElementById('contactAddress').innerHTML = data.contactAddress;
     document.getElementById('contactFoundation').textContent = data.contactFoundation;
-    
-    // Admin
     document.getElementById('adminTitle').textContent = data.adminTitle;
     document.getElementById('clearBtn').textContent = data.clearBtn;
-    
-    // Footer
     document.getElementById('footerCopy').textContent = data.footerCopy;
     document.getElementById('footerFoundation').textContent = data.footerFoundation;
-    
-    // Popup
     document.getElementById('popupTitle').textContent = data.popupTitle;
     document.getElementById('popupDesc').textContent = data.popupDesc;
     document.getElementById('popupBtn').textContent = data.popupBtn;
     
-    // Apply text alignment
     document.querySelectorAll('p, h1, h2, h3, h4, label, li, a, .card, .testimonial, .contact-bar, footer').forEach(el => {
         if (!el.closest('header') && !el.closest('.hero') && !el.closest('.contact-bar')) {
             el.style.textAlign = data.align;
