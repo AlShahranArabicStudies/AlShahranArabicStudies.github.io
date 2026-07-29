@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ur"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Shahran Center</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"><link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet"><style>
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Segoe UI',Amiri,sans-serif;background:#f8f5f0;color:#1e1e1e}.container{width:90%;max-width:1200px;margin:auto}
+header{background:#1a4d2e;padding:12px 0;position:sticky;top:0;z-index:1000;box-shadow:0 2px 10px rgba(0,0,0,.2)}header .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.logo h1{color:#fff;font-size:26px}.logo span{color:#c9a84c;font-size:14px;display:block;font-family:Amiri,serif}
+nav ul{display:flex;list-style:none;gap:5px}nav ul li a{color:#fff;padding:8px 16px;border-radius:30px;font-size:15px;text-decoration:none;transition:.3s}
+nav ul li a:hover,nav ul li a.active{background:#c9a84c;color:#1a4d2e}nav ul li a.admin{background:#c0392b;color:#fff}nav ul li a.admin:hover{background:#e74c3c}
+.hamburger{display:none;font-size:28px;color:#fff;cursor:pointer}
+.hero{background:linear-gradient(135deg,#1a4d2e,#2d7a4a);color:#fff;padding:80px 0 60px;text-align:center;position:relative}
+.hero h1{font-size:48px;font-family:Amiri,serif;margin-bottom:10px}.hero .sub{font-size:22px;margin-bottom:30px;color:#e8d5b5}
+.btn{display:inline-block;padding:14px 40px;border-radius:50px;font-weight:700;font-size:18px;transition:.3s;text-decoration:none;margin:5px}
+.btn-primary{background:#c9a84c;color:#1a4d2e}.btn-primary:hover{background:#e8d5b5;transform:scale(1.05)}
+.btn-secondary{background:0 0;color:#fff;border:2px solid #c9a84c}.btn-secondary:hover{background:#c9a84c;color:#1a4d2e}
+.stats{display:flex;justify-content:center;gap:50px;flex-wrap:wrap;margin-top:40px}.stats div{font-size:16px;opacity:.9}.stats span{display:block;font-size:32px;font-weight:700;color:#c9a84c}
+.section-title{text-align:center;font-size:34px;margin:40px 0;color:#1a4d2e;position:relative;padding-bottom:15px}.section-title::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:60px;height:3px;background:#c9a84c}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;padding:20px 0}
+.card{background:#fff;padding:30px;border-radius:15px;text-align:center;border-bottom:4px solid #c9a84c;transition:.3s;box-shadow:0 5px 15px rgba(0,0,0,.05)}
+.card:hover{transform:translateY(-8px);box-shadow:0 10px 25px rgba(0,0,0,.1)}.card i{font-size:40px;color:#1a4d2e;margin-bottom:15px}.card h3{color:#1a4d2e;margin-bottom:10px}
+.testimonial{background:#fff;padding:30px;border-radius:15px;border-left:5px solid #c9a84c;margin:10px 0}.testimonial p{font-style:italic;font-size:17px;color:#333}.testimonial h4{color:#1a4d2e;margin-top:10px}
+.contact-bar{background:#1a4d2e;color:#fff;padding:30px 0;text-align:center}.contact-bar a{color:#c9a84c;text-decoration:none;margin:0 15px}.contact-bar i{margin-right:8px}
+footer{background:#0d2b1a;color:#aaa;text-align:center;padding:20px 0}
+form{max-width:600px;margin:auto;background:#fff;padding:30px;border-radius:15px;box-shadow:0 5px 20px rgba(0,0,0,.1)}
+.form-group{margin-bottom:20px}.form-group label{display:block;font-weight:700;margin-bottom:5px}.form-group input,.form-group select{width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;font-size:16px}
+.message{margin:20px 0;text-align:center;font-weight:700;color:green}
+#bookingsList{background:#fff;padding:20px;border-radius:10px;margin:20px 0}.booking-item{border-bottom:1px solid #ddd;padding:15px 0}
+.btn-danger{background:#c0392b;color:#fff;padding:12px 30px;border:none;border-radius:8px;cursor:pointer;font-size:16px}.btn-danger:hover{background:#e74c3c}
+@media(max-width:768px){.hamburger{display:block}nav ul{display:none;flex-direction:column;width:100%;background:#1a4d2e;padding:20px;margin-top:10px}nav ul.show{display:flex}nav ul li a{text-align:center}.hero h1{font-size:32px}.hero .sub{font-size:18px}.stats{gap:25px}.section-title{font-size:28px}}
+</style></head>
+<body>
+
+<!-- HEADER -->
+<header><div class="container"><div class="logo"><h1>🏛️ Shahran Center</h1><span>ثقافت و تحقیق</span></div><nav><ul><li><a href="#" class="active">Home</a></li><li><a href="#about">About</a></li><li><a href="#courses">Courses</a></li><li><a href="#booking">Register</a></li><li><a href="#contact">Contact</a></li><li><a href="#admin" class="admin">Admin</a></li></ul></nav><div class="hamburger" onclick="toggleMenu()">☰</div></div></header>
+
+<!-- HERO -->
+<section class="hero"><div class="container"><h1>Shahran Culture & Research Center</h1><p class="sub">Learn Urdu & Arabic – Preserve Heritage</p><div><a href="#booking" class="btn btn-primary">Enroll Today</a><a href="#courses" class="btn btn-secondary">View Courses</a></div><div class="stats"><div><span>6+</span> Courses</div><div><span>100+</span> Students</div><div><span>10+</span> Years</div></div></div></section>
+
+<!-- ABOUT -->
+<section id="about" class="container"><h2 class="section-title">About Us</h2><div style="background:#fff;padding:30px;border-radius:15px;margin-bottom:30px"><p style="font-size:18px;line-height:1.8">Shahran Culture & Research Center is dedicated to preserving and teaching <strong>Urdu</strong> and <strong>Arabic</strong> languages. Located in Hazur Nagar, Muzaffarnagar, we offer quality education from nursery to intermediate levels.</p><p style="margin-top:15px"><strong>Vision:</strong> To create a generation fluent in classical languages while staying rooted in culture.</p><p><strong>Mission:</strong> Affordable, accessible, and excellent language education for all.</p></div></section>
+
+<!-- COURSES -->
+<section id="courses" class="container"><h2 class="section-title">Our Courses</h2><div class="grid"><div class="card"><i class="fas fa-book"></i><h3>Urdu Nursery</h3><p>Basic alphabet, words, rhymes</p></div><div class="card"><i class="fas fa-book-open"></i><h3>Urdu Primary</h3><p>Reading, writing, grammar</p></div><div class="card"><i class="fas fa-pen-fancy"></i><h3>Urdu Intermediate</h3><p>Poetry, prose, advanced writing</p></div><div class="card"><i class="fas fa-quran"></i><h3>Arabic Nursery</h3><p>Alphabets, basic vocabulary</p></div><div class="card"><i class="fas fa-mosque"></i><h3>Arabic Primary</h3><p>Reading, writing, basic grammar</p></div><div class="card"><i class="fas fa-comments"></i><h3>Arabic Intermediate</h3><p>Conversation, advanced grammar</p></div></div></section>
+
+<!-- BOOKING -->
+<section id="booking" class="container"><h2 class="section-title">📝 Registration & Booking</h2><form id="bookingForm"><div class="form-group"><label>Student Name *</label><input type="text" id="sname" required></div><div class="form-group"><label>Age *</label><input type="number" id="age" required></div><div class="form-group"><label>Parent Name *</label><input type="text" id="pname" required></div><div class="form-group"><label>Contact *</label><input type="tel" id="contact" required></div><div class="form-group"><label>Course *</label><select id="course"><option>Urdu Nursery</option><option>Urdu Primary</option><option>Urdu Intermediate</option><option>Arabic Nursery</option><option>Arabic Primary</option><option>Arabic Intermediate</option></select></div><div class="form-group"><label>Batch *</label><select id="batch"><option>Morning (8am-10am)</option><option>Evening (4pm-6pm)</option></select></div><button type="submit" class="btn btn-primary" style="width:100%">Book Now</button></form><div id="msg" class="message"></div></section>
+
+<!-- TESTIMONIALS -->
+<section style="background:#f8f5f0;padding:40px 0;margin:40px 0"><div class="container"><h2 class="section-title">Student Testimonials</h2><div class="testimonial"><p>"Alhamdulillah, studying at Shahran Center is a blessing. The teachers are knowledgeable and caring."</p><h4>— Ahmad R.</h4></div><div class="testimonial"><p>"I improved my Arabic speaking and writing greatly. The quizzes and exams really help reinforce learning."</p><h4>— Fatima Z.</h4></div><div class="testimonial"><p>"My children love the Urdu classes. They now read and write with confidence. Highly recommended!"</p><h4>— Mohammed S.</h4></div></div></section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-bar"><div class="container"><p><i class="fas fa-map-marker-alt"></i> Hazur Nagar, Muzaffarnagar, UP – 251318</p><p style="margin:10px 0"><i class="fas fa-phone"></i> <a href="tel:9837983062">9837983062</a> | <i class="fab fa-whatsapp"></i> <a href="https://wa.me/919837983062" target="_blank">WhatsApp</a></p></div></section>
+
+<!-- ADMIN -->
+<section id="admin" class="container"><h2 class="section-title">📋 All Bookings</h2><div id="bookingsList"><p>Loading...</p></div><button onclick="clearAll()" class="btn-danger">Clear All Bookings</button></section>
+
+<!-- FOOTER -->
+<footer><div class="container"><p>&copy; 2026 Shahran Culture & Research Center. All rights reserved.</p></div></footer>
+
+<!-- JS -->
+<script>
+function toggleMenu(){document.querySelector('nav ul').classList.toggle('show')}
+document.getElementById('bookingForm')?.addEventListener('submit',function(e){e.preventDefault();let d={id:Date.now(),sname:document.getElementById('sname').value,age:document.getElementById('age').value,pname:document.getElementById('pname').value,contact:document.getElementById('contact').value,course:document.getElementById('course').value,batch:document.getElementById('batch').value,date:new Date().toLocaleString()};let b=JSON.parse(localStorage.getItem('shahran'))||[];b.push(d);localStorage.setItem('shahran',JSON.stringify(b));document.getElementById('msg').innerHTML='✅ Booking successful! We will contact you soon.';this.reset();window.open('https://wa.me/919837983062?text=New%20Booking:%20'+d.sname+'%20-%20'+d.course,'_blank')});
+let list=document.getElementById('bookingsList');if(list){let b=JSON.parse(localStorage.getItem('shahran'))||[];if(!b.length)list.innerHTML='<p>No bookings yet.</p>';else{let h='';b.forEach((x,i)=>{h+='<div class="booking-item"><strong>#'+(i+1)+'</strong> <strong>'+x.sname+'</strong> ('+x.age+' yrs)<br>Course: '+x.course+' | Batch: '+x.batch+'<br>Parent: '+x.pname+' | Contact: '+x.contact+'<br><small>'+x.date+'</small></div>'});list.innerHTML=h}}
+function clearAll(){if(confirm('Delete all bookings?')){localStorage.removeItem('shahran');location.reload()}}
+</script>
+</body></html>
