@@ -1,107 +1,251 @@
 <!DOCTYPE html>
-<html lang="ur" id="htmlTag"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Shahran Cultural & Research Center</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"><link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet"><style>
-*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Segoe UI',Amiri,sans-serif;background:#f8f5f0;color:#1e1e1e}.container{width:90%;max-width:1200px;margin:auto}
-header{background:#1a4d2e;padding:12px 0;position:sticky;top:0;z-index:1000;box-shadow:0 2px 10px rgba(0,0,0,.2)}header .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
-.logo h1{color:#fff;font-size:22px}.logo .foundation{color:#a8d5ba;font-size:11px;display:block;font-style:italic;margin-top:2px}
-nav ul{display:flex;list-style:none;gap:5px;align-items:center;flex-wrap:wrap}nav ul li a{color:#fff;padding:8px 16px;border-radius:30px;font-size:14px;text-decoration:none;transition:.3s}
-nav ul li a:hover,nav ul li a.active{background:#c9a84c;color:#1a4d2e}nav ul li a.admin{background:#c0392b;color:#fff}nav ul li a.admin:hover{background:#e74c3c}
-.lang-btn{background:#c9a84c;color:#1a4d2e;border:none;padding:6px 16px;border-radius:30px;cursor:pointer;font-size:13px;transition:.3s;font-weight:700}.lang-btn:hover{background:#e8d5b5;transform:scale(1.05)}
-.hamburger{display:none;font-size:28px;color:#fff;cursor:pointer}
-.hero{background:linear-gradient(135deg,#1a4d2e,#2d7a4a);color:#fff;padding:80px 0 60px;text-align:center;position:relative}
-.hero h1{font-size:42px;font-family:Amiri,serif;margin-bottom:5px}.hero .foundation-tag{font-size:18px;color:#c9a84c;font-family:Amiri,serif;margin-bottom:10px}.hero .sub{font-size:20px;margin-bottom:30px;color:#e8d5b5}
-.btn{display:inline-block;padding:14px 40px;border-radius:50px;font-weight:700;font-size:18px;transition:.3s;text-decoration:none;margin:5px}
-.btn-primary{background:#c9a84c;color:#1a4d2e}.btn-primary:hover{background:#e8d5b5;transform:scale(1.05)}
-.btn-secondary{background:0 0;color:#fff;border:2px solid #c9a84c}.btn-secondary:hover{background:#c9a84c;color:#1a4d2e}
-.stats{display:flex;justify-content:center;gap:50px;flex-wrap:wrap;margin-top:40px}.stats div{font-size:16px;opacity:.9}.stats span{display:block;font-size:32px;font-weight:700;color:#c9a84c}
-.section-title{text-align:center;font-size:34px;margin:40px 0;color:#1a4d2e;position:relative;padding-bottom:15px}.section-title::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:60px;height:3px;background:#c9a84c}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;padding:20px 0}
-.card{background:#fff;padding:30px;border-radius:15px;text-align:center;border-bottom:4px solid #c9a84c;transition:.3s;box-shadow:0 5px 15px rgba(0,0,0,.05)}
-.card:hover{transform:translateY(-8px);box-shadow:0 10px 25px rgba(0,0,0,.1)}.card i{font-size:40px;color:#1a4d2e;margin-bottom:15px}.card h3{color:#1a4d2e;margin-bottom:10px}
-.card.complementary{background:#f0f7f0;border-bottom-color:#2d7a4a}
-.card.complementary i{color:#2d7a4a}
-.complementary-title{text-align:center;font-size:28px;color:#1a4d2e;margin:40px 0 10px;padding-bottom:10px;border-bottom:2px dashed #c9a84c}
-.testimonial{background:#fff;padding:30px;border-radius:15px;border-left:5px solid #c9a84c;margin:10px 0}.testimonial p{font-style:italic;font-size:17px;color:#333}.testimonial h4{color:#1a4d2e;margin-top:10px}
-.contact-bar{background:#1a4d2e;color:#fff;padding:30px 0;text-align:center}.contact-bar a{color:#c9a84c;text-decoration:none;margin:0 15px}.contact-bar i{margin-right:8px}
-footer{background:#0d2b1a;color:#aaa;text-align:center;padding:20px 0}.footer-foundation{color:#c9a84c;font-size:13px;margin-top:3px;font-style:italic}
-form{max-width:600px;margin:auto;background:#fff;padding:30px;border-radius:15px;box-shadow:0 5px 20px rgba(0,0,0,.1)}
-.form-group{margin-bottom:20px}.form-group label{display:block;font-weight:700;margin-bottom:5px}.form-group input,.form-group select{width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;font-size:16px}
-.message{margin:20px 0;text-align:center;font-weight:700;color:green}
-#bookingsList{background:#fff;padding:20px;border-radius:10px;margin:20px 0}.booking-item{border-bottom:1px solid #ddd;padding:15px 0}
-.btn-danger{background:#c0392b;color:#fff;padding:12px 30px;border:none;border-radius:8px;cursor:pointer;font-size:16px}.btn-danger:hover{background:#e74c3c}
-.password-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);z-index:9999;display:flex;justify-content:center;align-items:center}
-.password-box{background:#fff;padding:40px;border-radius:20px;text-align:center;max-width:400px;width:90%;box-shadow:0 20px 60px rgba(0,0,0,0.3)}
-.password-box h2{color:#1a4d2e;margin-bottom:10px}.password-box p{color:#666;margin-bottom:20px}
-.password-box input{width:100%;padding:14px;border:2px solid #ddd;border-radius:10px;font-size:18px;text-align:center;margin-bottom:15px}
-.password-box input:focus{border-color:#c9a84c;outline:none}
-.password-box .btn{width:100%;border:none;cursor:pointer}
-.password-error{color:#c0392b;font-size:14px;margin-top:10px;display:none}
-.lang-urdu .hero h1,.lang-urdu .section-title,.lang-urdu .logo h1{font-family:'Amiri',serif}
-.lang-hindi body{font-family:'Segoe UI','Noto Sans Devanagari',sans-serif}
-@media(max-width:768px){.hamburger{display:block}nav ul{display:none;flex-direction:column;width:100%;background:#1a4d2e;padding:20px;margin-top:10px}nav ul.show{display:flex}nav ul li a{text-align:center}.hero h1{font-size:30px}.hero .sub{font-size:17px}.stats{gap:20px}.section-title{font-size:26px}.password-box{padding:25px}}
-</style></head>
+<html lang="en" id="htmlTag">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shahran Cultural & Research Center</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Segoe UI',Tahoma,sans-serif;background:#f8f5f0;color:#1e1e1e}
+        .container{width:90%;max-width:1200px;margin:auto}
+        header{background:#1a4d2e;padding:12px 0;position:sticky;top:0;z-index:1000;box-shadow:0 2px 10px rgba(0,0,0,.2)}
+        header .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+        .logo h1{color:#fff;font-size:22px}
+        .logo .foundation{color:#a8d5ba;font-size:11px;display:block;font-style:italic;margin-top:2px}
+        nav ul{display:flex;list-style:none;gap:5px;align-items:center;flex-wrap:wrap}
+        nav ul li a{color:#fff;padding:8px 16px;border-radius:30px;font-size:14px;text-decoration:none;transition:.3s}
+        nav ul li a:hover,nav ul li a.active{background:#c9a84c;color:#1a4d2e}
+        nav ul li a.admin{background:#c0392b;color:#fff}
+        nav ul li a.admin:hover{background:#e74c3c}
+        .lang-btn{background:#c9a84c;color:#1a4d2e;border:none;padding:6px 16px;border-radius:30px;cursor:pointer;font-size:13px;font-weight:700;transition:.3s}
+        .lang-btn:hover{background:#e8d5b5;transform:scale(1.05)}
+        .hamburger{display:none;font-size:28px;color:#fff;cursor:pointer}
+        .hero{background:linear-gradient(135deg,#1a4d2e,#2d7a4a);color:#fff;padding:80px 0 60px;text-align:center}
+        .hero h1{font-size:42px;font-family:Amiri,serif;margin-bottom:5px}
+        .hero .foundation-tag{font-size:18px;color:#c9a84c;font-family:Amiri,serif;margin-bottom:10px}
+        .hero .sub{font-size:20px;margin-bottom:30px;color:#e8d5b5}
+        .btn{display:inline-block;padding:14px 40px;border-radius:50px;font-weight:700;font-size:18px;transition:.3s;text-decoration:none;margin:5px;border:none;cursor:pointer}
+        .btn-primary{background:#c9a84c;color:#1a4d2e}
+        .btn-primary:hover{background:#e8d5b5;transform:scale(1.05)}
+        .btn-secondary{background:0 0;color:#fff;border:2px solid #c9a84c}
+        .btn-secondary:hover{background:#c9a84c;color:#1a4d2e}
+        .stats{display:flex;justify-content:center;gap:50px;flex-wrap:wrap;margin-top:40px}
+        .stats div{font-size:16px;opacity:.9}
+        .stats span{display:block;font-size:32px;font-weight:700;color:#c9a84c}
+        .section-title{text-align:center;font-size:34px;margin:40px 0;color:#1a4d2e;position:relative;padding-bottom:15px}
+        .section-title::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:60px;height:3px;background:#c9a84c}
+        .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;padding:20px 0}
+        .card{background:#fff;padding:30px;border-radius:15px;text-align:center;border-bottom:4px solid #c9a84c;transition:.3s;box-shadow:0 5px 15px rgba(0,0,0,.05)}
+        .card:hover{transform:translateY(-8px);box-shadow:0 10px 25px rgba(0,0,0,.1)}
+        .card i{font-size:40px;color:#1a4d2e;margin-bottom:15px}
+        .card h3{color:#1a4d2e;margin-bottom:10px}
+        .card.complementary{background:#f0f7f0;border-bottom-color:#2d7a4a}
+        .card.complementary i{color:#2d7a4a}
+        .complementary-title{text-align:center;font-size:28px;color:#1a4d2e;margin:40px 0 10px;padding-bottom:10px;border-bottom:2px dashed #c9a84c}
+        .testimonial{background:#fff;padding:30px;border-radius:15px;border-left:5px solid #c9a84c;margin:10px 0}
+        .testimonial p{font-style:italic;font-size:17px;color:#333}
+        .testimonial h4{color:#1a4d2e;margin-top:10px}
+        .contact-bar{background:#1a4d2e;color:#fff;padding:30px 0;text-align:center}
+        .contact-bar a{color:#c9a84c;text-decoration:none;margin:0 15px}
+        .contact-bar i{margin-right:8px}
+        footer{background:#0d2b1a;color:#aaa;text-align:center;padding:20px 0}
+        .footer-foundation{color:#c9a84c;font-size:13px;margin-top:3px;font-style:italic}
+        form{max-width:600px;margin:auto;background:#fff;padding:30px;border-radius:15px;box-shadow:0 5px 20px rgba(0,0,0,.1)}
+        .form-group{margin-bottom:20px}
+        .form-group label{display:block;font-weight:700;margin-bottom:5px}
+        .form-group input,.form-group select{width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;font-size:16px}
+        .message{margin:20px 0;text-align:center;font-weight:700;color:green}
+        #bookingsList{background:#fff;padding:20px;border-radius:10px;margin:20px 0}
+        .booking-item{border-bottom:1px solid #ddd;padding:15px 0}
+        .btn-danger{background:#c0392b;color:#fff;padding:12px 30px;border:none;border-radius:8px;cursor:pointer;font-size:16px}
+        .btn-danger:hover{background:#e74c3c}
+        .password-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);z-index:9999;display:flex;justify-content:center;align-items:center}
+        .password-box{background:#fff;padding:40px;border-radius:20px;text-align:center;max-width:400px;width:90%;box-shadow:0 20px 60px rgba(0,0,0,0.3)}
+        .password-box h2{color:#1a4d2e;margin-bottom:10px}
+        .password-box p{color:#666;margin-bottom:20px}
+        .password-box input{width:100%;padding:14px;border:2px solid #ddd;border-radius:10px;font-size:18px;text-align:center;margin-bottom:15px}
+        .password-box input:focus{border-color:#c9a84c;outline:none}
+        .password-box .btn{width:100%;border:none;cursor:pointer}
+        .password-error{color:#c0392b;font-size:14px;margin-top:10px;display:none}
+        .lang-urdu .hero h1,.lang-urdu .section-title,.lang-urdu .logo h1{font-family:'Amiri',serif}
+        @media(max-width:768px){
+            .hamburger{display:block}
+            nav ul{display:none;flex-direction:column;width:100%;background:#1a4d2e;padding:20px;margin-top:10px}
+            nav ul.show{display:flex}
+            nav ul li a{text-align:center}
+            .hero h1{font-size:30px}
+            .hero .sub{font-size:17px}
+            .stats{gap:20px}
+            .section-title{font-size:26px}
+            .password-box{padding:25px}
+        }
+    </style>
+</head>
 <body>
 
-<!-- HEADER -->
-<header><div class="container"><div class="logo"><h1 id="siteTitle">🏛️ Shahran Cultural & Research Center</h1><span class="foundation" id="foundationTag">📌 A Unit of Shahran Foundation</span></div><nav><ul><li><a href="#" class="active" id="navHome">Home</a></li><li><a href="#about" id="navAbout">About</a></li><li><a href="#courses" id="navCourses">Courses</a></li><li><a href="#booking" id="navRegister">Register</a></li><li><a href="#contact" id="navContact">Contact</a></li><li><a href="#admin" class="admin" onclick="checkAdmin(event)" id="navAdmin">Admin</a></li><li><button class="lang-btn" onclick="toggleLanguage()" id="langToggle">🇺🇸 English</button></li></ul></nav><div class="hamburger" onclick="toggleMenu()">☰</div></div></header>
+<!-- ===== HEADER ===== -->
+<header>
+    <div class="container">
+        <div class="logo">
+            <h1 id="siteTitle">🏛️ Shahran Cultural & Research Center</h1>
+            <span class="foundation" id="foundationTag">📌 A Unit of Shahran Foundation</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active" id="navHome">Home</a></li>
+                <li><a href="#about" id="navAbout">About</a></li>
+                <li><a href="#courses" id="navCourses">Courses</a></li>
+                <li><a href="#booking" id="navRegister">Register</a></li>
+                <li><a href="#contact" id="navContact">Contact</a></li>
+                <li><a href="#admin" class="admin" onclick="checkAdmin(event)" id="navAdmin">Admin</a></li>
+                <li><button class="lang-btn" onclick="toggleLanguage()" id="langToggle">🇺🇸 English</button></li>
+            </ul>
+        </nav>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </div>
+</header>
 
-<!-- PASSWORD POPUP -->
-<div id="passwordPopup" class="password-overlay" style="display:none"><div class="password-box"><h2 id="popupTitle">🔒 Admin Access</h2><p id="popupDesc">Enter password to view bookings</p><input type="password" id="adminPassword" placeholder="Enter Password" onkeydown="if(event.key==='Enter')verifyPassword()"><button class="btn btn-primary" onclick="verifyPassword()" id="popupBtn">Unlock</button><div id="passwordError" class="password-error">❌ Wrong password! Try again.</div></div></div>
-
-<!-- HERO -->
-<section class="hero"><div class="container"><h1 id="heroTitle">Shahran Cultural & Research Center</h1><div class="foundation-tag" id="heroFoundation">📌 A Unit of Shahran Foundation</div><p class="sub" id="heroSub">Learn Quran & Islamic Studies Online</p><div><a href="#booking" class="btn btn-primary" id="heroBtn1">Enroll Today</a><a href="#courses" class="btn btn-secondary" id="heroBtn2">View Courses</a></div><div class="stats"><div><span>5+</span> <span id="stat1">Courses</span></div><div><span>100+</span> <span id="stat2">Students</span></div></div></div></section>
-
-<!-- ABOUT -->
-<section id="about" class="container"><h2 class="section-title" id="aboutTitle">About Us</h2><div style="background:#fff;padding:30px;border-radius:15px;margin-bottom:30px"><p style="font-size:18px;line-height:1.8" id="aboutText"><strong>Shahran Cultural & Research Center</strong> <span style="color:#1a4d2e;font-weight:bold;">(A Unit of Shahran Foundation)</span> is dedicated to providing quality <strong>Quranic</strong> and <strong>Islamic</strong> education online. Located in Hazur Nagar, Muzaffarnagar, we offer a wide range of courses for all ages and levels.</p><p style="margin-top:15px" id="aboutVision"><strong>Vision:</strong> To create a generation that understands and practices the Quran and Sunnah.</p><p id="aboutMission"><strong>Mission:</strong> Affordable, accessible, and excellent Islamic education for everyone.</p></div></section>
-
-<!-- COURSES -->
-<section id="courses" class="container"><h2 class="section-title" id="coursesTitle">Our Courses</h2>
-<div class="grid">
-<div class="card"><i class="fas fa-book"></i><h3 id="c1">Learn Noorani Qaida Online</h3><p id="c1d">Basic Arabic reading for beginners</p></div>
-<div class="card"><i class="fas fa-quran"></i><h3 id="c2">Learn Quran with Tajweed Online</h3><p id="c2d">Recite Quran with proper rules</p></div>
-<div class="card"><i class="fas fa-book-open"></i><h3 id="c3">Quran Reading</h3><p id="c3d">Fluent Quran recitation</p></div>
-<div class="card"><i class="fas fa-memory"></i><h3 id="c4">Quran Memorization</h3><p id="c4d">Hifz program with revision</p></div>
-<div class="card"><i class="fas fa-brain"></i><h3 id="c5">Learn Tafseer Quran</h3><p id="c5d">Understand the meaning of Quran</p></div>
+<!-- ===== PASSWORD POPUP ===== -->
+<div id="passwordPopup" class="password-overlay" style="display:none">
+    <div class="password-box">
+        <h2 id="popupTitle">🔒 Admin Access</h2>
+        <p id="popupDesc">Enter password to view bookings</p>
+        <input type="password" id="adminPassword" placeholder="Enter Password" onkeydown="if(event.key==='Enter')verifyPassword()">
+        <button class="btn btn-primary" onclick="verifyPassword()" id="popupBtn">Unlock</button>
+        <div id="passwordError" class="password-error">❌ Wrong password! Try again.</div>
+    </div>
 </div>
 
-<!-- COMPLEMENTARY COURSES -->
-<h3 class="complementary-title" id="compTitle">📚 Complementary Courses</h3>
-<div class="grid">
-<div class="card complementary"><i class="fas fa-microphone-alt"></i><h3 id="comp1">Learn Ten Qirat</h3><p id="comp1d">Master the ten recitation styles</p></div>
-<div class="card complementary"><i class="fas fa-hands-praying"></i><h3 id="comp2">Islamic Supplications (Duas)</h3><p id="comp2d">Daily duas with meanings</p></div>
-<div class="card complementary"><i class="fas fa-graduation-cap"></i><h3 id="comp3">Islamic Studies</h3><p id="comp3d">Seerah, Fiqh, and Aqeedah</p></div>
-<div class="card complementary"><i class="fas fa-kaaba"></i><h3 id="comp4">Pillars of Islam</h3><p id="comp4d">Learn the five pillars in detail</p></div>
-</div>
+<!-- ===== HERO ===== -->
+<section class="hero">
+    <div class="container">
+        <h1 id="heroTitle">Shahran Cultural & Research Center</h1>
+        <div class="foundation-tag" id="heroFoundation">📌 A Unit of Shahran Foundation</div>
+        <p class="sub" id="heroSub">Learn Quran & Islamic Studies Online</p>
+        <div>
+            <a href="#booking" class="btn btn-primary" id="heroBtn1">Enroll Today</a>
+            <a href="#courses" class="btn btn-secondary" id="heroBtn2">View Courses</a>
+        </div>
+        <div class="stats">
+            <div><span>5+</span> <span id="stat1">Courses</span></div>
+            <div><span>100+</span> <span id="stat2">Students</span></div>
+        </div>
+    </div>
 </section>
 
-<!-- BOOKING -->
-<section id="booking" class="container"><h2 class="section-title" id="bookingTitle">📝 Registration & Booking</h2><form id="bookingForm"><div class="form-group"><label id="lblName">Student Name *</label><input type="text" id="sname" required></div><div class="form-group"><label id="lblAge">Age *</label><input type="number" id="age" required></div><div class="form-group"><label id="lblParent">Parent Name *</label><input type="text" id="pname" required></div><div class="form-group"><label id="lblContact">Contact *</label><input type="tel" id="contact" required></div><div class="form-group"><label id="lblCourse">Course *</label><select id="course">
-<option value="Noorani Qaida" id="opt1">Noorani Qaida</option>
-<option value="Quran with Tajweed" id="opt2">Quran with Tajweed</option>
-<option value="Quran Reading" id="opt3">Quran Reading</option>
-<option value="Quran Memorization" id="opt4">Quran Memorization</option>
-<option value="Tafseer Quran" id="opt5">Tafseer Quran</option>
-<option value="Ten Qirat" id="opt6">Ten Qirat</option>
-<option value="Islamic Supplications (Duas)" id="opt7">Islamic Supplications (Duas)</option>
-<option value="Islamic Studies" id="opt8">Islamic Studies</option>
-<option value="Pillars of Islam" id="opt9">Pillars of Islam</option>
-</select></div>
-<div class="form-group"><label id="lblBatch">Batch *</label><select id="batch"><option value="Morning (8am-10am)" id="batch1">Morning (8am-10am)</option><option value="Evening (4pm-6pm)" id="batch2">Evening (4pm-6pm)</option></select></div><button type="submit" class="btn btn-primary" style="width:100%" id="bookBtn">Book Now</button></form><div id="msg" class="message"></div></section>
+<!-- ===== ABOUT ===== -->
+<section id="about" class="container">
+    <h2 class="section-title" id="aboutTitle">About Us</h2>
+    <div style="background:#fff;padding:30px;border-radius:15px;margin-bottom:30px">
+        <p style="font-size:18px;line-height:1.8" id="aboutText">
+            <strong>Shahran Cultural & Research Center</strong> 
+            <span style="color:#1a4d2e;font-weight:bold;">(A Unit of Shahran Foundation)</span> 
+            is dedicated to providing quality <strong>Quranic</strong> and <strong>Islamic</strong> education online. 
+            Located in Hazur Nagar, Muzaffarnagar, we offer a wide range of courses for all ages and levels.
+        </p>
+        <p style="margin-top:15px" id="aboutVision"><strong>Vision:</strong> To create a generation that understands and practices the Quran and Sunnah.</p>
+        <p id="aboutMission"><strong>Mission:</strong> Affordable, accessible, and excellent Islamic education for everyone.</p>
+    </div>
+</section>
 
-<!-- TESTIMONIALS -->
-<section style="background:#f8f5f0;padding:40px 0;margin:40px 0"><div class="container"><h2 class="section-title" id="testTitle">Student Testimonials</h2><div class="testimonial"><p id="test1">"Alhamdulillah, the Quran classes at Shahran Center are excellent. My Tajweed has improved greatly."</p><h4>— Ahmad R.</h4></div><div class="testimonial"><p id="test2">"I started with Noorani Qaida and now I can read Quran fluently. Highly recommend!"</p><h4>— Fatima Z.</h4></div><div class="testimonial"><p id="test3">"My children love the Islamic Studies classes. They now know the pillars of Islam well."</p><h4>— Mohammed S.</h4></div></div></section>
+<!-- ===== COURSES ===== -->
+<section id="courses" class="container">
+    <h2 class="section-title" id="coursesTitle">Our Courses</h2>
+    <div class="grid">
+        <div class="card"><i class="fas fa-book"></i><h3 id="c1">Learn Noorani Qaida Online</h3><p id="c1d">Basic Arabic reading for beginners</p></div>
+        <div class="card"><i class="fas fa-quran"></i><h3 id="c2">Learn Quran with Tajweed Online</h3><p id="c2d">Recite Quran with proper rules</p></div>
+        <div class="card"><i class="fas fa-book-open"></i><h3 id="c3">Quran Reading</h3><p id="c3d">Fluent Quran recitation</p></div>
+        <div class="card"><i class="fas fa-memory"></i><h3 id="c4">Quran Memorization</h3><p id="c4d">Hifz program with revision</p></div>
+        <div class="card"><i class="fas fa-brain"></i><h3 id="c5">Learn Tafseer Quran</h3><p id="c5d">Understand the meaning of Quran</p></div>
+    </div>
 
-<!-- CONTACT -->
-<section id="contact" class="contact-bar"><div class="container"><p id="contactAddress"><i class="fas fa-map-marker-alt"></i> Hazur Nagar, Muzaffarnagar, UP – 251318</p><p style="margin:10px 0"><i class="fas fa-phone"></i> <a href="tel:9837983062">9837983062</a> | <i class="fab fa-whatsapp"></i> <a href="https://wa.me/919837983062" target="_blank">WhatsApp</a></p><p style="font-size:13px;color:#a8d5ba;margin-top:5px" id="contactFoundation">📌 A Unit of Shahran Foundation</p></div></section>
+    <!-- Complementary Courses -->
+    <h3 class="complementary-title" id="compTitle">📚 Complementary Courses</h3>
+    <div class="grid">
+        <div class="card complementary"><i class="fas fa-microphone-alt"></i><h3 id="comp1">Learn Ten Qirat</h3><p id="comp1d">Master the ten recitation styles</p></div>
+        <div class="card complementary"><i class="fas fa-hands-praying"></i><h3 id="comp2">Islamic Supplications (Duas)</h3><p id="comp2d">Daily duas with meanings</p></div>
+        <div class="card complementary"><i class="fas fa-graduation-cap"></i><h3 id="comp3">Islamic Studies</h3><p id="comp3d">Seerah, Fiqh, and Aqeedah</p></div>
+        <div class="card complementary"><i class="fas fa-kaaba"></i><h3 id="comp4">Pillars of Islam</h3><p id="comp4d">Learn the five pillars in detail</p></div>
+    </div>
+</section>
 
-<!-- ADMIN -->
-<section id="admin" class="container" style="display:none"><h2 class="section-title" id="adminTitle">📋 All Bookings</h2><div id="bookingsList"><p>Loading...</p></div><button onclick="clearAll()" class="btn-danger" id="clearBtn">Clear All Bookings</button></section>
+<!-- ===== BOOKING ===== -->
+<section id="booking" class="container">
+    <h2 class="section-title" id="bookingTitle">📝 Registration & Booking</h2>
+    <form id="bookingForm">
+        <div class="form-group"><label id="lblName">Student Name *</label><input type="text" id="sname" required></div>
+        <div class="form-group"><label id="lblAge">Age *</label><input type="number" id="age" required></div>
+        <div class="form-group"><label id="lblParent">Parent Name *</label><input type="text" id="pname" required></div>
+        <div class="form-group"><label id="lblContact">Contact *</label><input type="tel" id="contact" required></div>
+        <div class="form-group"><label id="lblAddress">Address *</label><input type="text" id="address" placeholder="Enter full address" required></div>
+        <div class="form-group"><label id="lblCourse">Course *</label>
+            <select id="course">
+                <option value="Noorani Qaida" id="opt1">Noorani Qaida</option>
+                <option value="Quran with Tajweed" id="opt2">Quran with Tajweed</option>
+                <option value="Quran Reading" id="opt3">Quran Reading</option>
+                <option value="Quran Memorization" id="opt4">Quran Memorization</option>
+                <option value="Tafseer Quran" id="opt5">Tafseer Quran</option>
+                <option value="Ten Qirat" id="opt6">Ten Qirat</option>
+                <option value="Islamic Supplications (Duas)" id="opt7">Islamic Supplications (Duas)</option>
+                <option value="Islamic Studies" id="opt8">Islamic Studies</option>
+                <option value="Pillars of Islam" id="opt9">Pillars of Islam</option>
+            </select>
+        </div>
+        <div class="form-group"><label id="lblBatch">Batch *</label>
+            <select id="batch">
+                <option value="Morning (8am-10am)" id="batch1">Morning (8am-10am)</option>
+                <option value="Evening (4pm-6pm)" id="batch2">Evening (4pm-6pm)</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%" id="bookBtn">Book Now</button>
+    </form>
+    <div id="msg" class="message"></div>
+</section>
 
-<!-- FOOTER -->
-<footer><div class="container"><p id="footerCopy">&copy; 2026 Shahran Cultural & Research Center</p><p class="footer-foundation" id="footerFoundation">📌 A Unit of Shahran Foundation</p></div></footer>
+<!-- ===== TESTIMONIALS ===== -->
+<section style="background:#f8f5f0;padding:40px 0;margin:40px 0">
+    <div class="container">
+        <h2 class="section-title" id="testTitle">Student Testimonials</h2>
+        <div class="testimonial"><p id="test1">"Alhamdulillah, the Quran classes at Shahran Center are excellent. My Tajweed has improved greatly."</p><h4>— Ahmad R.</h4></div>
+        <div class="testimonial"><p id="test2">"I started with Noorani Qaida and now I can read Quran fluently. Highly recommend!"</p><h4>— Fatima Z.</h4></div>
+        <div class="testimonial"><p id="test3">"My children love the Islamic Studies classes. They now know the pillars of Islam well."</p><h4>— Mohammed S.</h4></div>
+    </div>
+</section>
 
-<!-- JS -->
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="contact-bar">
+    <div class="container">
+        <p id="contactAddress"><i class="fas fa-map-marker-alt"></i> Hazur Nagar, Muzaffarnagar, UP – 251318</p>
+        <p style="margin:10px 0">
+            <i class="fas fa-phone"></i> <a href="tel:9837983062">9837983062</a> | 
+            <i class="fab fa-whatsapp"></i> <a href="https://wa.me/919837983062" target="_blank">WhatsApp</a>
+        </p>
+        <p style="font-size:13px;color:#a8d5ba;margin-top:5px" id="contactFoundation">📌 A Unit of Shahran Foundation</p>
+    </div>
+</section>
+
+<!-- ===== ADMIN ===== -->
+<section id="admin" class="container" style="display:none">
+    <h2 class="section-title" id="adminTitle">📋 All Bookings</h2>
+    <div id="bookingsList"><p>Loading...</p></div>
+    <button onclick="clearAll()" class="btn-danger" id="clearBtn">Clear All Bookings</button>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+    <div class="container">
+        <p id="footerCopy">&copy; 2026 Shahran Cultural & Research Center</p>
+        <p class="footer-foundation" id="footerFoundation">📌 A Unit of Shahran Foundation</p>
+    </div>
+</footer>
+
+<!-- ===== JAVASCRIPT ===== -->
 <script>
-// ===== LANGUAGE DATA (English, Urdu, Hindi) =====
+// =============================================
+// LANGUAGE DATA (English, Urdu, Hindi)
+// =============================================
 const langData = {
     en: {
         siteTitle: '🏛️ Shahran Cultural & Research Center',
@@ -130,6 +274,7 @@ const langData = {
         comp4: 'Pillars of Islam', comp4d: 'Learn the five pillars in detail',
         bookingTitle: '📝 Registration & Booking',
         lblName: 'Student Name *', lblAge: 'Age *', lblParent: 'Parent Name *', lblContact: 'Contact *',
+        lblAddress: 'Address *',
         lblCourse: 'Course *', lblBatch: 'Batch *',
         opt1: 'Noorani Qaida', opt2: 'Quran with Tajweed', opt3: 'Quran Reading',
         opt4: 'Quran Memorization', opt5: 'Tafseer Quran', opt6: 'Ten Qirat',
@@ -179,6 +324,7 @@ const langData = {
         comp4: 'اسلام کے ستون', comp4d: 'پانچ ستون اسلام تفصیل سے سیکھیں',
         bookingTitle: '📝 اندراج اور بکنگ',
         lblName: 'طالب علم کا نام *', lblAge: 'عمر *', lblParent: 'والدین کا نام *', lblContact: 'رابطہ نمبر *',
+        lblAddress: 'پتہ *',
         lblCourse: 'کورس *', lblBatch: 'شیفٹ *',
         opt1: 'نورانی قاعدہ', opt2: 'تجوید کے ساتھ قرآن', opt3: 'قرآن پڑھنا',
         opt4: 'قرآن حفظ', opt5: 'تفسیر قرآن', opt6: 'دس قرات',
@@ -228,6 +374,7 @@ const langData = {
         comp4: 'इस्लाम के स्तंभ', comp4d: 'इस्लाम के पाँच स्तंभ विस्तार से सीखें',
         bookingTitle: '📝 पंजीकरण और बुकिंग',
         lblName: 'छात्र का नाम *', lblAge: 'आयु *', lblParent: 'माता-पिता का नाम *', lblContact: 'संपर्क नंबर *',
+        lblAddress: 'पता *',
         lblCourse: 'कोर्स *', lblBatch: 'शिफ्ट *',
         opt1: 'नूरानी कायदा', opt2: 'तजवीद के साथ कुरान', opt3: 'कुरान पढ़ना',
         opt4: 'कुरान हिफ्ज', opt5: 'तफसीर कुरान', opt6: 'दस क़िरात',
@@ -254,7 +401,9 @@ const langData = {
 
 let currentLang = 'en';
 
-// ===== TOGGLE FUNCTION =====
+// =============================================
+// LANGUAGE TOGGLE
+// =============================================
 function toggleLanguage() {
     const languages = ['en', 'ur', 'hi'];
     let currentIndex = languages.indexOf(currentLang);
@@ -266,7 +415,6 @@ function toggleLanguage() {
     html.dir = langData[currentLang].direction;
     html.lang = currentLang;
     document.body.classList.toggle('lang-urdu', currentLang === 'ur');
-    document.body.classList.toggle('lang-hindi', currentLang === 'hi');
 }
 
 function applyLanguage(lang) {
@@ -317,6 +465,7 @@ function applyLanguage(lang) {
     document.getElementById('lblAge').textContent = data.lblAge;
     document.getElementById('lblParent').textContent = data.lblParent;
     document.getElementById('lblContact').textContent = data.lblContact;
+    document.getElementById('lblAddress').textContent = data.lblAddress;
     document.getElementById('lblCourse').textContent = data.lblCourse;
     document.getElementById('lblBatch').textContent = data.lblBatch;
     document.getElementById('opt1').textContent = data.opt1;
@@ -356,22 +505,29 @@ function applyLanguage(lang) {
     document.querySelector('.complementary-title').style.textAlign = 'center';
 }
 
-// ===== OTHER FUNCTIONS =====
-function toggleMenu(){document.querySelector('nav ul').classList.toggle('show')}
-
-const ADMIN_PASSWORD = "shahran2026";
-
-function checkAdmin(e){
-    e.preventDefault();
-    document.getElementById('passwordPopup').style.display='flex';
+// =============================================
+// MENU TOGGLE
+// =============================================
+function toggleMenu() {
+    document.querySelector('nav ul').classList.toggle('show');
 }
 
-function verifyPassword(){
+// =============================================
+// ADMIN PASSWORD
+// =============================================
+const ADMIN_PASSWORD = "shahran2026";
+
+function checkAdmin(e) {
+    e.preventDefault();
+    document.getElementById('passwordPopup').style.display = 'flex';
+}
+
+function verifyPassword() {
     let input = document.getElementById('adminPassword').value;
     let error = document.getElementById('passwordError');
-    if(input === ADMIN_PASSWORD){
-        document.getElementById('passwordPopup').style.display='none';
-        document.getElementById('admin').style.display='block';
+    if (input === ADMIN_PASSWORD) {
+        document.getElementById('passwordPopup').style.display = 'none';
+        document.getElementById('admin').style.display = 'block';
         loadBookings();
         document.getElementById('adminPassword').value = '';
         error.style.display = 'none';
@@ -382,11 +538,13 @@ function verifyPassword(){
     }
 }
 
-document.getElementById('passwordPopup')?.addEventListener('click', function(e){
-    if(e.target === this) this.style.display = 'none';
+document.getElementById('passwordPopup')?.addEventListener('click', function(e) {
+    if (e.target === this) this.style.display = 'none';
 });
 
-// ===== BOOKING FORM (FIXED WHATSAPP) =====
+// =============================================
+// BOOKING FORM (WhatsApp + Admin)
+// =============================================
 document.getElementById('bookingForm')?.addEventListener('submit', function(e) {
     e.preventDefault();
     
@@ -394,6 +552,7 @@ document.getElementById('bookingForm')?.addEventListener('submit', function(e) {
     let age = document.getElementById('age').value;
     let pname = document.getElementById('pname').value;
     let contact = document.getElementById('contact').value;
+    let address = document.getElementById('address').value;
     let course = document.getElementById('course').value;
     let batch = document.getElementById('batch').value;
     let date = new Date().toLocaleString();
@@ -404,6 +563,7 @@ document.getElementById('bookingForm')?.addEventListener('submit', function(e) {
         age: age,
         pname: pname,
         contact: contact,
+        address: address,
         course: course,
         batch: batch,
         date: date
@@ -419,47 +579,55 @@ document.getElementById('bookingForm')?.addEventListener('submit', function(e) {
     document.getElementById('msg').style.color = 'green';
     this.reset();
     
-    // ===== WHATSAPP MESSAGE (NO %0A, DIRECT NEW LINES) =====
+    // ===== WHATSAPP MESSAGE (NO DUPLICATE) =====
     let msg = "📚 *New Booking - Shahran Cultural & Research Center*\n\n";
     msg += "👤 *Student Name:* " + sname + "\n";
     msg += "📅 *Age:* " + age + " years\n";
     msg += "👨‍👩‍👦 *Parent Name:* " + pname + "\n";
     msg += "📞 *Contact:* " + contact + "\n";
+    msg += "📍 *Address:* " + address + "\n";
     msg += "📖 *Course:* " + course + "\n";
     msg += "🕐 *Batch:* " + batch + "\n";
-    msg += "📆 *Date:* " + date + "\n\n";
-    msg += "📍 *Address:* Hazur Nagar, Muzaffarnagar, UP - 251318\n";
-    msg += "📌 *A Unit of Shahran Foundation*";
+    msg += "📆 *Date:* " + date;
     
-    // Open WhatsApp - Direct message
     window.open('https://wa.me/919837983062?text=' + encodeURIComponent(msg), '_blank');
 });
 
-// ===== LOAD BOOKINGS =====
-function loadBookings(){
+// =============================================
+// ADMIN - LOAD BOOKINGS
+// =============================================
+function loadBookings() {
     let list = document.getElementById('bookingsList');
-    let b = JSON.parse(localStorage.getItem('shahran'))||[];
-    if(!b.length) list.innerHTML='<p>No bookings yet.</p>';
-    else{
-        let h='';
-        b.forEach((x,i)=>{
-            h+='<div class="booking-item"><strong>#'+(i+1)+'</strong> <strong>'+x.sname+'</strong> ('+x.age+' yrs)<br>Course: '+x.course+' | Batch: '+x.batch+'<br>Parent: '+x.pname+' | Contact: '+x.contact+'<br><small>'+x.date+'</small></div>'
+    let b = JSON.parse(localStorage.getItem('shahran')) || [];
+    if (!b.length) {
+        list.innerHTML = '<p>No bookings yet.</p>';
+    } else {
+        let h = '';
+        b.forEach((x, i) => {
+            h += '<div class="booking-item">';
+            h += '<strong>#' + (i + 1) + '</strong> ';
+            h += '<strong>' + x.sname + '</strong> (' + x.age + ' yrs)<br>';
+            h += '📍 Address: ' + x.address + '<br>';
+            h += 'Course: ' + x.course + ' | Batch: ' + x.batch + '<br>';
+            h += 'Parent: ' + x.pname + ' | Contact: ' + x.contact + '<br>';
+            h += '<small>' + x.date + '</small>';
+            h += '</div>';
         });
-        list.innerHTML=h;
+        list.innerHTML = h;
     }
 }
 
-function clearAll(){
-    if(confirm('Delete all bookings?')){
+function clearAll() {
+    if (confirm('Delete all bookings?')) {
         localStorage.removeItem('shahran');
         loadBookings();
     }
 }
 
-if(document.getElementById('admin').style.display !== 'none'){
-    loadBookings();
-}
-
+// =============================================
+// INIT
+// =============================================
 applyLanguage('en');
 </script>
-</body></html>
+</body>
+</html>
