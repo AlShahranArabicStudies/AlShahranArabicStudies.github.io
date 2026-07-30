@@ -272,7 +272,6 @@ function toggleLanguage() {
 function applyLanguage(lang) {
     const data = langData[lang];
     
-    // Header
     document.getElementById('siteTitle').textContent = data.siteTitle;
     document.getElementById('foundationTag').textContent = data.foundationTag;
     document.getElementById('navHome').textContent = data.navHome;
@@ -282,8 +281,6 @@ function applyLanguage(lang) {
     document.getElementById('navContact').textContent = data.navContact;
     document.getElementById('navAdmin').textContent = data.navAdmin;
     document.getElementById('langToggle').textContent = data.langBtn;
-    
-    // Hero
     document.getElementById('heroTitle').textContent = data.heroTitle;
     document.getElementById('heroFoundation').textContent = data.heroFoundation;
     document.getElementById('heroSub').textContent = data.heroSub;
@@ -291,14 +288,10 @@ function applyLanguage(lang) {
     document.getElementById('heroBtn2').textContent = data.heroBtn2;
     document.getElementById('stat1').textContent = data.stat1;
     document.getElementById('stat2').textContent = data.stat2;
-    
-    // About
     document.getElementById('aboutTitle').textContent = data.aboutTitle;
     document.getElementById('aboutText').innerHTML = data.aboutText;
     document.getElementById('aboutVision').innerHTML = data.aboutVision;
     document.getElementById('aboutMission').innerHTML = data.aboutMission;
-    
-    // Courses
     document.getElementById('coursesTitle').textContent = data.coursesTitle;
     document.getElementById('c1').textContent = data.c1;
     document.getElementById('c1d').textContent = data.c1d;
@@ -319,8 +312,6 @@ function applyLanguage(lang) {
     document.getElementById('comp3d').textContent = data.comp3d;
     document.getElementById('comp4').textContent = data.comp4;
     document.getElementById('comp4d').textContent = data.comp4d;
-    
-    // Booking
     document.getElementById('bookingTitle').textContent = data.bookingTitle;
     document.getElementById('lblName').textContent = data.lblName;
     document.getElementById('lblAge').textContent = data.lblAge;
@@ -340,31 +331,20 @@ function applyLanguage(lang) {
     document.getElementById('batch1').textContent = data.batch1;
     document.getElementById('batch2').textContent = data.batch2;
     document.getElementById('bookBtn').textContent = data.bookBtn;
-    
-    // Testimonials
     document.getElementById('testTitle').textContent = data.testTitle;
     document.getElementById('test1').innerHTML = data.test1;
     document.getElementById('test2').innerHTML = data.test2;
     document.getElementById('test3').innerHTML = data.test3;
-    
-    // Contact
     document.getElementById('contactAddress').innerHTML = data.contactAddress;
     document.getElementById('contactFoundation').textContent = data.contactFoundation;
-    
-    // Admin
     document.getElementById('adminTitle').textContent = data.adminTitle;
     document.getElementById('clearBtn').textContent = data.clearBtn;
-    
-    // Footer
     document.getElementById('footerCopy').textContent = data.footerCopy;
     document.getElementById('footerFoundation').textContent = data.footerFoundation;
-    
-    // Popup
     document.getElementById('popupTitle').textContent = data.popupTitle;
     document.getElementById('popupDesc').textContent = data.popupDesc;
     document.getElementById('popupBtn').textContent = data.popupBtn;
     
-    // Text alignment
     document.querySelectorAll('p, h1, h2, h3, h4, label, li, a, .card, .testimonial, .contact-bar, footer').forEach(el => {
         if (!el.closest('header') && !el.closest('.hero') && !el.closest('.contact-bar')) {
             el.style.textAlign = data.align;
@@ -406,7 +386,7 @@ document.getElementById('passwordPopup')?.addEventListener('click', function(e){
     if(e.target === this) this.style.display = 'none';
 });
 
-// ===== BOOKING FORM (WhatsApp + Admin) =====
+// ===== BOOKING FORM (FIXED WHATSAPP) =====
 document.getElementById('bookingForm')?.addEventListener('submit',function(e){
     e.preventDefault();
     let sname = document.getElementById('sname').value;
@@ -427,32 +407,30 @@ document.getElementById('bookingForm')?.addEventListener('submit',function(e){
         date:new Date().toLocaleString()
     };
     
-    // Save to localStorage (Admin Panel)
     let b=JSON.parse(localStorage.getItem('shahran'))||[];
     b.push(d);
     localStorage.setItem('shahran',JSON.stringify(b));
     
-    // Success message
     document.getElementById('msg').innerHTML='✅ Booking successful! We will contact you soon.';
     document.getElementById('msg').style.color='green';
     this.reset();
     
-    // ===== SEND WHATSAPP MESSAGE =====
-    let msg = `📚 *New Booking - Shahran Cultural & Research Center*%0A%0A`;
-    msg += `👤 *Student:* ${sname}%0A`;
-    msg += `📅 *Age:* ${age} years%0A`;
-    msg += `👨‍👩‍👦 *Parent:* ${pname}%0A`;
-    msg += `📞 *Contact:* ${contact}%0A`;
-    msg += `📖 *Course:* ${course}%0A`;
-    msg += `🕐 *Batch:* ${batch}%0A`;
-    msg += `📆 *Date:* ${new Date().toLocaleString()}%0A%0A`;
-    msg += `📍 Hazur Nagar, Muzaffarnagar, UP - 251318`;
+    // ===== FIXED WHATSAPP MESSAGE =====
+    let msg = "📚 *New Booking - Shahran Cultural & Research Center*%0A%0A";
+    msg += "👤 *Student Name:* " + sname + "%0A";
+    msg += "📅 *Age:* " + age + " years%0A";
+    msg += "👨‍👩‍👦 *Parent Name:* " + pname + "%0A";
+    msg += "📞 *Contact:* " + contact + "%0A";
+    msg += "📖 *Course:* " + course + "%0A";
+    msg += "🕐 *Batch:* " + batch + "%0A";
+    msg += "📆 *Date:* " + new Date().toLocaleString() + "%0A%0A";
+    msg += "📍 *Address:* Hazur Nagar, Muzaffarnagar, UP - 251318%0A";
+    msg += "📌 *A Unit of Shahran Foundation*";
     
-    // Open WhatsApp with message
-    window.open(`https://wa.me/919837983062?text=${msg}`, '_blank');
+    window.open('https://wa.me/919837983062?text=' + msg, '_blank');
 });
 
-// ===== LOAD BOOKINGS (Admin Panel) =====
+// ===== LOAD BOOKINGS =====
 function loadBookings(){
     let list = document.getElementById('bookingsList');
     let b = JSON.parse(localStorage.getItem('shahran'))||[];
@@ -477,7 +455,6 @@ if(document.getElementById('admin').style.display !== 'none'){
     loadBookings();
 }
 
-// ===== INIT =====
 applyLanguage('en');
 </script>
 </body></html>
