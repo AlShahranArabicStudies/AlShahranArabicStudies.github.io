@@ -90,7 +90,7 @@
     <div class="container">
         <div class="logo">
             <h1 id="siteTitle">🏛️ Shahran Cultural & Research Center</h1>
-            <span class="foundation" id="foundationTag">📌 A Unit of Shahran Foundation</span>
+            <span class="foundation" id="foundationTag"> A Unit of Shahran Foundation</span>
         </div>
         <nav>
             <ul>
@@ -122,7 +122,7 @@
 <section class="hero">
     <div class="container">
         <h1 id="heroTitle">Shahran Cultural & Research Center</h1>
-        <div class="foundation-tag" id="heroFoundation">📌 A Unit of Shahran Foundation</div>
+        <div class="foundation-tag" id="heroFoundation"> A Unit of Shahran Foundation</div>
         <p class="sub" id="heroSub">Learn Quran & Islamic Studies Online</p>
         <div>
             <a href="#booking" class="btn btn-primary" id="heroBtn1">Enroll Today</a>
@@ -142,7 +142,7 @@
         <p style="font-size:18px;line-height:1.8" id="aboutText">
             <strong>Shahran Cultural & Research Center</strong> 
             <span style="color:#1a4d2e;font-weight:bold;">(A Unit of Shahran Foundation)</span> 
-            is dedicated to providing quality <strong>Quran</strong> and <strong>Islamic</strong> education online. 
+            is dedicated to providing quality <strong>Quranic</strong> and <strong>Islamic</strong> education online. 
             Located in Hazur Nagar, Muzaffarnagar, we offer a wide range of courses for all ages and levels.
         </p>
         <p style="margin-top:15px" id="aboutVision"><strong>Vision:</strong> To create a generation that understands and practices the Quran and Sunnah.</p>
@@ -161,13 +161,16 @@
         <div class="card"><i class="fas fa-brain"></i><h3 id="c5">Learn Tafseer Quran</h3><p id="c5d">Understand the meaning of Quran</p></div>
     </div>
 
-    <!-- Complementary Courses -->
+    <!-- COMPLEMENTARY COURSES -->
     <h3 class="complementary-title" id="compTitle">📚 Complementary Courses</h3>
     <div class="grid">
         <div class="card complementary"><i class="fas fa-microphone-alt"></i><h3 id="comp1">Learn Ten Qirat</h3><p id="comp1d">Master the ten recitation styles</p></div>
         <div class="card complementary"><i class="fas fa-hands-praying"></i><h3 id="comp2">Islamic Supplications (Duas)</h3><p id="comp2d">Daily duas with meanings</p></div>
         <div class="card complementary"><i class="fas fa-graduation-cap"></i><h3 id="comp3">Islamic Studies</h3><p id="comp3d">Seerah, Fiqh, and Aqeedah</p></div>
         <div class="card complementary"><i class="fas fa-kaaba"></i><h3 id="comp4">Pillars of Islam</h3><p id="comp4d">Learn the five pillars in detail</p></div>
+        <div class="card complementary"><i class="fas fa-star-and-crescent"></i><h3 id="comp5">6 Kalimas</h3><p id="comp5d">Learn all six Kalimas with translation</p></div>
+        <div class="card complementary"><i class="fas fa-pray"></i><h3 id="comp6">Namaz (Salah)</h3><p id="comp6d">Complete Salah guide with steps</p></div>
+        <div class="card complementary"><i class="fas fa-hand-sparkles"></i><h3 id="comp7">Ghusal & Wudu</h3><p id="comp7d">Learn proper purification methods</p></div>
     </div>
 </section>
 
@@ -191,6 +194,9 @@
                 <option value="Islamic Supplications (Duas)" id="opt7">Islamic Supplications (Duas)</option>
                 <option value="Islamic Studies" id="opt8">Islamic Studies</option>
                 <option value="Pillars of Islam" id="opt9">Pillars of Islam</option>
+                <option value="6 Kalimas" id="opt10">6 Kalimas</option>
+                <option value="Namaz (Salah)" id="opt11">Namaz (Salah)</option>
+                <option value="Ghusal & Wudu" id="opt12">Ghusal & Wudu</option>
             </select>
         </div>
         <div class="form-group"><label id="lblBatch">Batch *</label>
@@ -237,7 +243,7 @@
 <footer>
     <div class="container">
         <p id="footerCopy">&copy; 2026 Shahran Cultural & Research Center</p>
-        <p class="footer-foundation" id="footerFoundation">📌 A Unit of Shahran Foundation</p>
+        <p class="footer-foundation" id="footerFoundation"> A Unit of Shahran Foundation</p>
     </div>
 </footer>
 
@@ -249,11 +255,11 @@
 const langData = {
     en: {
         siteTitle: '🏛️ Shahran Cultural & Research Center',
-        foundationTag: '📌 A Unit of Shahran Foundation',
+        foundationTag: ' A Unit of Shahran Foundation',
         navHome: 'Home', navAbout: 'About', navCourses: 'Courses', navRegister: 'Register', navContact: 'Contact', navAdmin: 'Admin',
         langBtn: ' English',
         heroTitle: 'Shahran Cultural & Research Center',
-        heroFoundation: '📌 A Unit of Shahran Foundation',
+        heroFoundation: ' A Unit of Shahran Foundation',
         heroSub: 'Learn Quran & Islamic Studies Online',
         heroBtn1: 'Enroll Today', heroBtn2: 'View Courses',
         stat1: 'Courses', stat2: 'Students',
@@ -272,6 +278,9 @@ const langData = {
         comp2: 'Islamic Supplications (Duas)', comp2d: 'Daily duas with meanings',
         comp3: 'Islamic Studies', comp3d: 'Seerah, Fiqh, and Aqeedah',
         comp4: 'Pillars of Islam', comp4d: 'Learn the five pillars in detail',
+        comp5: '6 Kalimas', comp5d: 'Learn all six Kalimas with translation',
+        comp6: 'Namaz (Salah)', comp6d: 'Complete Salah guide with steps',
+        comp7: 'Ghusal & Wudu', comp7d: 'Learn proper purification methods',
         bookingTitle: '📝 Registration & Booking',
         lblName: 'Student Name *', lblAge: 'Age *', lblParent: 'Parent Name *', lblContact: 'Contact *',
         lblAddress: 'Address *',
@@ -279,18 +288,19 @@ const langData = {
         opt1: 'Noorani Qaida', opt2: 'Quran with Tajweed', opt3: 'Quran Reading',
         opt4: 'Quran Memorization', opt5: 'Tafseer Quran', opt6: 'Ten Qirat',
         opt7: 'Islamic Supplications (Duas)', opt8: 'Islamic Studies', opt9: 'Pillars of Islam',
+        opt10: '6 Kalimas', opt11: 'Namaz (Salah)', opt12: 'Ghusal & Wudu',
         batch1: 'Morning (8am-10am)', batch2: 'Evening (4pm-6pm)',
         bookBtn: 'Book Now',
         testTitle: 'Student Testimonials',
         test1: '"Alhamdulillah, the Quran classes at Shahran Center are excellent. My Tajweed has improved greatly."',
         test2: '"I started with Noorani Qaida and now I can read Quran fluently. Highly recommend!"',
         test3: '"My children love the Islamic Studies classes. They now know the pillars of Islam well."',
-        contactAddress: '📍 Hazur Nagar, Muzaffarnagar, UP – 251318',
-        contactFoundation: '📌 A Unit of Shahran Foundation',
+        contactAddress: ' Hazur Nagar, Muzaffarnagar, UP – 251318',
+        contactFoundation: ' A Unit of Shahran Foundation',
         adminTitle: '📋 All Bookings',
         clearBtn: 'Clear All Bookings',
         footerCopy: '© 2026 Shahran Cultural & Research Center',
-        footerFoundation: '📌 A Unit of Shahran Foundation',
+        footerFoundation: ' A Unit of Shahran Foundation',
         popupTitle: '🔒 Admin Access',
         popupDesc: 'Enter password to view bookings',
         popupBtn: 'Unlock',
@@ -299,16 +309,16 @@ const langData = {
     },
     ur: {
         siteTitle: '🏛️ شہران کلچرل اینڈ ریسرچ سینٹر',
-        foundationTag: '📌 شہران فاؤنڈیشن کا ایک یونٹ',
+        foundationTag: ' شہران فاؤنڈیشن کا ایک یونٹ',
         navHome: 'ہوم', navAbout: 'تعارف', navCourses: 'کورسز', navRegister: 'رجسٹریشن', navContact: 'رابطہ', navAdmin: 'ایڈمن',
         langBtn: ' اردو',
         heroTitle: 'شہران کلچرل اینڈ ریسرچ سینٹر',
-        heroFoundation: '📌 شہران فاؤنڈیشن کا ایک یونٹ',
+        heroFoundation: ' شہران فاؤنڈیشن کا ایک یونٹ',
         heroSub: 'قرآن اور اسلامی تعلیمات سیکھیں آن لائن',
         heroBtn1: 'آج داخلہ لیں', heroBtn2: 'کورسز دیکھیں',
         stat1: 'کورسز', stat2: 'طلباء',
         aboutTitle: 'ہمارا تعارف',
-        aboutText: '<strong>شہران کلچرل اینڈ ریسرچ سینٹر</strong> <span style="color:#1a4d2e;font-weight:bold;">(شہران فاؤنڈیشن کا ایک یونٹ)</span> آن لائن <strong>قُرآن</strong> اور <strong>اسلامی</strong> تعلیم فراہم کرنے کے لیے وقف ہے۔ ہزار نگر، مظفرنگر، یوپی میں واقع، ہم تمام عمر اور سطح کے لیے کورسز پیش کرتے ہیں۔',
+        aboutText: '<strong>شہران کلچرل اینڈ ریسرچ سینٹر</strong> <span style="color:#1a4d2e;font-weight:bold;">(شہران فاؤنڈیشن کا ایک یونٹ)</span> آن لائن <strong>القرآن</strong> اور <strong>اسلامی</strong> تعلیم فراہم کرنے کے لیے وقف ہے۔ ہزار نگر، مظفرنگر، یوپی میں واقع، ہم تمام عمر اور سطح کے لیے کورسز پیش کرتے ہیں۔',
         aboutVision: '<strong>نظریہ:</strong> ایک ایسی نسل تیار کرنا جو قرآن اور سنت کو سمجھے اور اس پر عمل کرے۔',
         aboutMission: '<strong>مشن:</strong> ہر فرد کے لیے سستی، قابل رسائی اور بہترین اسلامی تعلیم۔',
         coursesTitle: 'ہمارے کورسز',
@@ -322,6 +332,9 @@ const langData = {
         comp2: 'اسلامی دعائیں', comp2d: 'معانی کے ساتھ روزمرہ کی دعائیں',
         comp3: 'اسلامی علوم', comp3d: 'سیرت، فقہ اور عقیدہ',
         comp4: 'اسلام کے ستون', comp4d: 'پانچ ستون اسلام تفصیل سے سیکھیں',
+        comp5: 'چھ کلمے', comp5d: 'چھوں کلموں کو ترجمے کے ساتھ سیکھیں',
+        comp6: 'نماز (صلوٰۃ)', comp6d: 'مکمل نماز کا طریقہ مراحل کے ساتھ',
+        comp7: 'غسل اور وضو', comp7d: 'طہارت کے صحیح طریقے سیکھیں',
         bookingTitle: '📝 اندراج اور بکنگ',
         lblName: 'طالب علم کا نام *', lblAge: 'عمر *', lblParent: 'والدین کا نام *', lblContact: 'رابطہ نمبر *',
         lblAddress: 'پتہ *',
@@ -329,18 +342,19 @@ const langData = {
         opt1: 'نورانی قاعدہ', opt2: 'تجوید کے ساتھ قرآن', opt3: 'قرآن پڑھنا',
         opt4: 'قرآن حفظ', opt5: 'تفسیر قرآن', opt6: 'دس قرات',
         opt7: 'اسلامی دعائیں', opt8: 'اسلامی علوم', opt9: 'اسلام کے ستون',
+        opt10: 'چھ کلمے', opt11: 'نماز (صلوٰۃ)', opt12: 'غسل اور وضو',
         batch1: 'صبح (8am-10am)', batch2: 'شام (4pm-6pm)',
         bookBtn: 'بک کریں',
         testTitle: 'طلباء کے تجربات',
         test1: '"الحمدللہ، شہران سینٹر میں قرآن کی کلاسز بہترین ہیں۔ میری تجوید میں بہت بہتری آئی ہے۔"',
         test2: '"میں نے نورانی قاعدہ سے شروع کیا اور اب میں روانی سے قرآن پڑھ سکتا ہوں۔"',
         test3: '"میرے بچوں کو اسلامی علوم کی کلاسز بہت پسند ہیں۔ اب وہ اسلام کے ستون اچھی طرح جانتے ہیں۔"',
-        contactAddress: '📍 ہزار نگر، مظفرنگر، یوپی – 251318',
-        contactFoundation: '📌 شہران فاؤنڈیشن کا ایک یونٹ',
+        contactAddress: ' ہزار نگر، مظفرنگر، یوپی – 251318',
+        contactFoundation: ' شہران فاؤنڈیشن کا ایک یونٹ',
         adminTitle: '📋 تمام بکنگز',
         clearBtn: 'تمام بکنگز حذف کریں',
         footerCopy: '© 2026 شہران کلچرل اینڈ ریسرچ سینٹر',
-        footerFoundation: '📌 شہران فاؤنڈیشن کا ایک یونٹ',
+        footerFoundation: ' شہران فاؤنڈیشن کا ایک یونٹ',
         popupTitle: '🔒 ایڈمن تک رسائی',
         popupDesc: 'بکنگز دیکھنے کے لیے پاس ورڈ درج کریں',
         popupBtn: 'انلاک کریں',
@@ -349,11 +363,11 @@ const langData = {
     },
     hi: {
         siteTitle: '🏛️ शाहरान कल्चरल एंड रिसर्च सेंटर',
-        foundationTag: '📌 शाहरान फाउंडेशन की एक इकाई',
+        foundationTag: ' शाहरान फाउंडेशन की एक इकाई',
         navHome: 'होम', navAbout: 'परिचय', navCourses: 'कोर्स', navRegister: 'पंजीकरण', navContact: 'संपर्क', navAdmin: 'एडमिन',
         langBtn: ' हिन्दी',
         heroTitle: 'शाहरान कल्चरल एंड रिसर्च सेंटर',
-        heroFoundation: '📌 शाहरान फाउंडेशन की एक इकाई',
+        heroFoundation: ' शाहरान फाउंडेशन की एक इकाई',
         heroSub: 'ऑनलाइन कुरान और इस्लामिक शिक्षा सीखें',
         heroBtn1: 'आज दाखिला लें', heroBtn2: 'कोर्स देखें',
         stat1: 'कोर्स', stat2: 'छात्र',
@@ -372,6 +386,9 @@ const langData = {
         comp2: 'इस्लामी दुआएं', comp2d: 'अर्थों के साथ दैनिक दुआएं',
         comp3: 'इस्लामी अध्ययन', comp3d: 'सीरत, फिक्ह और अकीदा',
         comp4: 'इस्लाम के स्तंभ', comp4d: 'इस्लाम के पाँच स्तंभ विस्तार से सीखें',
+        comp5: '6 कलिमा', comp5d: 'सभी छह कलिमा अनुवाद के साथ सीखें',
+        comp6: 'नमाज़ (सलाह)', comp6d: 'चरणों के साथ पूरी नमाज़ गाइड',
+        comp7: 'ग़ुस्ल और वुज़ू', comp7d: 'शुद्धि के सही तरीके सीखें',
         bookingTitle: '📝 पंजीकरण और बुकिंग',
         lblName: 'छात्र का नाम *', lblAge: 'आयु *', lblParent: 'माता-पिता का नाम *', lblContact: 'संपर्क नंबर *',
         lblAddress: 'पता *',
@@ -379,18 +396,19 @@ const langData = {
         opt1: 'नूरानी कायदा', opt2: 'तजवीद के साथ कुरान', opt3: 'कुरान पढ़ना',
         opt4: 'कुरान हिफ्ज', opt5: 'तफसीर कुरान', opt6: 'दस क़िरात',
         opt7: 'इस्लामी दुआएं', opt8: 'इस्लामी अध्ययन', opt9: 'इस्लाम के स्तंभ',
+        opt10: '6 कलिमा', opt11: 'नमाज़ (सलाह)', opt12: 'ग़ुस्ल और वुज़ू',
         batch1: 'सुबह (8am-10am)', batch2: 'शाम (4pm-6pm)',
         bookBtn: 'बुक करें',
         testTitle: 'छात्रों के अनुभव',
         test1: '"अल्हम्दुलिल्लाह, शाहरान सेंटर में कुरान की क्लासें बहुत अच्छी हैं। मेरी तजवीद में बहुत सुधार हुआ है।"',
         test2: '"मैंने नूरानी कायदा से शुरू किया और अब मैं रवानी से कुरान पढ़ सकता हूं।"',
         test3: '"मेरे बच्चों को इस्लामी अध्ययन की क्लासें बहुत पसंद हैं। अब वे इस्लाम के स्तंभ अच्छी तरह जानते हैं।"',
-        contactAddress: '📍 हज़ूर नगर, मुज़फ्फरनगर, यूपी – 251318',
-        contactFoundation: '📌 शाहरान फाउंडेशन की एक इकाई',
+        contactAddress: ' हज़ूर नगर, मुज़फ्फरनगर, यूपी – 251318',
+        contactFoundation: ' शाहरान फाउंडेशन की एक इकाई',
         adminTitle: '📋 सभी बुकिंग्स',
         clearBtn: 'सभी बुकिंग्स हटाएं',
         footerCopy: '© 2026 शाहरान कल्चरल एंड रिसर्च सेंटर',
-        footerFoundation: '📌 शाहरान फाउंडेशन की एक इकाई',
+        footerFoundation: ' शाहरान फाउंडेशन की एक इकाई',
         popupTitle: '🔒 एडमिन एक्सेस',
         popupDesc: 'बुकिंग्स देखने के लिए पासवर्ड डालें',
         popupBtn: 'अनलॉक करें',
@@ -460,6 +478,12 @@ function applyLanguage(lang) {
     document.getElementById('comp3d').textContent = data.comp3d;
     document.getElementById('comp4').textContent = data.comp4;
     document.getElementById('comp4d').textContent = data.comp4d;
+    document.getElementById('comp5').textContent = data.comp5;
+    document.getElementById('comp5d').textContent = data.comp5d;
+    document.getElementById('comp6').textContent = data.comp6;
+    document.getElementById('comp6d').textContent = data.comp6d;
+    document.getElementById('comp7').textContent = data.comp7;
+    document.getElementById('comp7d').textContent = data.comp7d;
     document.getElementById('bookingTitle').textContent = data.bookingTitle;
     document.getElementById('lblName').textContent = data.lblName;
     document.getElementById('lblAge').textContent = data.lblAge;
@@ -477,6 +501,9 @@ function applyLanguage(lang) {
     document.getElementById('opt7').textContent = data.opt7;
     document.getElementById('opt8').textContent = data.opt8;
     document.getElementById('opt9').textContent = data.opt9;
+    document.getElementById('opt10').textContent = data.opt10;
+    document.getElementById('opt11').textContent = data.opt11;
+    document.getElementById('opt12').textContent = data.opt12;
     document.getElementById('batch1').textContent = data.batch1;
     document.getElementById('batch2').textContent = data.batch2;
     document.getElementById('bookBtn').textContent = data.bookBtn;
@@ -579,7 +606,7 @@ document.getElementById('bookingForm')?.addEventListener('submit', function(e) {
     document.getElementById('msg').style.color = 'green';
     this.reset();
     
-    // ===== WHATSAPP MESSAGE (NO DUPLICATE) =====
+    // ===== WHATSAPP MESSAGE =====
     let msg = "📚 *New Booking - Shahran Cultural & Research Center*\n\n";
     msg += "👤 *Student Name:* " + sname + "\n";
     msg += "📅 *Age:* " + age + " years\n";
