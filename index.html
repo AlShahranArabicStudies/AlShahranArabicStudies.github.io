@@ -254,7 +254,7 @@ const langData = {
 
 let currentLang = 'en';
 
-// ===== TOGGLE FUNCTION (3 Languages Cycle) =====
+// ===== TOGGLE FUNCTION =====
 function toggleLanguage() {
     const languages = ['en', 'ur', 'hi'];
     let currentIndex = languages.indexOf(currentLang);
@@ -386,7 +386,7 @@ document.getElementById('passwordPopup')?.addEventListener('click', function(e){
     if(e.target === this) this.style.display = 'none';
 });
 
-// ===== BOOKING FORM (FIXED WHATSAPP - 100% WORKING) =====
+// ===== BOOKING FORM (FIXED WHATSAPP) =====
 document.getElementById('bookingForm')?.addEventListener('submit', function(e) {
     e.preventDefault();
     
@@ -409,7 +409,7 @@ document.getElementById('bookingForm')?.addEventListener('submit', function(e) {
         date: date
     };
     
-    // Save to localStorage (Admin Panel)
+    // Save to localStorage
     let bookings = JSON.parse(localStorage.getItem('shahran')) || [];
     bookings.push(d);
     localStorage.setItem('shahran', JSON.stringify(bookings));
@@ -419,19 +419,19 @@ document.getElementById('bookingForm')?.addEventListener('submit', function(e) {
     document.getElementById('msg').style.color = 'green';
     this.reset();
     
-    // ===== WHATSAPP MESSAGE (FIXED - USING encodeURIComponent) =====
-    let msg = "📚 *New Booking - Shahran Cultural & Research Center*%0A%0A";
-    msg += "👤 *Student Name:* " + sname + "%0A";
-    msg += "📅 *Age:* " + age + " years%0A";
-    msg += "👨‍👩‍👦 *Parent Name:* " + pname + "%0A";
-    msg += "📞 *Contact:* " + contact + "%0A";
-    msg += "📖 *Course:* " + course + "%0A";
-    msg += "🕐 *Batch:* " + batch + "%0A";
-    msg += "📆 *Date:* " + date + "%0A%0A";
-    msg += "📍 *Address:* Hazur Nagar, Muzaffarnagar, UP - 251318%0A";
+    // ===== WHATSAPP MESSAGE (NO %0A, DIRECT NEW LINES) =====
+    let msg = "📚 *New Booking - Shahran Cultural & Research Center*\n\n";
+    msg += "👤 *Student Name:* " + sname + "\n";
+    msg += "📅 *Age:* " + age + " years\n";
+    msg += "👨‍👩‍👦 *Parent Name:* " + pname + "\n";
+    msg += "📞 *Contact:* " + contact + "\n";
+    msg += "📖 *Course:* " + course + "\n";
+    msg += "🕐 *Batch:* " + batch + "\n";
+    msg += "📆 *Date:* " + date + "\n\n";
+    msg += "📍 *Address:* Hazur Nagar, Muzaffarnagar, UP - 251318\n";
     msg += "📌 *A Unit of Shahran Foundation*";
     
-    // Open WhatsApp with properly encoded message
+    // Open WhatsApp - Direct message
     window.open('https://wa.me/919837983062?text=' + encodeURIComponent(msg), '_blank');
 });
 
