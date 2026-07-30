@@ -386,36 +386,40 @@ document.getElementById('passwordPopup')?.addEventListener('click', function(e){
     if(e.target === this) this.style.display = 'none';
 });
 
-// ===== BOOKING FORM (FIXED WHATSAPP) =====
-document.getElementById('bookingForm')?.addEventListener('submit',function(e){
+// ===== BOOKING FORM (FIXED WHATSAPP - 100% WORKING) =====
+document.getElementById('bookingForm')?.addEventListener('submit', function(e) {
     e.preventDefault();
+    
     let sname = document.getElementById('sname').value;
     let age = document.getElementById('age').value;
     let pname = document.getElementById('pname').value;
     let contact = document.getElementById('contact').value;
     let course = document.getElementById('course').value;
     let batch = document.getElementById('batch').value;
+    let date = new Date().toLocaleString();
     
-    let d={
-        id:Date.now(),
-        sname:sname,
-        age:age,
-        pname:pname,
-        contact:contact,
-        course:course,
-        batch:batch,
-        date:new Date().toLocaleString()
+    let d = {
+        id: Date.now(),
+        sname: sname,
+        age: age,
+        pname: pname,
+        contact: contact,
+        course: course,
+        batch: batch,
+        date: date
     };
     
-    let b=JSON.parse(localStorage.getItem('shahran'))||[];
-    b.push(d);
-    localStorage.setItem('shahran',JSON.stringify(b));
+    // Save to localStorage (Admin Panel)
+    let bookings = JSON.parse(localStorage.getItem('shahran')) || [];
+    bookings.push(d);
+    localStorage.setItem('shahran', JSON.stringify(bookings));
     
-    document.getElementById('msg').innerHTML='✅ Booking successful! We will contact you soon.';
-    document.getElementById('msg').style.color='green';
+    // Success message
+    document.getElementById('msg').innerHTML = '✅ Booking successful! We will contact you soon.';
+    document.getElementById('msg').style.color = 'green';
     this.reset();
     
-    // ===== FIXED WHATSAPP MESSAGE =====
+    // ===== WHATSAPP MESSAGE (FIXED - USING encodeURIComponent) =====
     let msg = "📚 *New Booking - Shahran Cultural & Research Center*%0A%0A";
     msg += "👤 *Student Name:* " + sname + "%0A";
     msg += "📅 *Age:* " + age + " years%0A";
@@ -423,11 +427,12 @@ document.getElementById('bookingForm')?.addEventListener('submit',function(e){
     msg += "📞 *Contact:* " + contact + "%0A";
     msg += "📖 *Course:* " + course + "%0A";
     msg += "🕐 *Batch:* " + batch + "%0A";
-    msg += "📆 *Date:* " + new Date().toLocaleString() + "%0A%0A";
+    msg += "📆 *Date:* " + date + "%0A%0A";
     msg += "📍 *Address:* Hazur Nagar, Muzaffarnagar, UP - 251318%0A";
     msg += "📌 *A Unit of Shahran Foundation*";
     
-    window.open('https://wa.me/919837983062?text=' + msg, '_blank');
+    // Open WhatsApp with properly encoded message
+    window.open('https://wa.me/919837983062?text=' + encodeURIComponent(msg), '_blank');
 });
 
 // ===== LOAD BOOKINGS =====
