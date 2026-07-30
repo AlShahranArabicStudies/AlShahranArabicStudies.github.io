@@ -17,8 +17,6 @@
         nav ul{display:flex;list-style:none;gap:5px;align-items:center;flex-wrap:wrap}
         nav ul li a{color:#fff;padding:8px 16px;border-radius:30px;font-size:14px;text-decoration:none;transition:.3s}
         nav ul li a:hover,nav ul li a.active{background:#c9a84c;color:#1a4d2e}
-        nav ul li a.admin{background:#c0392b;color:#fff}
-        nav ul li a.admin:hover{background:#e74c3c}
         .lang-btn{background:#c9a84c;color:#1a4d2e;border:none;padding:6px 16px;border-radius:30px;cursor:pointer;font-size:13px;font-weight:700;transition:.3s}
         .lang-btn:hover{background:#e8d5b5;transform:scale(1.05)}
         .hamburger{display:none;font-size:28px;color:#fff;cursor:pointer}
@@ -31,6 +29,7 @@
         .btn-primary:hover{background:#e8d5b5;transform:scale(1.05)}
         .btn-secondary{background:0 0;color:#fff;border:2px solid #c9a84c}
         .btn-secondary:hover{background:#c9a84c;color:#1a4d2e}
+        .btn-sm{padding:8px 20px;font-size:14px}
         .stats{display:flex;justify-content:center;gap:50px;flex-wrap:wrap;margin-top:40px}
         .stats div{font-size:16px;opacity:.9}
         .stats span{display:block;font-size:32px;font-weight:700;color:#c9a84c}
@@ -43,6 +42,8 @@
         .card h3{color:#1a4d2e;margin-bottom:10px}
         .card.complementary{background:#f0f7f0;border-bottom-color:#2d7a4a}
         .card.complementary i{color:#2d7a4a}
+        .card.study-card{background:#fff8f0;border-bottom-color:#c9a84c}
+        .card.study-card i{color:#c9a84c}
         .complementary-title{text-align:center;font-size:28px;color:#1a4d2e;margin:40px 0 10px;padding-bottom:10px;border-bottom:2px dashed #c9a84c}
         .testimonial{background:#fff;padding:30px;border-radius:15px;border-left:5px solid #c9a84c;margin:10px 0}
         .testimonial p{font-style:italic;font-size:17px;color:#333}
@@ -51,26 +52,19 @@
         .contact-bar a{color:#c9a84c;text-decoration:none;margin:0 15px}
         .contact-bar i{margin-right:8px}
         footer{background:#0d2b1a;color:#aaa;text-align:center;padding:20px 0}
+        .footer-links{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-top:8px}
+        .footer-links a{color:#c9a84c;text-decoration:none;font-size:13px}
+        .footer-links a:hover{text-decoration:underline}
         .footer-foundation{color:#c9a84c;font-size:13px;margin-top:3px;font-style:italic}
         form{max-width:600px;margin:auto;background:#fff;padding:30px;border-radius:15px;box-shadow:0 5px 20px rgba(0,0,0,.1)}
         .form-group{margin-bottom:20px}
         .form-group label{display:block;font-weight:700;margin-bottom:5px}
         .form-group input,.form-group select{width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;font-size:16px}
         .message{margin:20px 0;text-align:center;font-weight:700;color:green}
-        #bookingsList{background:#fff;padding:20px;border-radius:10px;margin:20px 0;min-height:100px}
-        .booking-item{border-bottom:1px solid #ddd;padding:12px 0}
-        .booking-item:last-child{border-bottom:none}
-        .btn-danger{background:#c0392b;color:#fff;padding:12px 30px;border:none;border-radius:8px;cursor:pointer;font-size:16px}
-        .btn-danger:hover{background:#e74c3c}
-        .password-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);z-index:9999;display:flex;justify-content:center;align-items:center}
-        .password-box{background:#fff;padding:40px;border-radius:20px;text-align:center;max-width:400px;width:90%;box-shadow:0 20px 60px rgba(0,0,0,0.3)}
-        .password-box h2{color:#1a4d2e;margin-bottom:10px}
-        .password-box p{color:#666;margin-bottom:20px}
-        .password-box input{width:100%;padding:14px;border:2px solid #ddd;border-radius:10px;font-size:18px;text-align:center;margin-bottom:15px}
-        .password-box input:focus{border-color:#c9a84c;outline:none}
-        .password-box .btn{width:100%;border:none;cursor:pointer}
-        .password-error{color:#c0392b;font-size:14px;margin-top:10px;display:none}
         .lang-urdu .hero h1,.lang-urdu .section-title,.lang-urdu .logo h1{font-family:'Amiri',serif}
+        .page-section{padding:40px 0;background:#fff;border-radius:15px;margin:30px 0}
+        .page-section h2{text-align:center;color:#1a4d2e;margin-bottom:20px}
+        .page-section p{font-size:17px;line-height:1.8;text-align:center;color:#555}
         @media(max-width:768px){
             .hamburger{display:block}
             nav ul{display:none;flex-direction:column;width:100%;background:#1a4d2e;padding:20px;margin-top:10px}
@@ -80,7 +74,7 @@
             .hero .sub{font-size:17px}
             .stats{gap:20px}
             .section-title{font-size:26px}
-            .password-box{padding:25px}
+            .footer-links{gap:12px}
         }
     </style>
 </head>
@@ -98,26 +92,15 @@
                 <li><a href="#" class="active" id="navHome">Home</a></li>
                 <li><a href="#about" id="navAbout">About</a></li>
                 <li><a href="#courses" id="navCourses">Courses</a></li>
+                <li><a href="#study" id="navStudy">Study Material</a></li>
                 <li><a href="#booking" id="navRegister">Register</a></li>
                 <li><a href="#contact" id="navContact">Contact</a></li>
-                <li><a href="#admin" class="admin" onclick="checkAdmin(event)" id="navAdmin">Admin</a></li>
                 <li><button class="lang-btn" onclick="toggleLanguage()" id="langToggle"> English</button></li>
             </ul>
         </nav>
         <div class="hamburger" onclick="toggleMenu()">☰</div>
     </div>
 </header>
-
-<!-- ===== PASSWORD POPUP ===== -->
-<div id="passwordPopup" class="password-overlay" style="display:none">
-    <div class="password-box">
-        <h2 id="popupTitle">🔒 Admin Access</h2>
-        <p id="popupDesc">Enter password to view bookings</p>
-        <input type="password" id="adminPassword" placeholder="Enter Password" onkeydown="if(event.key==='Enter')verifyPassword()">
-        <button class="btn btn-primary" onclick="verifyPassword()" id="popupBtn">Unlock</button>
-        <div id="passwordError" class="password-error">❌ Wrong password! Try again.</div>
-    </div>
-</div>
 
 <!-- ===== HERO ===== -->
 <section class="hero">
@@ -173,6 +156,53 @@
         <div class="card complementary"><i class="fas fa-pray"></i><h3 id="comp6">Namaz (Salah)</h3><p id="comp6d">Complete Salah guide with steps</p></div>
         <div class="card complementary"><i class="fas fa-hand-sparkles"></i><h3 id="comp7">Ghusal & Wudu</h3><p id="comp7d">Learn proper purification methods</p></div>
     </div>
+</section>
+
+<!-- ===== STUDY MATERIAL PAGE ===== -->
+<section id="study" class="container page-section">
+    <h2 class="section-title" id="studyTitle">📚 Study Material</h2>
+    <p id="studyDesc" style="text-align:center;font-size:18px;color:#555;margin-bottom:30px;">
+        Download PDFs, books, and other resources for your courses.
+    </p>
+    <div class="grid">
+        <div class="card study-card">
+            <i class="fas fa-file-pdf"></i>
+            <h3>Noorani Qaida</h3>
+            <p>Complete Noorani Qaida PDF</p>
+            <a href="#" class="btn btn-primary btn-sm" style="margin-top:10px;display:inline-block;" id="study1">📥 Download</a>
+        </div>
+        <div class="card study-card">
+            <i class="fas fa-file-pdf"></i>
+            <h3>Tajweed Rules</h3>
+            <p>Complete Tajweed rules PDF</p>
+            <a href="#" class="btn btn-primary btn-sm" style="margin-top:10px;display:inline-block;" id="study2">📥 Download</a>
+        </div>
+        <div class="card study-card">
+            <i class="fas fa-file-pdf"></i>
+            <h3>Quran Reading Guide</h3>
+            <p>Step by step reading guide</p>
+            <a href="#" class="btn btn-primary btn-sm" style="margin-top:10px;display:inline-block;" id="study3">📥 Download</a>
+        </div>
+        <div class="card study-card">
+            <i class="fas fa-file-pdf"></i>
+            <h3>Islamic Duas</h3>
+            <p>Daily duas with meanings</p>
+            <a href="#" class="btn btn-primary btn-sm" style="margin-top:10px;display:inline-block;" id="study4">📥 Download</a>
+        </div>
+        <div class="card study-card">
+            <i class="fas fa-file-pdf"></i>
+            <h3>6 Kalimas</h3>
+            <p>Six Kalimas with translation</p>
+            <a href="#" class="btn btn-primary btn-sm" style="margin-top:10px;display:inline-block;" id="study5">📥 Download</a>
+        </div>
+        <div class="card study-card">
+            <i class="fas fa-file-pdf"></i>
+            <h3>Namaz Guide</h3>
+            <p>Complete Salah guide PDF</p>
+            <a href="#" class="btn btn-primary btn-sm" style="margin-top:10px;display:inline-block;" id="study6">📥 Download</a>
+        </div>
+    </div>
+    <p style="text-align:center;color:#999;font-size:14px;margin-top:20px;" id="studyNote">More study materials will be added soon. In sha Allah.</p>
 </section>
 
 <!-- ===== BOOKING ===== -->
@@ -232,20 +262,16 @@
     </div>
 </section>
 
-<!-- ===== ADMIN ===== -->
-<section id="admin" class="container" style="display:none">
-    <h2 class="section-title" id="adminTitle">📋 All Bookings</h2>
-    <div id="bookingsList">
-        <p style="text-align:center;padding:30px;color:#666;">🔐 Loading bookings...</p>
-    </div>
-    <button onclick="clearAll()" class="btn-danger" id="clearBtn">Clear All Bookings</button>
-</section>
-
 <!-- ===== FOOTER ===== -->
 <footer>
     <div class="container">
-        <p id="footerCopy">&copy; 2026 Shahran Cultural & Research Center</p>
+        <p id="footerCopy">&copy; 2026 Shahran Cultural & Research Center. All rights reserved.</p>
         <p class="footer-foundation" id="footerFoundation"> A Unit of Shahran Foundation</p>
+        <div class="footer-links">
+            <a href="#" id="footerPrivacy">Privacy Policy</a>
+            <a href="#" id="footerTerms">Terms of Service</a>
+            <a href="#contact" id="footerContact">Contact Us</a>
+        </div>
     </div>
 </footer>
 
@@ -258,7 +284,7 @@ const langData = {
     en: {
         siteTitle: '🏛️ Shahran Cultural & Research Center',
         foundationTag: ' A Unit of Shahran Foundation',
-        navHome: 'Home', navAbout: 'About', navCourses: 'Courses', navRegister: 'Register', navContact: 'Contact', navAdmin: 'Admin',
+        navHome: 'Home', navAbout: 'About', navCourses: 'Courses', navStudy: 'Study Material', navRegister: 'Register', navContact: 'Contact',
         langBtn: ' English',
         heroTitle: 'Shahran Cultural & Research Center',
         heroFoundation: ' A Unit of Shahran Foundation',
@@ -283,6 +309,11 @@ const langData = {
         comp5: '6 Kalimas', comp5d: 'Learn all six Kalimas with translation',
         comp6: 'Namaz (Salah)', comp6d: 'Complete Salah guide with steps',
         comp7: 'Ghusal & Wudu', comp7d: 'Learn proper purification methods',
+        studyTitle: '📚 Study Material',
+        studyDesc: 'Download PDFs, books, and other resources for your courses.',
+        study1: 'Noorani Qaida', study2: 'Tajweed Rules', study3: 'Quran Reading Guide',
+        study4: 'Islamic Duas', study5: '6 Kalimas', study6: 'Namaz Guide',
+        studyNote: 'More study materials will be added soon. In sha Allah.',
         bookingTitle: '📝 Registration & Booking',
         lblName: 'Student Name *', lblAge: 'Age *', lblParent: 'Parent Name *', lblContact: 'Contact *',
         lblAddress: 'Address *',
@@ -298,20 +329,18 @@ const langData = {
         test2: '"I started with Noorani Qaida and now I can read Quran fluently. Highly recommend!"',
         test3: '"My children love the Islamic Studies classes. They now know the pillars of Islam well."',
         contactAddress: ' Hazur Nagar, Muzaffarnagar, UP – 251318',
-        adminTitle: '📋 All Bookings',
-        clearBtn: 'Clear All Bookings',
-        footerCopy: '© 2026 Shahran Cultural & Research Center',
+        footerCopy: '© 2026 Shahran Cultural & Research Center. All rights reserved.',
         footerFoundation: ' A Unit of Shahran Foundation',
-        popupTitle: '🔒 Admin Access',
-        popupDesc: 'Enter password to view bookings',
-        popupBtn: 'Unlock',
+        footerPrivacy: 'Privacy Policy',
+        footerTerms: 'Terms of Service',
+        footerContact: 'Contact Us',
         direction: 'ltr',
         align: 'left'
     },
     ur: {
         siteTitle: '🏛️ شہران کلچرل اینڈ ریسرچ سینٹر',
         foundationTag: ' شہران فاؤنڈیشن کا ایک یونٹ',
-        navHome: 'ہوم', navAbout: 'تعارف', navCourses: 'کورسز', navRegister: 'رجسٹریشن', navContact: 'رابطہ', navAdmin: 'ایڈمن',
+        navHome: 'ہوم', navAbout: 'تعارف', navCourses: 'کورسز', navStudy: 'تعلیمی مواد', navRegister: 'رجسٹریشن', navContact: 'رابطہ',
         langBtn: ' اردو',
         heroTitle: 'شہران کلچرل اینڈ ریسرچ سینٹر',
         heroFoundation: ' شہران فاؤنڈیشن کا ایک یونٹ',
@@ -336,6 +365,11 @@ const langData = {
         comp5: 'چھ کلمے', comp5d: 'چھوں کلموں کو ترجمے کے ساتھ سیکھیں',
         comp6: 'نماز (صلوٰۃ)', comp6d: 'مکمل نماز کا طریقہ مراحل کے ساتھ',
         comp7: 'غسل اور وضو', comp7d: 'طہارت کے صحیح طریقے سیکھیں',
+        studyTitle: '📚 تعلیمی مواد',
+        studyDesc: 'اپنے کورسز کے لیے پی ڈی ایف، کتابیں اور دیگر وسائل ڈاؤن لوڈ کریں۔',
+        study1: 'نورانی قاعدہ', study2: 'تجوید کے قواعد', study3: 'قرآن پڑھنے کی گائیڈ',
+        study4: 'اسلامی دعائیں', study5: 'چھ کلمے', study6: 'نماز گائیڈ',
+        studyNote: 'مزید تعلیمی مواد جلد شامل کیا جائے گا۔ ان شاء اللہ',
         bookingTitle: '📝 اندراج اور بکنگ',
         lblName: 'طالب علم کا نام *', lblAge: 'عمر *', lblParent: 'والدین کا نام *', lblContact: 'رابطہ نمبر *',
         lblAddress: 'پتہ *',
@@ -351,20 +385,18 @@ const langData = {
         test2: '"میں نے نورانی قاعدہ سے شروع کیا اور اب میں روانی سے قرآن پڑھ سکتا ہوں۔"',
         test3: '"میرے بچوں کو اسلامی علوم کی کلاسز بہت پسند ہیں۔ اب وہ اسلام کے ستون اچھی طرح جانتے ہیں۔"',
         contactAddress: ' ہزار نگر، مظفرنگر، یوپی – 251318',
-        adminTitle: '📋 تمام بکنگز',
-        clearBtn: 'تمام بکنگز حذف کریں',
-        footerCopy: '© 2026 شہران کلچرل اینڈ ریسرچ سینٹر',
+        footerCopy: '© 2026 شہران کلچرل اینڈ ریسرچ سینٹر۔ جملہ حقوق محفوظ ہیں۔',
         footerFoundation: ' شہران فاؤنڈیشن کا ایک یونٹ',
-        popupTitle: '🔒 ایڈمن تک رسائی',
-        popupDesc: 'بکنگز دیکھنے کے لیے پاس ورڈ درج کریں',
-        popupBtn: 'انلاک کریں',
+        footerPrivacy: 'پرائیویسی پالیسی',
+        footerTerms: 'استعمال کی شرائط',
+        footerContact: 'رابطہ کریں',
         direction: 'rtl',
         align: 'right'
     },
     hi: {
         siteTitle: '🏛️ शाहरान कल्चरल एंड रिसर्च सेंटर',
         foundationTag: ' शाहरान फाउंडेशन की एक इकाई',
-        navHome: 'होम', navAbout: 'परिचय', navCourses: 'कोर्स', navRegister: 'पंजीकरण', navContact: 'संपर्क', navAdmin: 'एडमिन',
+        navHome: 'होम', navAbout: 'परिचय', navCourses: 'कोर्स', navStudy: 'अध्ययन सामग्री', navRegister: 'पंजीकरण', navContact: 'संपर्क',
         langBtn: ' हिन्दी',
         heroTitle: 'शाहरान कल्चरल एंड रिसर्च सेंटर',
         heroFoundation: ' शाहरान फाउंडेशन की एक इकाई',
@@ -389,6 +421,11 @@ const langData = {
         comp5: '6 कलिमा', comp5d: 'सभी छह कलिमा अनुवाद के साथ सीखें',
         comp6: 'नमाज़ (सलाह)', comp6d: 'चरणों के साथ पूरी नमाज़ गाइड',
         comp7: 'ग़ुस्ल और वुज़ू', comp7d: 'शुद्धि के सही तरीके सीखें',
+        studyTitle: '📚 अध्ययन सामग्री',
+        studyDesc: 'अपने कोर्स के लिए पीडीएफ, किताबें और अन्य संसाधन डाउनलोड करें।',
+        study1: 'नूरानी कायदा', study2: 'तजवीद के नियम', study3: 'कुरान पढ़ने गाइड',
+        study4: 'इस्लामी दुआएं', study5: '6 कलिमा', study6: 'नमाज़ गाइड',
+        studyNote: 'और अध्ययन सामग्री जल्द ही जोड़ी जाएगी। इंशा अल्लाह',
         bookingTitle: '📝 पंजीकरण और बुकिंग',
         lblName: 'छात्र का नाम *', lblAge: 'आयु *', lblParent: 'माता-पिता का नाम *', lblContact: 'संपर्क नंबर *',
         lblAddress: 'पता *',
@@ -404,13 +441,11 @@ const langData = {
         test2: '"मैंने नूरानी कायदा से शुरू किया और अब मैं रवानी से कुरान पढ़ सकता हूं।"',
         test3: '"मेरे बच्चों को इस्लामी अध्ययन की क्लासें बहुत पसंद हैं। अब वे इस्लाम के स्तंभ अच्छी तरह जानते हैं।"',
         contactAddress: ' हज़ूर नगर, मुज़फ्फरनगर, यूपी – 251318',
-        adminTitle: '📋 सभी बुकिंग्स',
-        clearBtn: 'सभी बुकिंग्स हटाएं',
-        footerCopy: '© 2026 शाहरान कल्चरल एंड रिसर्च सेंटर',
+        footerCopy: '© 2026 शाहरान कल्चरल एंड रिसर्च सेंटर। सर्वाधिकार सुरक्षित।',
         footerFoundation: ' शाहरान फाउंडेशन की एक इकाई',
-        popupTitle: '🔒 एडमिन एक्सेस',
-        popupDesc: 'बुकिंग्स देखने के लिए पासवर्ड डालें',
-        popupBtn: 'अनलॉक करें',
+        footerPrivacy: 'गोपनीयता नीति',
+        footerTerms: 'सेवा की शर्तें',
+        footerContact: 'संपर्क करें',
         direction: 'ltr',
         align: 'left'
     }
@@ -442,9 +477,9 @@ function applyLanguage(lang) {
     document.getElementById('navHome').textContent = data.navHome;
     document.getElementById('navAbout').textContent = data.navAbout;
     document.getElementById('navCourses').textContent = data.navCourses;
+    document.getElementById('navStudy').textContent = data.navStudy;
     document.getElementById('navRegister').textContent = data.navRegister;
     document.getElementById('navContact').textContent = data.navContact;
-    document.getElementById('navAdmin').textContent = data.navAdmin;
     document.getElementById('langToggle').textContent = data.langBtn;
     document.getElementById('heroTitle').textContent = data.heroTitle;
     document.getElementById('heroFoundation').textContent = data.heroFoundation;
@@ -483,6 +518,15 @@ function applyLanguage(lang) {
     document.getElementById('comp6d').textContent = data.comp6d;
     document.getElementById('comp7').textContent = data.comp7;
     document.getElementById('comp7d').textContent = data.comp7d;
+    document.getElementById('studyTitle').textContent = data.studyTitle;
+    document.getElementById('studyDesc').textContent = data.studyDesc;
+    document.getElementById('study1').textContent = data.study1;
+    document.getElementById('study2').textContent = data.study2;
+    document.getElementById('study3').textContent = data.study3;
+    document.getElementById('study4').textContent = data.study4;
+    document.getElementById('study5').textContent = data.study5;
+    document.getElementById('study6').textContent = data.study6;
+    document.getElementById('studyNote').textContent = data.studyNote;
     document.getElementById('bookingTitle').textContent = data.bookingTitle;
     document.getElementById('lblName').textContent = data.lblName;
     document.getElementById('lblAge').textContent = data.lblAge;
@@ -511,13 +555,11 @@ function applyLanguage(lang) {
     document.getElementById('test2').innerHTML = data.test2;
     document.getElementById('test3').innerHTML = data.test3;
     document.getElementById('contactAddress').innerHTML = data.contactAddress;
-    document.getElementById('adminTitle').textContent = data.adminTitle;
-    document.getElementById('clearBtn').textContent = data.clearBtn;
     document.getElementById('footerCopy').textContent = data.footerCopy;
     document.getElementById('footerFoundation').textContent = data.footerFoundation;
-    document.getElementById('popupTitle').textContent = data.popupTitle;
-    document.getElementById('popupDesc').textContent = data.popupDesc;
-    document.getElementById('popupBtn').textContent = data.popupBtn;
+    document.getElementById('footerPrivacy').textContent = data.footerPrivacy;
+    document.getElementById('footerTerms').textContent = data.footerTerms;
+    document.getElementById('footerContact').textContent = data.footerContact;
     
     document.querySelectorAll('p, h1, h2, h3, h4, label, li, a, .card, .testimonial, .contact-bar, footer').forEach(el => {
         if (!el.closest('header') && !el.closest('.hero') && !el.closest('.contact-bar')) {
@@ -538,80 +580,6 @@ function toggleMenu() {
 }
 
 // =============================================
-// ADMIN PANEL - COMPLETE FIX (100% WORKING)
-// =============================================
-const ADMIN_PASSWORD = "shahran2026";
-
-// Admin link click
-function checkAdmin(e) {
-    e.preventDefault();
-    document.getElementById('passwordPopup').style.display = 'flex';
-    document.getElementById('adminPassword').value = '';
-    document.getElementById('passwordError').style.display = 'none';
-}
-
-// Password verify
-function verifyPassword() {
-    let input = document.getElementById('adminPassword').value;
-    if (input === ADMIN_PASSWORD) {
-        document.getElementById('passwordPopup').style.display = 'none';
-        document.getElementById('admin').style.display = 'block';
-        // Force load bookings after 0.3 second
-        setTimeout(function() {
-            loadBookings();
-        }, 300);
-    } else {
-        document.getElementById('passwordError').style.display = 'block';
-    }
-}
-
-// Close popup on outside click
-document.getElementById('passwordPopup')?.addEventListener('click', function(e) {
-    if (e.target === this) {
-        this.style.display = 'none';
-    }
-});
-
-// ===== MAIN FUNCTION - LOAD BOOKINGS =====
-function loadBookings() {
-    let list = document.getElementById('bookingsList');
-    if (!list) return;
-    
-    // Directly read from localStorage
-    let raw = localStorage.getItem('shahran');
-    let bookings = raw ? JSON.parse(raw) : [];
-    
-    console.log("📋 Total Bookings Found:", bookings.length);
-    
-    if (bookings.length === 0) {
-        list.innerHTML = '<p style="text-align:center;padding:30px;color:#666;">📭 No bookings yet. Please register a student first.</p>';
-        return;
-    }
-    
-    let html = '';
-    bookings.forEach((b, i) => {
-        html += `<div class="booking-item" style="border-bottom:1px solid #ddd;padding:12px 0;">
-            <strong>#${i + 1}</strong> 
-            <strong>${b.sname || 'N/A'}</strong> (${b.age || 'N/A'} yrs)<br>
-            📍 Address: ${b.address || 'N/A'}<br>
-            📖 Course: ${b.course || 'N/A'} | 🕐 Batch: ${b.batch || 'N/A'}<br>
-            👨‍👩‍👦 Parent: ${b.pname || 'N/A'} | 📞 Contact: ${b.contact || 'N/A'}<br>
-            <small>📆 ${b.date || 'N/A'}</small>
-        </div>`;
-    });
-    list.innerHTML = html;
-}
-
-// Clear all bookings
-function clearAll() {
-    if (confirm('⚠️ Delete all bookings permanently?')) {
-        localStorage.removeItem('shahran');
-        loadBookings();
-        alert('✅ All bookings cleared!');
-    }
-}
-
-// =============================================
 // BOOKING FORM
 // =============================================
 document.getElementById('bookingForm')?.addEventListener('submit', function(e) {
@@ -626,33 +594,10 @@ document.getElementById('bookingForm')?.addEventListener('submit', function(e) {
     let batch = document.getElementById('batch').value;
     let date = new Date().toLocaleString();
     
-    let d = {
-        id: Date.now(),
-        sname: sname,
-        age: age,
-        pname: pname,
-        contact: contact,
-        address: address,
-        course: course,
-        batch: batch,
-        date: date
-    };
-    
-    // Save to localStorage
-    let bookings = JSON.parse(localStorage.getItem('shahran')) || [];
-    bookings.push(d);
-    localStorage.setItem('shahran', JSON.stringify(bookings));
-    
-    // Debug
-    console.log("✅ Booking Saved:", d);
-    console.log("📦 Total Bookings Now:", JSON.parse(localStorage.getItem('shahran')).length);
-    
-    // Success message
     document.getElementById('msg').innerHTML = '✅ Booking successful! We will contact you soon.';
     document.getElementById('msg').style.color = 'green';
     this.reset();
     
-    // WhatsApp message
     let msg = "📚 *New Booking - Shahran Cultural & Research Center*\n\n";
     msg += "👤 *Student Name:* " + sname + "\n";
     msg += "📅 *Age:* " + age + " years\n";
@@ -664,20 +609,6 @@ document.getElementById('bookingForm')?.addEventListener('submit', function(e) {
     msg += "📆 *Date:* " + date;
     
     window.open('https://wa.me/919837983062?text=' + encodeURIComponent(msg), '_blank');
-});
-
-// =============================================
-// PAGE LOAD - AUTO CHECK
-// =============================================
-document.addEventListener('DOMContentLoaded', function() {
-    // If admin section is already visible (page refresh case)
-    if (document.getElementById('admin').style.display !== 'none') {
-        loadBookings();
-    }
-    
-    // Debug - Check localStorage on page load
-    let stored = localStorage.getItem('shahran');
-    console.log("📦 Stored Bookings on Load:", stored ? JSON.parse(stored) : 'None');
 });
 
 // =============================================
