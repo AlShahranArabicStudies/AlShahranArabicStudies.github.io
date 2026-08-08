@@ -40,8 +40,9 @@
         .card h3{color:#1a4d2e;margin-bottom:10px}
         .card.complementary{background:#f0f7f0;border-bottom-color:#2d7a4a}
         .card.complementary i{color:#2d7a4a}
-        .card.study-card{background:#fff8f0;border-bottom-color:#c9a84c}
-        .card.study-card i{color:#c9a84c}
+        .card.study-card{background:#fff8f0;border-bottom-color:#c9a84c;display:flex;flex-direction:column;justify-content:space-between;height:100%;min-height:260px}
+        .card.study-card i{color:#c9a84c;font-size:42px}
+        .card.study-card p{flex-grow:1}
         .complementary-title{text-align:center;font-size:28px;color:#1a4d2e;margin:40px 0 10px;padding-bottom:10px;border-bottom:2px dashed #c9a84c}
         .testimonial{background:#fff;padding:30px;border-radius:15px;border-left:5px solid #c9a84c;margin:10px 0}
         .testimonial p{font-style:italic;font-size:17px;color:#333}
@@ -72,6 +73,13 @@
             .stats{gap:20px}
             .section-title{font-size:26px}
             .footer-links{gap:12px}
+            .grid{grid-template-columns:1fr}
+        }
+        @media(max-width:480px){
+            .logo h1{font-size:18px}
+            .hero h1{font-size:26px}
+            .btn{padding:10px 24px;font-size:15px}
+            .card{padding:20px}
         }
     </style>
 </head>
@@ -158,24 +166,30 @@
     <p id="studyDesc" style="text-align:center;font-size:18px;color:#555;margin-bottom:30px;">
         Explore these online Islamic libraries and resources for your courses.
     </p>
-    <div class="grid">
+    <div class="grid" style="grid-template-columns:repeat(3,1fr);align-items:stretch;">
         <div class="card study-card">
-            <i class="fas fa-landmark"></i>
-            <h3 id="study1">My Islamic Library</h3>
-            <p id="study1d">Explore a vast collection of Islamic books and resources.</p>
-            <a href="https://myislamiclibrary.com/library/" target="_blank" class="btn btn-primary btn-sm" style="margin-top:10px;display:inline-block;" id="studyBtn1">🔗 Visit Library</a>
+            <div>
+                <i class="fas fa-landmark"></i>
+                <h3 id="study1">My Islamic Library</h3>
+                <p id="study1d">Explore a vast collection of Islamic books and resources.</p>
+            </div>
+            <a href="https://myislamiclibrary.com/library/" target="_blank" class="btn btn-primary btn-sm" style="margin-top:15px;align-self:center;" id="studyBtn1">🔗 Visit Library</a>
         </div>
         <div class="card study-card">
-            <i class="fas fa-book-open"></i>
-            <h3 id="study2">Muslim Library</h3>
-            <p id="study2d">Access a wide range of Islamic literature and PDFs.</p>
-            <a href="https://www.muslim-library.com/" target="_blank" class="btn btn-primary btn-sm" style="margin-top:10px;display:inline-block;" id="studyBtn2">🔗 Visit Library</a>
+            <div>
+                <i class="fas fa-book-open"></i>
+                <h3 id="study2">Muslim Library</h3>
+                <p id="study2d">Access a wide range of Islamic literature and PDFs.</p>
+            </div>
+            <a href="https://www.muslim-library.com/" target="_blank" class="btn btn-primary btn-sm" style="margin-top:15px;align-self:center;" id="studyBtn2">🔗 Visit Library</a>
         </div>
         <div class="card study-card">
-            <i class="fas fa-robot"></i>
-            <h3 id="study3">Usul.ai</h3>
-            <p id="study3d">AI-powered platform for Islamic knowledge and research.</p>
-            <a href="https://usul.ai/" target="_blank" class="btn btn-primary btn-sm" style="margin-top:10px;display:inline-block;" id="studyBtn3">🔗 Visit Platform</a>
+            <div>
+                <i class="fas fa-robot"></i>
+                <h3 id="study3">Usul.ai</h3>
+                <p id="study3d">AI-powered platform for Islamic knowledge and research.</p>
+            </div>
+            <a href="https://usul.ai/" target="_blank" class="btn btn-primary btn-sm" style="margin-top:15px;align-self:center;" id="studyBtn3">🔗 Visit Platform</a>
         </div>
     </div>
     <p style="text-align:center;color:#999;font-size:14px;margin-top:20px;" id="studyNote">More resources will be added soon. In sha Allah.</p>
