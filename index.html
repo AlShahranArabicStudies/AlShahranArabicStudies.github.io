@@ -161,21 +161,21 @@
     <div class="grid">
         <div class="card study-card">
             <i class="fas fa-landmark"></i>
-            <h3>My Islamic Library</h3>
-            <p>Explore a vast collection of Islamic books and resources.</p>
-            <a href="https://myislamiclibrary.com/library/" target="_blank" class="btn btn-primary btn-sm" style="margin-top:10px;display:inline-block;">🔗 Visit Library</a>
+            <h3 id="study1">My Islamic Library</h3>
+            <p id="study1d">Explore a vast collection of Islamic books and resources.</p>
+            <a href="https://myislamiclibrary.com/library/" target="_blank" class="btn btn-primary btn-sm" style="margin-top:10px;display:inline-block;" id="studyBtn1">🔗 Visit Library</a>
         </div>
         <div class="card study-card">
             <i class="fas fa-book-open"></i>
-            <h3>Muslim Library</h3>
-            <p>Access a wide range of Islamic literature and PDFs.</p>
-            <a href="https://www.muslim-library.com/" target="_blank" class="btn btn-primary btn-sm" style="margin-top:10px;display:inline-block;">🔗 Visit Library</a>
+            <h3 id="study2">Muslim Library</h3>
+            <p id="study2d">Access a wide range of Islamic literature and PDFs.</p>
+            <a href="https://www.muslim-library.com/" target="_blank" class="btn btn-primary btn-sm" style="margin-top:10px;display:inline-block;" id="studyBtn2">🔗 Visit Library</a>
         </div>
         <div class="card study-card">
             <i class="fas fa-robot"></i>
-            <h3>Usul.ai</h3>
-            <p>AI-powered platform for Islamic knowledge and research.</p>
-            <a href="https://usul.ai/" target="_blank" class="btn btn-primary btn-sm" style="margin-top:10px;display:inline-block;">🔗 Visit Platform</a>
+            <h3 id="study3">Usul.ai</h3>
+            <p id="study3d">AI-powered platform for Islamic knowledge and research.</p>
+            <a href="https://usul.ai/" target="_blank" class="btn btn-primary btn-sm" style="margin-top:10px;display:inline-block;" id="studyBtn3">🔗 Visit Platform</a>
         </div>
     </div>
     <p style="text-align:center;color:#999;font-size:14px;margin-top:20px;" id="studyNote">More resources will be added soon. In sha Allah.</p>
@@ -232,8 +232,8 @@
     <div class="container">
         <p id="contactAddress"><i class="fas fa-map-marker-alt"></i> Hazur Nagar, Muzaffarnagar, UP – 251318</p>
         <p style="margin:10px 0">
-            <i class="fas fa-phone"></i> <a href="tel:9837983062">9837983062</a> | 
-            <i class="fab fa-whatsapp"></i> <a href="https://wa.me/919837983062" target="_blank">WhatsApp</a>
+            <i class="fas fa-phone"></i> <a href="tel:9837983062" id="contactPhone">9837983062</a> | 
+            <i class="fab fa-whatsapp"></i> <a href="https://wa.me/919837983062" target="_blank" id="contactWhatsApp">WhatsApp</a>
         </p>
     </div>
 </section>
@@ -253,7 +253,7 @@
 <!-- ===== JAVASCRIPT ===== -->
 <script>
 // =============================================
-// LANGUAGE DATA (English, Urdu, Hindi)
+// LANGUAGE DATA (English, Urdu, Hindi) - COMPLETE
 // =============================================
 const langData = {
     en: {
@@ -284,7 +284,10 @@ const langData = {
         comp7: 'Ghusal & Wudu', comp7d: 'Learn proper purification methods',
         studyTitle: '📚 Study Material',
         studyDesc: 'Explore these online Islamic libraries and resources for your courses.',
-        study1: 'My Islamic Library', study2: 'Muslim Library', study3: 'Usul.ai',
+        study1: 'My Islamic Library', study1d: 'Explore a vast collection of Islamic books and resources.',
+        study2: 'Muslim Library', study2d: 'Access a wide range of Islamic literature and PDFs.',
+        study3: 'Usul.ai', study3d: 'AI-powered platform for Islamic knowledge and research.',
+        studyBtn1: '🔗 Visit Library', studyBtn2: '🔗 Visit Library', studyBtn3: '🔗 Visit Platform',
         studyNote: 'More resources will be added soon. In sha Allah.',
         bookingTitle: '📝 Registration & Booking',
         lblName: 'Student Name *', lblAge: 'Age *', lblParent: 'Parent Name *', lblContact: 'Contact *',
@@ -300,7 +303,9 @@ const langData = {
         test1: '"Alhamdulillah, the Quran classes at Shahran Center are excellent. My Tajweed has improved greatly."',
         test2: '"I started with Noorani Qaida and now I can read Quran fluently. Highly recommend!"',
         test3: '"My children love the Islamic Studies classes. They now know the pillars of Islam well."',
-        contactAddress: ' Hazur Nagar, Muzaffarnagar, UP – 251318',
+        contactAddress: '📍 Hazur Nagar, Muzaffarnagar, UP – 251318',
+        contactPhone: '9837983062',
+        contactWhatsApp: 'WhatsApp',
         footerCopy: '© 2026 Shahran Cultural & Research Center. All rights reserved.',
         footerPrivacy: 'Privacy Policy',
         footerTerms: 'Terms of Service',
@@ -336,7 +341,10 @@ const langData = {
         comp7: 'غسل اور وضو', comp7d: 'طہارت کے صحیح طریقے سیکھیں',
         studyTitle: '📚 تعلیمی مواد',
         studyDesc: 'اپنے کورسز کے لیے آن لائن اسلامی لائبریریاں اور وسائل دریافت کریں۔',
-        study1: 'مائی اسلامک لائبریری', study2: 'مسلم لائبریری', study3: 'Usul.ai',
+        study1: 'مائی اسلامک لائبریری', study1d: 'اسلامی کتب اور وسائل کا وسیع ذخیرہ دریافت کریں۔',
+        study2: 'مسلم لائبریری', study2d: 'اسلامی ادب اور پی ڈی ایف تک رسائی حاصل کریں۔',
+        study3: 'Usul.ai', study3d: 'اسلامی علم اور تحقیق کے لیے اے آئی سے چلنے والا پلیٹ فارم۔',
+        studyBtn1: '🔗 لائبریری دیکھیں', studyBtn2: '🔗 لائبریری دیکھیں', studyBtn3: '🔗 پلیٹ فارم دیکھیں',
         studyNote: 'مزید وسائل جلد شامل کیے جائیں گے۔ ان شاء اللہ',
         bookingTitle: '📝 اندراج اور بکنگ',
         lblName: 'طالب علم کا نام *', lblAge: 'عمر *', lblParent: 'والدین کا نام *', lblContact: 'رابطہ نمبر *',
@@ -352,7 +360,9 @@ const langData = {
         test1: '"الحمدللہ، شہران سینٹر میں قرآن کی کلاسز بہترین ہیں۔ میری تجوید میں بہت بہتری آئی ہے۔"',
         test2: '"میں نے نورانی قاعدہ سے شروع کیا اور اب میں روانی سے قرآن پڑھ سکتا ہوں۔"',
         test3: '"میرے بچوں کو اسلامی علوم کی کلاسز بہت پسند ہیں۔ اب وہ اسلام کے ستون اچھی طرح جانتے ہیں۔"',
-        contactAddress: ' ہزار نگر، مظفرنگر، یوپی – 251318',
+        contactAddress: '📍 ہزار نگر، مظفرنگر، یوپی – 251318',
+        contactPhone: '9837983062',
+        contactWhatsApp: 'WhatsApp',
         footerCopy: '© 2026 شہران کلچرل اینڈ ریسرچ سینٹر۔ جملہ حقوق محفوظ ہیں۔',
         footerPrivacy: 'پرائیویسی پالیسی',
         footerTerms: 'استعمال کی شرائط',
@@ -388,7 +398,10 @@ const langData = {
         comp7: 'ग़ुस्ल और वुज़ू', comp7d: 'शुद्धि के सही तरीके सीखें',
         studyTitle: '📚 अध्ययन सामग्री',
         studyDesc: 'अपने कोर्स के लिए ऑनलाइन इस्लामिक लाइब्रेरी और संसाधन खोजें।',
-        study1: 'माय इस्लामिक लाइब्रेरी', study2: 'मुस्लिम लाइब्रेरी', study3: 'Usul.ai',
+        study1: 'माय इस्लामिक लाइब्रेरी', study1d: 'इस्लामिक किताबों और संसाधनों का विशाल संग्रह देखें।',
+        study2: 'मुस्लिम लाइब्रेरी', study2d: 'इस्लामिक साहित्य और पीडीएफ की विस्तृत श्रृंखला तक पहुंचें।',
+        study3: 'Usul.ai', study3d: 'इस्लामी ज्ञान और शोध के लिए एआई-संचालित प्लेटफॉर्म।',
+        studyBtn1: '🔗 लाइब्रेरी देखें', studyBtn2: '🔗 लाइब्रेरी देखें', studyBtn3: '🔗 प्लेटफॉर्म देखें',
         studyNote: 'और संसाधन जल्द ही जोड़े जाएंगे। इंशा अल्लाह',
         bookingTitle: '📝 पंजीकरण और बुकिंग',
         lblName: 'छात्र का नाम *', lblAge: 'आयु *', lblParent: 'माता-पिता का नाम *', lblContact: 'संपर्क नंबर *',
@@ -404,7 +417,9 @@ const langData = {
         test1: '"अल्हम्दुलिल्लाह, शाहरान सेंटर में कुरान की क्लासें बहुत अच्छी हैं। मेरी तजवीद में बहुत सुधार हुआ है।"',
         test2: '"मैंने नूरानी कायदा से शुरू किया और अब मैं रवानी से कुरान पढ़ सकता हूं।"',
         test3: '"मेरे बच्चों को इस्लामी अध्ययन की क्लासें बहुत पसंद हैं। अब वे इस्लाम के स्तंभ अच्छी तरह जानते हैं।"',
-        contactAddress: ' हज़ूर नगर, मुज़फ्फरनगर, यूपी – 251318',
+        contactAddress: '📍 हज़ूर नगर, मुज़फ्फरनगर, यूपी – 251318',
+        contactPhone: '9837983062',
+        contactWhatsApp: 'WhatsApp',
         footerCopy: '© 2026 शाहरान कल्चरल एंड रिसर्च सेंटर। सर्वाधिकार सुरक्षित।',
         footerPrivacy: 'गोपनीयता नीति',
         footerTerms: 'सेवा की शर्तें',
@@ -435,6 +450,7 @@ function toggleLanguage() {
 function applyLanguage(lang) {
     const data = langData[lang];
     
+    // Header
     document.getElementById('siteTitle').textContent = data.siteTitle;
     document.getElementById('navHome').textContent = data.navHome;
     document.getElementById('navAbout').textContent = data.navAbout;
@@ -443,16 +459,22 @@ function applyLanguage(lang) {
     document.getElementById('navRegister').textContent = data.navRegister;
     document.getElementById('navContact').textContent = data.navContact;
     document.getElementById('langToggle').textContent = data.langBtn;
+    
+    // Hero
     document.getElementById('heroTitle').textContent = data.heroTitle;
     document.getElementById('heroSub').textContent = data.heroSub;
     document.getElementById('heroBtn1').textContent = data.heroBtn1;
     document.getElementById('heroBtn2').textContent = data.heroBtn2;
     document.getElementById('stat1').textContent = data.stat1;
     document.getElementById('stat2').textContent = data.stat2;
+    
+    // About
     document.getElementById('aboutTitle').textContent = data.aboutTitle;
     document.getElementById('aboutText').innerHTML = data.aboutText;
     document.getElementById('aboutVision').innerHTML = data.aboutVision;
     document.getElementById('aboutMission').innerHTML = data.aboutMission;
+    
+    // Courses
     document.getElementById('coursesTitle').textContent = data.coursesTitle;
     document.getElementById('c1').textContent = data.c1;
     document.getElementById('c1d').textContent = data.c1d;
@@ -479,12 +501,22 @@ function applyLanguage(lang) {
     document.getElementById('comp6d').textContent = data.comp6d;
     document.getElementById('comp7').textContent = data.comp7;
     document.getElementById('comp7d').textContent = data.comp7d;
+    
+    // Study Material
     document.getElementById('studyTitle').textContent = data.studyTitle;
     document.getElementById('studyDesc').textContent = data.studyDesc;
     document.getElementById('study1').textContent = data.study1;
+    document.getElementById('study1d').textContent = data.study1d;
     document.getElementById('study2').textContent = data.study2;
+    document.getElementById('study2d').textContent = data.study2d;
     document.getElementById('study3').textContent = data.study3;
+    document.getElementById('study3d').textContent = data.study3d;
+    document.getElementById('studyBtn1').textContent = data.studyBtn1;
+    document.getElementById('studyBtn2').textContent = data.studyBtn2;
+    document.getElementById('studyBtn3').textContent = data.studyBtn3;
     document.getElementById('studyNote').textContent = data.studyNote;
+    
+    // Booking
     document.getElementById('bookingTitle').textContent = data.bookingTitle;
     document.getElementById('lblName').textContent = data.lblName;
     document.getElementById('lblAge').textContent = data.lblAge;
@@ -508,16 +540,25 @@ function applyLanguage(lang) {
     document.getElementById('batch1').textContent = data.batch1;
     document.getElementById('batch2').textContent = data.batch2;
     document.getElementById('bookBtn').textContent = data.bookBtn;
+    
+    // Testimonials
     document.getElementById('testTitle').textContent = data.testTitle;
     document.getElementById('test1').innerHTML = data.test1;
     document.getElementById('test2').innerHTML = data.test2;
     document.getElementById('test3').innerHTML = data.test3;
+    
+    // Contact
     document.getElementById('contactAddress').innerHTML = data.contactAddress;
+    document.getElementById('contactPhone').textContent = data.contactPhone;
+    document.getElementById('contactWhatsApp').textContent = data.contactWhatsApp;
+    
+    // Footer
     document.getElementById('footerCopy').textContent = data.footerCopy;
     document.getElementById('footerPrivacy').textContent = data.footerPrivacy;
     document.getElementById('footerTerms').textContent = data.footerTerms;
     document.getElementById('footerContact').textContent = data.footerContact;
     
+    // Text alignment
     document.querySelectorAll('p, h1, h2, h3, h4, label, li, a, .card, .testimonial, .contact-bar, footer').forEach(el => {
         if (!el.closest('header') && !el.closest('.hero') && !el.closest('.contact-bar')) {
             el.style.textAlign = data.align;
