@@ -21,8 +21,7 @@
         .hamburger{display:none;font-size:28px;color:#fff;cursor:pointer}
         .hero{background:linear-gradient(135deg,#1a4d2e,#2d7a4a);color:#fff;padding:80px 0 60px;text-align:center}
         .hero h1{font-size:42px;font-family:Amiri,serif;margin-bottom:5px}
-        .hero .sub{font-size:20px;margin-bottom:10px;color:#e8d5b5}
-        .hero .tagline{font-size:18px;color:#c9a84c;font-weight:600;margin-bottom:25px;letter-spacing:0.5px}
+        .hero .sub{font-size:20px;margin-bottom:30px;color:#e8d5b5}
         .btn{display:inline-block;padding:14px 40px;border-radius:50px;font-weight:700;font-size:18px;transition:.3s;text-decoration:none;margin:5px;border:none;cursor:pointer}
         .btn-primary{background:#c9a84c;color:#1a4d2e}
         .btn-primary:hover{background:#e8d5b5;transform:scale(1.05)}
@@ -63,7 +62,6 @@
         .contact-bar a{color:#c9a84c;text-decoration:none;margin:0 15px}
         .contact-bar i{margin-right:8px}
         footer{background:#0d2b1a;color:#aaa;text-align:center;padding:20px 0}
-        .footer-tagline{color:#c9a84c;font-size:14px;margin:8px 0;font-style:italic}
         .footer-links{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-top:8px}
         .footer-links a{color:#c9a84c;text-decoration:none;font-size:13px}
         .footer-links a:hover{text-decoration:underline}
@@ -76,7 +74,6 @@
         .page-section{padding:40px 0;background:#fff;border-radius:15px;margin:30px 0}
         .page-section h2{text-align:center;color:#1a4d2e;margin-bottom:20px}
         .page-section p{font-size:17px;line-height:1.8;text-align:center;color:#555}
-        .about-tagline{text-align:center;font-size:18px;color:#1a4d2e;font-weight:600;margin-top:20px;padding:15px;background:#f8f5f0;border-radius:10px;border-left:4px solid #c9a84c}
         .features-box{margin-top:25px;padding:20px;background:#f8f5f0;border-radius:10px;border-left:4px solid #c9a84c}
         .features-box h4{color:#1a4d2e;font-size:20px;margin-bottom:15px;text-align:center}
         .features-box ul{list-style:none;padding:0;font-size:16px;line-height:2}
@@ -90,7 +87,6 @@
             nav ul li a{text-align:center}
             .hero h1{font-size:30px}
             .hero .sub{font-size:17px}
-            .hero .tagline{font-size:15px}
             .stats{gap:20px}
             .section-title{font-size:26px}
             .footer-links{gap:12px}
@@ -102,7 +98,6 @@
             .hero h1{font-size:26px}
             .btn{padding:10px 24px;font-size:15px}
             .card{padding:20px}
-            .about-tagline{font-size:15px;padding:12px}
             .btn-group{flex-direction:column;align-items:center}
             .features-box{padding:15px}
             .features-box ul{font-size:14px}
@@ -137,7 +132,6 @@
     <div class="container">
         <h1 id="heroTitle">Al Shahran Arabic Studies</h1>
         <p class="sub" id="heroSub">Learn Quran & Islamic Studies Online</p>
-        <p class="tagline" id="heroTagline">⭐ Learn 24/7 in every time zone with experienced male and female teachers.</p>
         <div>
             <a href="#booking" class="btn btn-primary" id="heroBtn1">Enroll Today</a>
             <a href="#courses" class="btn btn-secondary" id="heroBtn2">View Courses</a>
@@ -169,12 +163,12 @@
                 <li>✅ <span id="f4">Class recordings provided & uploaded on YouTube</span></li>
                 <li>✅ <span id="f5">Easy-to-understand language on various topics</span></li>
                 <li>✅ <span id="f6">Online classes via Zoom / WhatsApp / Skype</span></li>
+                <li>✅ <span id="f7">Learn 24/7 in every time zone with experienced male and female teachers</span></li>
             </ul>
         </div>
 
         <p style="margin-top:15px" id="aboutVision"><strong>Vision:</strong> To create a generation that understands and practices the Quran and Sunnah.</p>
         <p id="aboutMission"><strong>Mission:</strong> Affordable, accessible, and excellent Islamic education for everyone.</p>
-        <div class="about-tagline" id="aboutTagline">⭐ Learn 24/7 in every time zone with experienced male and female teachers.</div>
     </div>
 </section>
 
@@ -370,7 +364,6 @@
 <footer>
     <div class="container">
         <p id="footerCopy">&copy; 2026 Al Shahran Arabic Studies. All rights reserved.</p>
-        <p class="footer-tagline" id="footerTagline">⭐ Learn 24/7 in every time zone with experienced male and female teachers.</p>
         <div class="footer-links">
             <a href="#" id="footerPrivacy">Privacy Policy</a>
             <a href="#" id="footerTerms">Terms of Service</a>
@@ -391,7 +384,6 @@ const langData = {
         langBtn: ' English',
         heroTitle: 'Al Shahran Arabic Studies',
         heroSub: 'Learn Quran & Islamic Studies Online',
-        heroTagline: '⭐ Learn 24/7 in every time zone with experienced male and female teachers.',
         heroBtn1: 'Enroll Today', heroBtn2: 'View Courses',
         stat1: 'Courses', stat2: 'Students',
         aboutTitle: 'About Us',
@@ -403,9 +395,9 @@ const langData = {
         f4: 'Class recordings provided & uploaded on YouTube',
         f5: 'Easy-to-understand language on various topics',
         f6: 'Online classes via Zoom / WhatsApp / Skype',
+        f7: 'Learn 24/7 in every time zone with experienced male and female teachers',
         aboutVision: '<strong>Vision:</strong> To create a generation that understands and practices the Quran and Sunnah.',
         aboutMission: '<strong>Mission:</strong> Affordable, accessible, and excellent Islamic education for everyone.',
-        aboutTagline: '⭐ Learn 24/7 in every time zone with experienced male and female teachers.',
         coursesTitle: 'Our Courses',
         c1: 'Learn Noorani Qaida Online', c1d: 'Basic Arabic reading for beginners',
         c2: 'Learn Quran with Tajweed Online', c2d: 'Recite Quran with proper rules',
@@ -454,7 +446,6 @@ const langData = {
         contactPhone: '9837983062',
         contactWhatsApp: 'WhatsApp',
         footerCopy: '© 2026 Al Shahran Arabic Studies. All rights reserved.',
-        footerTagline: '⭐ Learn 24/7 in every time zone with experienced male and female teachers.',
         footerPrivacy: 'Privacy Policy',
         footerTerms: 'Terms of Service',
         footerContact: 'Contact Us',
@@ -467,7 +458,6 @@ const langData = {
         langBtn: ' اردو',
         heroTitle: 'ال شہران عربی اسٹڈیز',
         heroSub: 'قرآن اور اسلامی تعلیمات سیکھیں آن لائن',
-        heroTagline: '⭐ ہر ٹائم زون میں 24/7 تجربہ کار مرد و خواتین اساتذہ کے ساتھ سیکھیں۔',
         heroBtn1: 'آج داخلہ لیں', heroBtn2: 'کورسز دیکھیں',
         stat1: 'کورسز', stat2: 'طلباء',
         aboutTitle: 'ہمارا تعارف',
@@ -479,9 +469,9 @@ const langData = {
         f4: 'کلاسز کی ریکارڈنگ فراہم کی جاتی ہے اور YouTube پر اپ لوڈ کی جاتی ہے',
         f5: 'آسان زبان میں مختلف موضوعات پڑھائے جاتے ہیں',
         f6: 'Zoom / WhatsApp / Skype کے ذریعے آن لائن کلاسز',
+        f7: 'ہر ٹائم زون میں 24/7 تجربہ کار مرد و خواتین اساتذہ کے ساتھ سیکھیں',
         aboutVision: '<strong>نظریہ:</strong> ایک ایسی نسل تیار کرنا جو قرآن اور سنت کو سمجھے اور اس پر عمل کرے۔',
         aboutMission: '<strong>مشن:</strong> ہر فرد کے لیے سستی، قابل رسائی اور بہترین اسلامی تعلیم۔',
-        aboutTagline: '⭐ ہر ٹائم زون میں 24/7 تجربہ کار مرد و خواتین اساتذہ کے ساتھ سیکھیں۔',
         coursesTitle: 'ہمارے کورسز',
         c1: 'نورانی قاعدہ سیکھیں آن لائن', c1d: 'ابتدائی عربی پڑھائی',
         c2: 'تجوید کے ساتھ قرآن سیکھیں', c2d: 'قرآن کو صحیح قواعد کے ساتھ پڑھیں',
@@ -530,7 +520,6 @@ const langData = {
         contactPhone: '9837983062',
         contactWhatsApp: 'WhatsApp',
         footerCopy: '© 2026 ال شہران عربی اسٹڈیز۔ جملہ حقوق محفوظ ہیں۔',
-        footerTagline: '⭐ ہر ٹائم زون میں 24/7 تجربہ کار مرد و خواتین اساتذہ کے ساتھ سیکھیں۔',
         footerPrivacy: 'پرائیویسی پالیسی',
         footerTerms: 'استعمال کی شرائط',
         footerContact: 'رابطہ کریں',
@@ -543,7 +532,6 @@ const langData = {
         langBtn: ' हिन्दी',
         heroTitle: 'अल शाहरान अरबिक स्टडीज',
         heroSub: 'ऑनलाइन कुरान और इस्लामिक शिक्षा सीखें',
-        heroTagline: '⭐ हर टाइम ज़ोन में 24/7 अनुभवी पुरुष एवं महिला शिक्षकों के साथ सीखें।',
         heroBtn1: 'आज दाखिला लें', heroBtn2: 'कोर्स देखें',
         stat1: 'कोर्स', stat2: 'छात्र',
         aboutTitle: 'हमारा परिचय',
@@ -555,9 +543,9 @@ const langData = {
         f4: 'कक्षाओं की रिकॉर्डिंग दी जाती है और YouTube पर अपलोड की जाती है',
         f5: 'आसान भाषा में विभिन्न विषयों पर पढ़ाया जाता है',
         f6: 'Zoom / WhatsApp / Skype के माध्यम से ऑनलाइन कक्षाएं',
+        f7: 'हर टाइम ज़ोन में 24/7 अनुभवी पुरुष एवं महिला शिक्षकों के साथ सीखें',
         aboutVision: '<strong>दृष्टिकोण:</strong> एक ऐसी पीढ़ी तैयार करना जो कुरान और सुन्नत को समझे और उस पर अमल करे।',
         aboutMission: '<strong>मिशन:</strong> सभी के लिए सस्ती, सुलभ और उत्कृष्ट इस्लामी शिक्षा।',
-        aboutTagline: '⭐ हर टाइम ज़ोन में 24/7 अनुभवी पुरुष एवं महिला शिक्षकों के साथ सीखें।',
         coursesTitle: 'हमारे कोर्स',
         c1: 'नूरानी कायदा सीखें ऑनलाइन', c1d: 'शुरुआती अरबी पढ़ाई',
         c2: 'तजवीद के साथ कुरान सीखें', c2d: 'कुरान को सही नियमों के साथ पढ़ें',
@@ -606,7 +594,6 @@ const langData = {
         contactPhone: '9837983062',
         contactWhatsApp: 'WhatsApp',
         footerCopy: '© 2026 अल शाहरान अरबिक स्टडीज। सर्वाधिकार सुरक्षित।',
-        footerTagline: '⭐ हर टाइम ज़ोन में 24/7 अनुभवी पुरुष एवं महिला शिक्षकों के साथ सीखें।',
         footerPrivacy: 'गोपनीयता नीति',
         footerTerms: 'सेवा की शर्तें',
         footerContact: 'संपर्क करें',
@@ -649,7 +636,6 @@ function applyLanguage(lang) {
     // Hero
     document.getElementById('heroTitle').textContent = data.heroTitle;
     document.getElementById('heroSub').textContent = data.heroSub;
-    document.getElementById('heroTagline').textContent = data.heroTagline;
     document.getElementById('heroBtn1').textContent = data.heroBtn1;
     document.getElementById('heroBtn2').textContent = data.heroBtn2;
     document.getElementById('stat1').textContent = data.stat1;
@@ -665,9 +651,9 @@ function applyLanguage(lang) {
     document.getElementById('f4').textContent = data.f4;
     document.getElementById('f5').textContent = data.f5;
     document.getElementById('f6').textContent = data.f6;
+    document.getElementById('f7').textContent = data.f7;
     document.getElementById('aboutVision').innerHTML = data.aboutVision;
     document.getElementById('aboutMission').innerHTML = data.aboutMission;
-    document.getElementById('aboutTagline').textContent = data.aboutTagline;
 
     // Courses
     document.getElementById('coursesTitle').textContent = data.coursesTitle;
@@ -771,7 +757,6 @@ function applyLanguage(lang) {
 
     // Footer
     document.getElementById('footerCopy').textContent = data.footerCopy;
-    document.getElementById('footerTagline').textContent = data.footerTagline;
     document.getElementById('footerPrivacy').textContent = data.footerPrivacy;
     document.getElementById('footerTerms').textContent = data.footerTerms;
     document.getElementById('footerContact').textContent = data.footerContact;
@@ -784,7 +769,6 @@ function applyLanguage(lang) {
     });
     document.querySelector('.hero h1').style.textAlign = 'center';
     document.querySelector('.hero .sub').style.textAlign = 'center';
-    document.querySelector('.hero .tagline').style.textAlign = 'center';
     document.querySelector('.section-title').style.textAlign = 'center';
     document.querySelector('.sub-title').style.textAlign = 'center';
     document.querySelector('.complementary-title').style.textAlign = 'center';
