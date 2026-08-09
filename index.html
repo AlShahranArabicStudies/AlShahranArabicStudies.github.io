@@ -23,7 +23,8 @@
         .hero .container{width:100%}
         .hero h1{font-size:42px;font-family:Amiri,serif;margin-bottom:5px}
         .hero .sub{font-size:20px;margin-bottom:10px;color:#e8d5b5}
-        .hero .free-trial{font-size:22px;color:#f1c40f;font-weight:700;margin-bottom:20px;background:rgba(0,0,0,0.3);display:inline-block;padding:8px 30px;border-radius:50px}
+        .hero .free-trial{font-size:22px;color:#f1c40f;font-weight:700;margin-bottom:20px;background:rgba(0,0,0,0.3);display:inline-block;padding:8px 30px;border-radius:50px;cursor:pointer;transition:.3s}
+        .hero .free-trial:hover{background:rgba(0,0,0,0.5);transform:scale(1.05)}
         .hero .tagline{font-size:18px;color:#c9a84c;font-weight:600;margin-bottom:25px;letter-spacing:0.5px}
         .btn{display:inline-block;padding:14px 40px;border-radius:50px;font-weight:700;font-size:18px;transition:.3s;text-decoration:none;margin:5px;border:none;cursor:pointer}
         .btn-primary{background:#c9a84c;color:#1a4d2e}
@@ -129,14 +130,14 @@
                 <li><a href="#study" id="navStudy">Study Material</a></li>
                 <li><a href="#booking" id="navRegister">Register</a></li>
                 <li><a href="#contactSection" id="navContact">Contact</a></li>
-                <li><button class="lang-btn" onclick="toggleLanguage()" id="langToggle">🇺🇸 English</button></li>
+                <li><button class="lang-btn" onclick="toggleLanguage()" id="langToggle">🇵🇰 اردو</button></li>
             </ul>
         </nav>
         <div class="hamburger" onclick="toggleMenu()">☰</div>
     </div>
 </header>
 
-<!-- ===== PRIVACY POLICY PAGE (Hidden by default) ===== -->
+<!-- ===== PRIVACY POLICY PAGE ===== -->
 <section id="privacyPage" class="container page-section" style="display:none;">
     <h2 class="section-title" id="privacyTitle">🔒 Privacy Policy</h2>
     <div style="text-align:left;max-width:800px;margin:auto;padding:0 20px;">
@@ -162,7 +163,7 @@
     </div>
 </section>
 
-<!-- ===== TERMS & CONDITIONS PAGE (Hidden by default) ===== -->
+<!-- ===== TERMS & CONDITIONS PAGE ===== -->
 <section id="termsPage" class="container page-section" style="display:none;">
     <h2 class="section-title" id="termsTitle">📜 Terms & Conditions</h2>
     <div style="text-align:left;max-width:800px;margin:auto;padding:0 20px;">
@@ -196,7 +197,7 @@
     <div class="container">
         <h1 id="heroTitle">Al Shahran Arabic Studies</h1>
         <p class="sub" id="heroSub">Learn Quran & Islamic Studies Online</p>
-        <div class="free-trial" id="heroTrial">🎓 Free Trial Class – 3 Days</div>
+        <a href="#booking" class="free-trial" id="heroTrial">🎓 Free Trial Class – 3 Days</a>
         <p class="tagline" id="heroTagline">⭐ Learn 24/7 in every time zone with experienced male and female teachers.</p>
         <div>
             <a href="#booking" class="btn btn-primary" id="heroBtn1">Start Free Trial</a>
@@ -219,7 +220,6 @@
             Located in Hazur Nagar, Muzaffarnagar, we offer a wide range of courses for all ages and levels.
         </p>
 
-        <!-- ===== FEATURES LIST ===== -->
         <div class="features-box">
             <h4 id="featuresTitle">🌟 What We Offer</h4>
             <ul>
@@ -307,14 +307,13 @@
     </div>
 </section>
 
-<!-- ===== STUDY MATERIAL PAGE ===== -->
+<!-- ===== STUDY MATERIAL ===== -->
 <section id="study" class="container page-section">
     <h2 class="section-title" id="studyTitle">📚 Study Material</h2>
     <p id="studyDesc" style="text-align:center;font-size:18px;color:#555;margin-bottom:30px;">
         Download PDFs and explore online Islamic libraries for your courses.
     </p>
 
-    <!-- PDF DOWNLOAD SECTION -->
     <h3 class="sub-title" id="pdfTitle">📄 Download PDFs</h3>
     <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;padding:20px 0;">
         <div class="card pdf-card">
@@ -339,7 +338,6 @@
         </div>
     </div>
 
-    <!-- LIBRARY LINKS -->
     <h3 class="sub-title" id="libraryTitle">📚 Online Libraries</h3>
     <div class="grid" style="grid-template-columns:repeat(3,1fr);align-items:stretch;">
         <div class="card study-card"><div><i class="fas fa-landmark"></i><h3 id="study1">My Islamic Library</h3><p id="study1d">Explore a vast collection of Islamic books and resources.</p></div><a href="https://myislamiclibrary.com/library/" target="_blank" class="btn btn-primary btn-sm" style="margin-top:15px;align-self:center;" id="studyBtn1">🔗 Visit Library</a></div>
@@ -427,7 +425,7 @@ const langData = {
     en: {
         siteTitle: '🏛️ Al Shahran Arabic Studies',
         navHome: 'Home', navAbout: 'About', navCourses: 'Courses', navStudy: 'Study Material', navRegister: 'Register', navContact: 'Contact',
-        langBtn: '🇺🇸 English',
+        langBtn: '🇵🇰 اردو',
         heroTitle: 'Al Shahran Arabic Studies',
         heroSub: 'Learn Quran & Islamic Studies Online',
         heroTrial: '🎓 Free Trial Class – 3 Days',
@@ -514,7 +512,7 @@ const langData = {
     ur: {
         siteTitle: '🏛️ ال شہران عربی اسٹڈیز',
         navHome: 'ہوم', navAbout: 'تعارف', navCourses: 'کورسز', navStudy: 'تعلیمی مواد', navRegister: 'رجسٹریشن', navContact: 'رابطہ',
-        langBtn: '🇵🇰 اردو',
+        langBtn: '🇮🇳 हिन्दी',
         heroTitle: 'ال شہران عربی اسٹڈیز',
         heroSub: 'قرآن اور اسلامی تعلیمات سیکھیں آن لائن',
         heroTrial: '🎓 مفت ٹرائل کلاس – 3 دن',
@@ -601,7 +599,7 @@ const langData = {
     hi: {
         siteTitle: '🏛️ अल शाहरान अरबिक स्टडीज',
         navHome: 'होम', navAbout: 'परिचय', navCourses: 'कोर्स', navStudy: 'अध्ययन सामग्री', navRegister: 'पंजीकरण', navContact: 'संपर्क',
-        langBtn: '🇮🇳 हिन्दी',
+        langBtn: '🇺🇸 English',
         heroTitle: 'अल शाहरान अरबिक स्टडीज',
         heroSub: 'ऑनलाइन कुरान और इस्लामिक शिक्षा सीखें',
         heroTrial: '🎓 मुफ्त ट्रायल क्लास – 3 दिन',
@@ -708,7 +706,6 @@ function toggleLanguage() {
 function applyLanguage(lang) {
     const data = langData[lang];
 
-    // Header
     document.getElementById('siteTitle').textContent = data.siteTitle;
     document.getElementById('navHome').textContent = data.navHome;
     document.getElementById('navAbout').textContent = data.navAbout;
@@ -718,7 +715,6 @@ function applyLanguage(lang) {
     document.getElementById('navContact').textContent = data.navContact;
     document.getElementById('langToggle').textContent = data.langBtn;
 
-    // Hero
     document.getElementById('heroTitle').textContent = data.heroTitle;
     document.getElementById('heroSub').textContent = data.heroSub;
     document.getElementById('heroTrial').textContent = data.heroTrial;
@@ -728,7 +724,6 @@ function applyLanguage(lang) {
     document.getElementById('stat1').textContent = data.stat1;
     document.getElementById('stat2').textContent = data.stat2;
 
-    // About
     document.getElementById('aboutTitle').textContent = data.aboutTitle;
     document.getElementById('aboutText').innerHTML = data.aboutText;
     document.getElementById('featuresTitle').textContent = data.featuresTitle;
@@ -744,7 +739,6 @@ function applyLanguage(lang) {
     document.getElementById('visionLabel').textContent = data.visionLabel;
     document.getElementById('aboutVision').textContent = data.aboutVision;
 
-    // Courses
     document.getElementById('coursesTitle').textContent = data.coursesTitle;
     document.getElementById('c1').textContent = data.c1;
     document.getElementById('c1d').textContent = data.c1d;
@@ -808,7 +802,6 @@ function applyLanguage(lang) {
     document.getElementById('c12cert').textContent = data.c12cert;
     document.getElementById('c12btn').textContent = data.c12btn;
 
-    // Study Material
     document.getElementById('studyTitle').textContent = data.studyTitle;
     document.getElementById('studyDesc').textContent = data.studyDesc;
     document.getElementById('pdfTitle').textContent = data.pdfTitle;
@@ -844,11 +837,9 @@ function applyLanguage(lang) {
     document.getElementById('studyBtn3').textContent = data.studyBtn3;
     document.getElementById('studyNote').textContent = data.studyNote;
 
-    // Privacy & Terms
     document.getElementById('privacyTitle').textContent = data.privacyTitle;
     document.getElementById('termsTitle').textContent = data.termsTitle;
 
-    // Booking
     document.getElementById('bookingTitle').textContent = data.bookingTitle;
     document.getElementById('lblName').textContent = data.lblName;
     document.getElementById('lblAge').textContent = data.lblAge;
@@ -873,24 +864,20 @@ function applyLanguage(lang) {
     document.getElementById('batch2').textContent = data.batch2;
     document.getElementById('bookBtn').textContent = data.bookBtn;
 
-    // Testimonials
     document.getElementById('testTitle').textContent = data.testTitle;
     document.getElementById('test1').innerHTML = data.test1;
     document.getElementById('test2').innerHTML = data.test2;
     document.getElementById('test3').innerHTML = data.test3;
 
-    // Contact
     document.getElementById('contactAddress').innerHTML = data.contactAddress;
     document.getElementById('contactPhone').textContent = data.contactPhone;
     document.getElementById('contactWhatsApp').textContent = data.contactWhatsApp;
 
-    // Footer
     document.getElementById('footerCopy').textContent = data.footerCopy;
     document.getElementById('footerPrivacy').textContent = data.footerPrivacy;
     document.getElementById('footerTerms').textContent = data.footerTerms;
     document.getElementById('footerContact').textContent = data.footerContact;
 
-    // Text alignment
     document.querySelectorAll('p, h1, h2, h3, h4, label, li, a, .card, .testimonial, .contact-bar, footer').forEach(el => {
         if (!el.closest('header') && !el.closest('.hero') && !el.closest('.contact-bar')) {
             el.style.textAlign = data.align;
