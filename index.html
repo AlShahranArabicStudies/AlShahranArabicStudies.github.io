@@ -29,8 +29,10 @@
         .btn-secondary{background:0 0;color:#fff;border:2px solid #c9a84c}
         .btn-secondary:hover{background:#c9a84c;color:#1a4d2e}
         .btn-sm{padding:8px 20px;font-size:14px}
-        .btn-download{background:#c9a84c;color:#1a4d2e;padding:6px 18px;font-size:13px;border-radius:50px;font-weight:700;text-decoration:none;border:none;cursor:pointer;transition:.3s;display:inline-block;margin-top:10px;align-self:center}
+        .btn-download{background:#c9a84c;color:#1a4d2e;padding:6px 18px;font-size:13px;border-radius:50px;font-weight:700;text-decoration:none;border:none;cursor:pointer;transition:.3s;display:inline-block}
         .btn-download:hover{background:#e8d5b5;transform:scale(1.05)}
+        .btn-preview{background:#3498db;color:#fff;padding:6px 18px;font-size:13px;border-radius:50px;font-weight:700;text-decoration:none;border:none;cursor:pointer;transition:.3s;display:inline-block}
+        .btn-preview:hover{background:#2980b9;transform:scale(1.05)}
         .stats{display:flex;justify-content:center;gap:50px;flex-wrap:wrap;margin-top:40px}
         .stats div{font-size:16px;opacity:.9}
         .stats span{display:block;font-size:32px;font-weight:700;color:#c9a84c}
@@ -48,7 +50,7 @@
         .card.study-card{background:#fff8f0;border-bottom-color:#c9a84c;display:flex;flex-direction:column;justify-content:space-between;height:100%;min-height:200px}
         .card.study-card i{color:#c9a84c;font-size:42px}
         .card.study-card p{flex-grow:1;font-size:14px}
-        .card.pdf-card{background:#f8faff;border-bottom-color:#3498db;display:flex;flex-direction:column;justify-content:space-between;height:100%;min-height:180px}
+        .card.pdf-card{background:#f8faff;border-bottom-color:#3498db;display:flex;flex-direction:column;justify-content:space-between;height:100%;min-height:200px}
         .card.pdf-card i{color:#e74c3c;font-size:36px;margin-bottom:8px}
         .card.pdf-card h4{font-size:16px;margin:5px 0}
         .card.pdf-card p{font-size:13px;color:#555}
@@ -75,6 +77,7 @@
         .page-section h2{text-align:center;color:#1a4d2e;margin-bottom:20px}
         .page-section p{font-size:17px;line-height:1.8;text-align:center;color:#555}
         .about-tagline{text-align:center;font-size:18px;color:#1a4d2e;font-weight:600;margin-top:20px;padding:15px;background:#f8f5f0;border-radius:10px;border-left:4px solid #c9a84c}
+        .btn-group{display:flex;gap:8px;justify-content:center;margin-top:10px;flex-wrap:wrap}
         @media(max-width:768px){
             .hamburger{display:block}
             nav ul{display:none;flex-direction:column;width:100%;background:#1a4d2e;padding:20px;margin-top:10px}
@@ -94,6 +97,7 @@
             .btn{padding:10px 24px;font-size:15px}
             .card{padding:20px}
             .about-tagline{font-size:15px;padding:12px}
+            .btn-group{flex-direction:column;align-items:center}
         }
     </style>
 </head>
@@ -185,46 +189,70 @@
 
     <!-- PDF DOWNLOAD SECTION -->
     <h3 class="sub-title" id="pdfTitle">📄 Download PDFs</h3>
-    <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;padding:20px 0;">
+    <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;padding:20px 0;">
+        <!-- PDF 1: Noorani Qaida -->
         <div class="card pdf-card">
             <div>
                 <i class="fas fa-file-pdf"></i>
                 <h4 id="pdf1">Noorani Qaida</h4>
                 <p id="pdf1d">Complete Noorani Qaida PDF</p>
             </div>
-            <a href="noorani_qaida.pdf" download class="btn-download" id="pdfBtn1">📥 Download</a>
+            <div class="btn-group">
+                <a href="noorani_qaida.pdf" target="_blank" class="btn-preview" id="pdfPreview1">👁️ Preview</a>
+                <a href="noorani_qaida.pdf" download class="btn-download" id="pdfBtn1">📥 Download</a>
+            </div>
         </div>
+
+        <!-- PDF 2: Tajweed Rules -->
         <div class="card pdf-card">
             <div>
                 <i class="fas fa-file-pdf"></i>
                 <h4 id="pdf2">Tajweed Rules</h4>
                 <p id="pdf2d">Complete Tajweed rules PDF</p>
             </div>
-            <a href="tajweedrules.pdf" download class="btn-download" id="pdfBtn2">📥 Download</a>
+            <div class="btn-group">
+                <a href="tajweedrules.pdf" target="_blank" class="btn-preview" id="pdfPreview2">👁️ Preview</a>
+                <a href="tajweedrules.pdf" download class="btn-download" id="pdfBtn2">📥 Download</a>
+            </div>
         </div>
+
+        <!-- PDF 3: Read Quran -->
         <div class="card pdf-card">
             <div>
                 <i class="fas fa-file-pdf"></i>
                 <h4 id="pdf3">Read Quran</h4>
                 <p id="pdf3d">Quran reading guide PDF</p>
             </div>
-            <a href="Read_Quran.pdf" download class="btn-download" id="pdfBtn3">📥 Download</a>
+            <div class="btn-group">
+                <a href="Read_Quran.pdf" target="_blank" class="btn-preview" id="pdfPreview3">👁️ Preview</a>
+                <a href="Read_Quran.pdf" download class="btn-download" id="pdfBtn3">📥 Download</a>
+            </div>
         </div>
+
+        <!-- PDF 4: Essential Duas -->
         <div class="card pdf-card">
             <div>
                 <i class="fas fa-file-pdf"></i>
                 <h4 id="pdf4">Essential Duas</h4>
                 <p id="pdf4d">Daily duas with meanings</p>
             </div>
-            <a href="Essential_Duas.pdf" download class="btn-download" id="pdfBtn4">📥 Download</a>
+            <div class="btn-group">
+                <a href="Essential_Duas.pdf" target="_blank" class="btn-preview" id="pdfPreview4">👁️ Preview</a>
+                <a href="Essential_Duas.pdf" download class="btn-download" id="pdfBtn4">📥 Download</a>
+            </div>
         </div>
+
+        <!-- PDF 5: Umrah Guide 2025 -->
         <div class="card pdf-card">
             <div>
                 <i class="fas fa-file-pdf"></i>
                 <h4 id="pdf5">Umrah Guide 2025</h4>
                 <p id="pdf5d">Complete Umrah guide PDF</p>
             </div>
-            <a href="Umrah-Guide-2025.pdf" download class="btn-download" id="pdfBtn5">📥 Download</a>
+            <div class="btn-group">
+                <a href="Umrah-Guide-2025.pdf" target="_blank" class="btn-preview" id="pdfPreview5">👁️ Preview</a>
+                <a href="Umrah-Guide-2025.pdf" download class="btn-download" id="pdfBtn5">📥 Download</a>
+            </div>
         </div>
     </div>
 
@@ -371,6 +399,7 @@ const langData = {
         pdf3: 'Read Quran', pdf3d: 'Quran reading guide PDF',
         pdf4: 'Essential Duas', pdf4d: 'Daily duas with meanings',
         pdf5: 'Umrah Guide 2025', pdf5d: 'Complete Umrah guide PDF',
+        pdfPreview1: '👁️ Preview', pdfPreview2: '👁️ Preview', pdfPreview3: '👁️ Preview', pdfPreview4: '👁️ Preview', pdfPreview5: '👁️ Preview',
         pdfBtn1: '📥 Download', pdfBtn2: '📥 Download', pdfBtn3: '📥 Download', pdfBtn4: '📥 Download', pdfBtn5: '📥 Download',
         libraryTitle: '📚 Online Libraries',
         study1: 'My Islamic Library', study1d: 'Explore a vast collection of Islamic books and resources.',
@@ -439,6 +468,7 @@ const langData = {
         pdf3: 'قرآن پڑھیں', pdf3d: 'قرآن پڑھنے کی گائیڈ پی ڈی ایف',
         pdf4: 'ضروری دعائیں', pdf4d: 'معانی کے ساتھ روزمرہ کی دعائیں',
         pdf5: 'عمرہ گائیڈ 2025', pdf5d: 'مکمل عمرہ گائیڈ پی ڈی ایف',
+        pdfPreview1: '👁️ دیکھیں', pdfPreview2: '👁️ دیکھیں', pdfPreview3: '👁️ دیکھیں', pdfPreview4: '👁️ دیکھیں', pdfPreview5: '👁️ دیکھیں',
         pdfBtn1: '📥 ڈاؤن لوڈ', pdfBtn2: '📥 ڈاؤن لوڈ', pdfBtn3: '📥 ڈاؤن لوڈ', pdfBtn4: '📥 ڈاؤن لوڈ', pdfBtn5: '📥 ڈاؤن لوڈ',
         libraryTitle: '📚 آن لائن لائبریریاں',
         study1: 'مائی اسلامک لائبریری', study1d: 'اسلامی کتب اور وسائل کا وسیع ذخیرہ دریافت کریں۔',
@@ -507,6 +537,7 @@ const langData = {
         pdf3: 'कुरान पढ़ें', pdf3d: 'कुरान पढ़ने गाइड पीडीएफ',
         pdf4: 'आवश्यक दुआएं', pdf4d: 'अर्थों के साथ दैनिक दुआएं',
         pdf5: 'उमराह गाइड 2025', pdf5d: 'पूरी उमराह गाइड पीडीएफ',
+        pdfPreview1: '👁️ देखें', pdfPreview2: '👁️ देखें', pdfPreview3: '👁️ देखें', pdfPreview4: '👁️ देखें', pdfPreview5: '👁️ देखें',
         pdfBtn1: '📥 डाउनलोड', pdfBtn2: '📥 डाउनलोड', pdfBtn3: '📥 डाउनलोड', pdfBtn4: '📥 डाउनलोड', pdfBtn5: '📥 डाउनलोड',
         libraryTitle: '📚 ऑनलाइन लाइब्रेरी',
         study1: 'माय इस्लामिक लाइब्रेरी', study1d: 'इस्लामिक किताबों और संसाधनों का विशाल संग्रह देखें।',
@@ -630,6 +661,11 @@ function applyLanguage(lang) {
     document.getElementById('pdf4d').textContent = data.pdf4d;
     document.getElementById('pdf5').textContent = data.pdf5;
     document.getElementById('pdf5d').textContent = data.pdf5d;
+    document.getElementById('pdfPreview1').textContent = data.pdfPreview1;
+    document.getElementById('pdfPreview2').textContent = data.pdfPreview2;
+    document.getElementById('pdfPreview3').textContent = data.pdfPreview3;
+    document.getElementById('pdfPreview4').textContent = data.pdfPreview4;
+    document.getElementById('pdfPreview5').textContent = data.pdfPreview5;
     document.getElementById('pdfBtn1').textContent = data.pdfBtn1;
     document.getElementById('pdfBtn2').textContent = data.pdfBtn2;
     document.getElementById('pdfBtn3').textContent = data.pdfBtn3;
