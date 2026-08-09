@@ -22,7 +22,9 @@
         .hero{background:linear-gradient(135deg,rgba(26,77,46,0.85),rgba(45,122,74,0.85)),url('hero.jpeg');background-size:cover;background-position:center;background-repeat:no-repeat;color:#fff;padding:100px 0 80px;text-align:center;min-height:500px;display:flex;align-items:center;justify-content:center}
         .hero .container{width:100%}
         .hero h1{font-size:42px;font-family:Amiri,serif;margin-bottom:5px}
-        .hero .sub{font-size:20px;margin-bottom:30px;color:#e8d5b5}
+        .hero .sub{font-size:20px;margin-bottom:10px;color:#e8d5b5}
+        .hero .free-trial{font-size:22px;color:#f1c40f;font-weight:700;margin-bottom:20px;background:rgba(0,0,0,0.3);display:inline-block;padding:8px 30px;border-radius:50px}
+        .hero .tagline{font-size:18px;color:#c9a84c;font-weight:600;margin-bottom:25px;letter-spacing:0.5px}
         .btn{display:inline-block;padding:14px 40px;border-radius:50px;font-weight:700;font-size:18px;transition:.3s;text-decoration:none;margin:5px;border:none;cursor:pointer}
         .btn-primary{background:#c9a84c;color:#1a4d2e}
         .btn-primary:hover{background:#e8d5b5;transform:scale(1.05)}
@@ -38,13 +40,14 @@
         .stats span{display:block;font-size:32px;font-weight:700;color:#c9a84c}
         .section-title{text-align:center;font-size:34px;margin:40px 0;color:#1a4d2e;position:relative;padding-bottom:15px}
         .section-title::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:60px;height:3px;background:#c9a84c}
-        .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;padding:20px 0}
-        .card{background:#fff;padding:30px;border-radius:15px;text-align:center;border-bottom:4px solid #c9a84c;transition:.3s;box-shadow:0 5px 15px rgba(0,0,0,.05)}
+        .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;padding:20px 0}
+        .card{background:#fff;padding:30px;border-radius:15px;text-align:center;border-bottom:4px solid #c9a84c;transition:.3s;box-shadow:0 5px 15px rgba(0,0,0,.05);display:flex;flex-direction:column;justify-content:space-between;height:100%}
         .card:hover{transform:translateY(-8px);box-shadow:0 10px 25px rgba(0,0,0,.1)}
         .card i{font-size:40px;color:#1a4d2e;margin-bottom:15px}
         .card h3{color:#1a4d2e;margin-bottom:10px;font-size:20px}
-        .card h4{color:#1a4d2e;font-size:16px;margin:8px 0}
-        .card p{font-size:15px;color:#555}
+        .card .course-meta{font-size:14px;color:#666;margin:5px 0}
+        .card .course-meta i{margin-right:5px;font-size:14px;color:#c9a84c}
+        .card .btn{width:100%;margin-top:15px}
         .card.complementary{background:#f0f7f0;border-bottom-color:#2d7a4a}
         .card.complementary i{color:#2d7a4a}
         .card.study-card{background:#fff8f0;border-bottom-color:#c9a84c;display:flex;flex-direction:column;justify-content:space-between;height:100%;min-height:200px}
@@ -75,6 +78,9 @@
         .page-section{padding:40px 0;background:#fff;border-radius:15px;margin:30px 0}
         .page-section h2{text-align:center;color:#1a4d2e;margin-bottom:20px}
         .page-section p{font-size:17px;line-height:1.8;text-align:center;color:#555}
+        .page-section ul{max-width:700px;margin:auto;padding-left:20px}
+        .page-section ul li{margin:10px 0;font-size:16px;line-height:1.6;color:#555}
+        .page-section ul li strong{color:#1a4d2e}
         .features-box{margin-top:25px;padding:20px;background:#f8f5f0;border-radius:10px;border-left:4px solid #c9a84c}
         .features-box h4{color:#1a4d2e;font-size:20px;margin-bottom:15px;text-align:center}
         .features-box ul{list-style:none;padding:0;font-size:16px;line-height:2}
@@ -89,6 +95,7 @@
             .hero{padding:60px 0 40px;min-height:350px}
             .hero h1{font-size:30px}
             .hero .sub{font-size:17px}
+            .hero .free-trial{font-size:18px;padding:6px 20px}
             .stats{gap:20px}
             .section-title{font-size:26px}
             .footer-links{gap:12px}
@@ -122,24 +129,81 @@
                 <li><a href="#study" id="navStudy">Study Material</a></li>
                 <li><a href="#booking" id="navRegister">Register</a></li>
                 <li><a href="#contactSection" id="navContact">Contact</a></li>
-                <li><button class="lang-btn" onclick="toggleLanguage()" id="langToggle"> English</button></li>
+                <li><button class="lang-btn" onclick="toggleLanguage()" id="langToggle">🇺🇸 English</button></li>
             </ul>
         </nav>
         <div class="hamburger" onclick="toggleMenu()">☰</div>
     </div>
 </header>
 
+<!-- ===== PRIVACY POLICY PAGE (Hidden by default) ===== -->
+<section id="privacyPage" class="container page-section" style="display:none;">
+    <h2 class="section-title" id="privacyTitle">🔒 Privacy Policy</h2>
+    <div style="text-align:left;max-width:800px;margin:auto;padding:0 20px;">
+        <p id="privacyText" style="font-size:16px;line-height:1.8;color:#444;">
+            <strong>Last updated:</strong> August 2026<br><br>
+            At <strong>Al Shahran Arabic Studies</strong>, we take your privacy seriously. This policy describes how we collect, use, and protect your personal information.
+            <br><br>
+            <strong>1. Information We Collect</strong><br>
+            We collect information you provide directly, such as your name, email address, phone number, and payment details when you register for our courses.
+            <br><br>
+            <strong>2. How We Use Your Information</strong><br>
+            We use your information to process registrations, send course updates, and improve our services. We do not sell your data to third parties.
+            <br><br>
+            <strong>3. Data Security</strong><br>
+            We implement appropriate technical and organizational measures to protect your personal data against unauthorized access.
+            <br><br>
+            <strong>4. Contact Us</strong><br>
+            If you have any questions about this Privacy Policy, please contact us at <a href="tel:9837983062">9837983062</a>.
+        </p>
+        <div style="text-align:center;margin-top:20px;">
+            <a href="#" onclick="document.getElementById('privacyPage').style.display='none';return false;" class="btn btn-primary">← Back to Home</a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== TERMS & CONDITIONS PAGE (Hidden by default) ===== -->
+<section id="termsPage" class="container page-section" style="display:none;">
+    <h2 class="section-title" id="termsTitle">📜 Terms & Conditions</h2>
+    <div style="text-align:left;max-width:800px;margin:auto;padding:0 20px;">
+        <p id="termsText" style="font-size:16px;line-height:1.8;color:#444;">
+            <strong>Last updated:</strong> August 2026<br><br>
+            Welcome to <strong>Al Shahran Arabic Studies</strong>. By using our website and enrolling in our courses, you agree to the following terms:
+            <br><br>
+            <strong>1. Course Registration</strong><br>
+            All course registrations are subject to availability. We reserve the right to cancel or reschedule courses if minimum enrollment numbers are not met.
+            <br><br>
+            <strong>2. Payments & Refunds</strong><br>
+            Course fees must be paid in full before access to course materials is granted. Refunds are available within 7 days of registration, subject to the course progress.
+            <br><br>
+            <strong>3. Code of Conduct</strong><br>
+            Students are expected to behave respectfully towards teachers and fellow students. We reserve the right to remove any student who violates this code.
+            <br><br>
+            <strong>4. Intellectual Property</strong><br>
+            All course materials, PDFs, and videos are the intellectual property of Al Shahran Arabic Studies and may not be redistributed.
+            <br><br>
+            <strong>5. Contact Us</strong><br>
+            For any questions, please contact us at <a href="tel:9837983062">9837983062</a>.
+        </p>
+        <div style="text-align:center;margin-top:20px;">
+            <a href="#" onclick="document.getElementById('termsPage').style.display='none';return false;" class="btn btn-primary">← Back to Home</a>
+        </div>
+    </div>
+</section>
+
 <!-- ===== HERO ===== -->
 <section class="hero">
     <div class="container">
         <h1 id="heroTitle">Al Shahran Arabic Studies</h1>
         <p class="sub" id="heroSub">Learn Quran & Islamic Studies Online</p>
+        <div class="free-trial" id="heroTrial">🎓 Free Trial Class – 3 Days</div>
+        <p class="tagline" id="heroTagline">⭐ Learn 24/7 in every time zone with experienced male and female teachers.</p>
         <div>
-            <a href="#booking" class="btn btn-primary" id="heroBtn1">Enroll Today</a>
+            <a href="#booking" class="btn btn-primary" id="heroBtn1">Start Free Trial</a>
             <a href="#courses" class="btn btn-secondary" id="heroBtn2">View Courses</a>
         </div>
         <div class="stats">
-            <div><span>5+</span> <span id="stat1">Courses</span></div>
+            <div><span>12+</span> <span id="stat1">Courses</span></div>
             <div><span>100+</span> <span id="stat2">Students</span></div>
         </div>
     </div>
@@ -178,23 +242,68 @@
 <section id="courses" class="container">
     <h2 class="section-title" id="coursesTitle">Our Courses</h2>
     <div class="grid">
-        <div class="card"><i class="fas fa-book"></i><h3 id="c1">Learn Noorani Qaida Online</h3><p id="c1d">Basic Arabic reading for beginners</p></div>
-        <div class="card"><i class="fas fa-quran"></i><h3 id="c2">Learn Quran with Tajweed Online</h3><p id="c2d">Recite Quran with proper rules</p></div>
-        <div class="card"><i class="fas fa-book-open"></i><h3 id="c3">Quran Reading</h3><p id="c3d">Fluent Quran recitation</p></div>
-        <div class="card"><i class="fas fa-memory"></i><h3 id="c4">Quran Memorization</h3><p id="c4d">Hifz program with revision</p></div>
-        <div class="card"><i class="fas fa-brain"></i><h3 id="c5">Learn Tafseer Quran</h3><p id="c5d">Understand the meaning of Quran</p></div>
+        <div class="card">
+            <div>
+                <i class="fas fa-book"></i>
+                <h3 id="c1">Learn Noorani Qaida Online</h3>
+                <p id="c1d">Basic Arabic reading for beginners</p>
+                <div class="course-meta"><i class="fas fa-video"></i> <span id="c1live">Live Online Classes</span></div>
+                <div class="course-meta"><i class="fas fa-certificate"></i> <span id="c1cert">Certificate</span></div>
+            </div>
+            <a href="#booking" class="btn btn-primary btn-sm" id="c1btn">📝 Register Now</a>
+        </div>
+        <div class="card">
+            <div>
+                <i class="fas fa-quran"></i>
+                <h3 id="c2">Learn Quran with Tajweed Online</h3>
+                <p id="c2d">Recite Quran with proper rules</p>
+                <div class="course-meta"><i class="fas fa-video"></i> <span id="c2live">Live Online Classes</span></div>
+                <div class="course-meta"><i class="fas fa-certificate"></i> <span id="c2cert">Certificate</span></div>
+            </div>
+            <a href="#booking" class="btn btn-primary btn-sm" id="c2btn">📝 Register Now</a>
+        </div>
+        <div class="card">
+            <div>
+                <i class="fas fa-book-open"></i>
+                <h3 id="c3">Quran Reading</h3>
+                <p id="c3d">Fluent Quran recitation</p>
+                <div class="course-meta"><i class="fas fa-video"></i> <span id="c3live">Live Online Classes</span></div>
+                <div class="course-meta"><i class="fas fa-certificate"></i> <span id="c3cert">Certificate</span></div>
+            </div>
+            <a href="#booking" class="btn btn-primary btn-sm" id="c3btn">📝 Register Now</a>
+        </div>
+        <div class="card">
+            <div>
+                <i class="fas fa-memory"></i>
+                <h3 id="c4">Quran Memorization</h3>
+                <p id="c4d">Hifz program with revision</p>
+                <div class="course-meta"><i class="fas fa-video"></i> <span id="c4live">Live Online Classes</span></div>
+                <div class="course-meta"><i class="fas fa-certificate"></i> <span id="c4cert">Certificate</span></div>
+            </div>
+            <a href="#booking" class="btn btn-primary btn-sm" id="c4btn">📝 Register Now</a>
+        </div>
+        <div class="card">
+            <div>
+                <i class="fas fa-brain"></i>
+                <h3 id="c5">Learn Tafseer Quran</h3>
+                <p id="c5d">Understand the meaning of Quran</p>
+                <div class="course-meta"><i class="fas fa-video"></i> <span id="c5live">Live Online Classes</span></div>
+                <div class="course-meta"><i class="fas fa-certificate"></i> <span id="c5cert">Certificate</span></div>
+            </div>
+            <a href="#booking" class="btn btn-primary btn-sm" id="c5btn">📝 Register Now</a>
+        </div>
     </div>
 
     <!-- COMPLEMENTARY COURSES -->
     <h3 class="complementary-title" id="compTitle">📚 Complementary Courses</h3>
     <div class="grid">
-        <div class="card complementary"><i class="fas fa-microphone-alt"></i><h3 id="comp1">Learn Ten Qirat</h3><p id="comp1d">Master the ten recitation styles</p></div>
-        <div class="card complementary"><i class="fas fa-hands-praying"></i><h3 id="comp2">Islamic Supplications (Duas)</h3><p id="comp2d">Daily duas with meanings</p></div>
-        <div class="card complementary"><i class="fas fa-graduation-cap"></i><h3 id="comp3">Islamic Studies</h3><p id="comp3d">Seerah, Fiqh, and Aqeedah</p></div>
-        <div class="card complementary"><i class="fas fa-kaaba"></i><h3 id="comp4">Pillars of Islam</h3><p id="comp4d">Learn the five pillars in detail</p></div>
-        <div class="card complementary"><i class="fas fa-star-and-crescent"></i><h3 id="comp5">6 Kalimas</h3><p id="comp5d">Learn all six Kalimas with translation</p></div>
-        <div class="card complementary"><i class="fas fa-pray"></i><h3 id="comp6">Namaz (Salah)</h3><p id="comp6d">Complete Salah guide with steps</p></div>
-        <div class="card complementary"><i class="fas fa-hand-sparkles"></i><h3 id="comp7">Ghusal & Wudu</h3><p id="comp7d">Learn proper purification methods</p></div>
+        <div class="card complementary"><i class="fas fa-microphone-alt"></i><h3 id="comp1">Learn Ten Qirat</h3><p id="comp1d">Master the ten recitation styles</p><div class="course-meta"><i class="fas fa-video"></i> <span id="c6live">Live Online Classes</span></div><div class="course-meta"><i class="fas fa-certificate"></i> <span id="c6cert">Certificate</span></div><a href="#booking" class="btn btn-primary btn-sm" id="c6btn">📝 Register Now</a></div>
+        <div class="card complementary"><i class="fas fa-hands-praying"></i><h3 id="comp2">Islamic Supplications (Duas)</h3><p id="comp2d">Daily duas with meanings</p><div class="course-meta"><i class="fas fa-video"></i> <span id="c7live">Live Online Classes</span></div><div class="course-meta"><i class="fas fa-certificate"></i> <span id="c7cert">Certificate</span></div><a href="#booking" class="btn btn-primary btn-sm" id="c7btn">📝 Register Now</a></div>
+        <div class="card complementary"><i class="fas fa-graduation-cap"></i><h3 id="comp3">Islamic Studies</h3><p id="comp3d">Seerah, Fiqh, and Aqeedah</p><div class="course-meta"><i class="fas fa-video"></i> <span id="c8live">Live Online Classes</span></div><div class="course-meta"><i class="fas fa-certificate"></i> <span id="c8cert">Certificate</span></div><a href="#booking" class="btn btn-primary btn-sm" id="c8btn">📝 Register Now</a></div>
+        <div class="card complementary"><i class="fas fa-kaaba"></i><h3 id="comp4">Pillars of Islam</h3><p id="comp4d">Learn the five pillars in detail</p><div class="course-meta"><i class="fas fa-video"></i> <span id="c9live">Live Online Classes</span></div><div class="course-meta"><i class="fas fa-certificate"></i> <span id="c9cert">Certificate</span></div><a href="#booking" class="btn btn-primary btn-sm" id="c9btn">📝 Register Now</a></div>
+        <div class="card complementary"><i class="fas fa-star-and-crescent"></i><h3 id="comp5">6 Kalimas</h3><p id="comp5d">Learn all six Kalimas with translation</p><div class="course-meta"><i class="fas fa-video"></i> <span id="c10live">Live Online Classes</span></div><div class="course-meta"><i class="fas fa-certificate"></i> <span id="c10cert">Certificate</span></div><a href="#booking" class="btn btn-primary btn-sm" id="c10btn">📝 Register Now</a></div>
+        <div class="card complementary"><i class="fas fa-pray"></i><h3 id="comp6">Namaz (Salah)</h3><p id="comp6d">Complete Salah guide with steps</p><div class="course-meta"><i class="fas fa-video"></i> <span id="c11live">Live Online Classes</span></div><div class="course-meta"><i class="fas fa-certificate"></i> <span id="c11cert">Certificate</span></div><a href="#booking" class="btn btn-primary btn-sm" id="c11btn">📝 Register Now</a></div>
+        <div class="card complementary"><i class="fas fa-hand-sparkles"></i><h3 id="comp7">Ghusal & Wudu</h3><p id="comp7d">Learn proper purification methods</p><div class="course-meta"><i class="fas fa-video"></i> <span id="c12live">Live Online Classes</span></div><div class="course-meta"><i class="fas fa-certificate"></i> <span id="c12cert">Certificate</span></div><a href="#booking" class="btn btn-primary btn-sm" id="c12btn">📝 Register Now</a></div>
     </div>
 </section>
 
@@ -209,89 +318,33 @@
     <h3 class="sub-title" id="pdfTitle">📄 Download PDFs</h3>
     <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;padding:20px 0;">
         <div class="card pdf-card">
-            <div>
-                <i class="fas fa-file-pdf"></i>
-                <h4 id="pdf1">Noorani Qaida</h4>
-                <p id="pdf1d">Complete Noorani Qaida PDF</p>
-            </div>
-            <div class="btn-group">
-                <a href="noorani_qaida.pdf" target="_blank" class="btn-preview" id="pdfPreview1">👁️ Preview</a>
-                <a href="noorani_qaida.pdf" download class="btn-download" id="pdfBtn1">📥 Download</a>
-            </div>
+            <div><i class="fas fa-file-pdf"></i><h4 id="pdf1">Noorani Qaida</h4><p id="pdf1d">Complete Noorani Qaida PDF</p></div>
+            <div class="btn-group"><a href="noorani_qaida.pdf" target="_blank" class="btn-preview" id="pdfPreview1">👁️ Preview</a><a href="noorani_qaida.pdf" download class="btn-download" id="pdfBtn1">📥 Download</a></div>
         </div>
         <div class="card pdf-card">
-            <div>
-                <i class="fas fa-file-pdf"></i>
-                <h4 id="pdf2">Tajweed Rules</h4>
-                <p id="pdf2d">Complete Tajweed rules PDF</p>
-            </div>
-            <div class="btn-group">
-                <a href="tajweedrules.pdf" target="_blank" class="btn-preview" id="pdfPreview2">👁️ Preview</a>
-                <a href="tajweedrules.pdf" download class="btn-download" id="pdfBtn2">📥 Download</a>
-            </div>
+            <div><i class="fas fa-file-pdf"></i><h4 id="pdf2">Tajweed Rules</h4><p id="pdf2d">Complete Tajweed rules PDF</p></div>
+            <div class="btn-group"><a href="tajweedrules.pdf" target="_blank" class="btn-preview" id="pdfPreview2">👁️ Preview</a><a href="tajweedrules.pdf" download class="btn-download" id="pdfBtn2">📥 Download</a></div>
         </div>
         <div class="card pdf-card">
-            <div>
-                <i class="fas fa-file-pdf"></i>
-                <h4 id="pdf3">Read Quran</h4>
-                <p id="pdf3d">Quran reading guide PDF</p>
-            </div>
-            <div class="btn-group">
-                <a href="Read_Quran.pdf" target="_blank" class="btn-preview" id="pdfPreview3">👁️ Preview</a>
-                <a href="Read_Quran.pdf" download class="btn-download" id="pdfBtn3">📥 Download</a>
-            </div>
+            <div><i class="fas fa-file-pdf"></i><h4 id="pdf3">Read Quran</h4><p id="pdf3d">Quran reading guide PDF</p></div>
+            <div class="btn-group"><a href="Read_Quran.pdf" target="_blank" class="btn-preview" id="pdfPreview3">👁️ Preview</a><a href="Read_Quran.pdf" download class="btn-download" id="pdfBtn3">📥 Download</a></div>
         </div>
         <div class="card pdf-card">
-            <div>
-                <i class="fas fa-file-pdf"></i>
-                <h4 id="pdf4">Essential Duas</h4>
-                <p id="pdf4d">Daily duas with meanings</p>
-            </div>
-            <div class="btn-group">
-                <a href="Essential_Duas.pdf" target="_blank" class="btn-preview" id="pdfPreview4">👁️ Preview</a>
-                <a href="Essential_Duas.pdf" download class="btn-download" id="pdfBtn4">📥 Download</a>
-            </div>
+            <div><i class="fas fa-file-pdf"></i><h4 id="pdf4">Essential Duas</h4><p id="pdf4d">Daily duas with meanings</p></div>
+            <div class="btn-group"><a href="Essential_Duas.pdf" target="_blank" class="btn-preview" id="pdfPreview4">👁️ Preview</a><a href="Essential_Duas.pdf" download class="btn-download" id="pdfBtn4">📥 Download</a></div>
         </div>
         <div class="card pdf-card">
-            <div>
-                <i class="fas fa-file-pdf"></i>
-                <h4 id="pdf5">Umrah Guide 2025</h4>
-                <p id="pdf5d">Complete Umrah guide PDF</p>
-            </div>
-            <div class="btn-group">
-                <a href="Umrah-Guide-2025.pdf" target="_blank" class="btn-preview" id="pdfPreview5">👁️ Preview</a>
-                <a href="Umrah-Guide-2025.pdf" download class="btn-download" id="pdfBtn5">📥 Download</a>
-            </div>
+            <div><i class="fas fa-file-pdf"></i><h4 id="pdf5">Umrah Guide</h4><p id="pdf5d">Complete Umrah guide PDF</p></div>
+            <div class="btn-group"><a href="Umrah-Guide-2025.pdf" target="_blank" class="btn-preview" id="pdfPreview5">👁️ Preview</a><a href="Umrah-Guide-2025.pdf" download class="btn-download" id="pdfBtn5">📥 Download</a></div>
         </div>
     </div>
 
     <!-- LIBRARY LINKS -->
     <h3 class="sub-title" id="libraryTitle">📚 Online Libraries</h3>
     <div class="grid" style="grid-template-columns:repeat(3,1fr);align-items:stretch;">
-        <div class="card study-card">
-            <div>
-                <i class="fas fa-landmark"></i>
-                <h3 id="study1">My Islamic Library</h3>
-                <p id="study1d">Explore a vast collection of Islamic books and resources.</p>
-            </div>
-            <a href="https://myislamiclibrary.com/library/" target="_blank" class="btn btn-primary btn-sm" style="margin-top:15px;align-self:center;" id="studyBtn1">🔗 Visit Library</a>
-        </div>
-        <div class="card study-card">
-            <div>
-                <i class="fas fa-book-open"></i>
-                <h3 id="study2">Muslim Library</h3>
-                <p id="study2d">Access a wide range of Islamic literature and PDFs.</p>
-            </div>
-            <a href="https://www.muslim-library.com/" target="_blank" class="btn btn-primary btn-sm" style="margin-top:15px;align-self:center;" id="studyBtn2">🔗 Visit Library</a>
-        </div>
-        <div class="card study-card">
-            <div>
-                <i class="fas fa-robot"></i>
-                <h3 id="study3">Usul.ai</h3>
-                <p id="study3d">AI-powered platform for Islamic knowledge and research.</p>
-            </div>
-            <a href="https://usul.ai/" target="_blank" class="btn btn-primary btn-sm" style="margin-top:15px;align-self:center;" id="studyBtn3">🔗 Visit Platform</a>
-        </div>
+        <div class="card study-card"><div><i class="fas fa-landmark"></i><h3 id="study1">My Islamic Library</h3><p id="study1d">Explore a vast collection of Islamic books and resources.</p></div><a href="https://myislamiclibrary.com/library/" target="_blank" class="btn btn-primary btn-sm" style="margin-top:15px;align-self:center;" id="studyBtn1">🔗 Visit Library</a></div>
+        <div class="card study-card"><div><i class="fas fa-book-open"></i><h3 id="study2">Muslim Library</h3><p id="study2d">Access a wide range of Islamic literature and PDFs.</p></div><a href="https://www.muslim-library.com/" target="_blank" class="btn btn-primary btn-sm" style="margin-top:15px;align-self:center;" id="studyBtn2">🔗 Visit Library</a></div>
+        <div class="card study-card"><div><i class="fas fa-robot"></i><h3 id="study3">Usul.ai</h3><p id="study3d">AI-powered platform for Islamic knowledge and research.</p></div><a href="https://usul.ai/" target="_blank" class="btn btn-primary btn-sm" style="margin-top:15px;align-self:center;" id="studyBtn3">🔗 Visit Platform</a></div>
     </div>
     <p style="text-align:center;color:#999;font-size:14px;margin-top:20px;" id="studyNote">More resources will be added soon. In sha Allah.</p>
 </section>
@@ -358,8 +411,8 @@
     <div class="container">
         <p id="footerCopy">&copy; 2026 Al Shahran Arabic Studies. All rights reserved.</p>
         <div class="footer-links">
-            <a href="#" id="footerPrivacy">Privacy Policy</a>
-            <a href="#" id="footerTerms">Terms of Service</a>
+            <a href="#" id="footerPrivacy" onclick="document.getElementById('privacyPage').style.display='block';document.getElementById('privacyPage').scrollIntoView();return false;">Privacy Policy</a>
+            <a href="#" id="footerTerms" onclick="document.getElementById('termsPage').style.display='block';document.getElementById('termsPage').scrollIntoView();return false;">Terms of Service</a>
             <a href="#contactSection" id="footerContact">Contact Us</a>
         </div>
     </div>
@@ -374,10 +427,12 @@ const langData = {
     en: {
         siteTitle: '🏛️ Al Shahran Arabic Studies',
         navHome: 'Home', navAbout: 'About', navCourses: 'Courses', navStudy: 'Study Material', navRegister: 'Register', navContact: 'Contact',
-        langBtn: ' English',
+        langBtn: '🇺🇸 English',
         heroTitle: 'Al Shahran Arabic Studies',
         heroSub: 'Learn Quran & Islamic Studies Online',
-        heroBtn1: 'Enroll Today', heroBtn2: 'View Courses',
+        heroTrial: '🎓 Free Trial Class – 3 Days',
+        heroTagline: '⭐ Learn 24/7 in every time zone with experienced male and female teachers.',
+        heroBtn1: 'Start Free Trial', heroBtn2: 'View Courses',
         stat1: 'Courses', stat2: 'Students',
         aboutTitle: 'About Us',
         aboutText: '<strong>Al Shahran Arabic Studies</strong> is dedicated to providing quality <strong>Quran</strong> and <strong>Islamic</strong> education online. Located in Hazur Nagar, Muzaffarnagar, we offer a wide range of courses for all ages and levels.',
@@ -394,11 +449,11 @@ const langData = {
         visionLabel: 'Vision:',
         aboutVision: 'To create a generation that understands and practices the Quran and Sunnah.',
         coursesTitle: 'Our Courses',
-        c1: 'Learn Noorani Qaida Online', c1d: 'Basic Arabic reading for beginners',
-        c2: 'Learn Quran with Tajweed Online', c2d: 'Recite Quran with proper rules',
-        c3: 'Quran Reading', c3d: 'Fluent Quran recitation',
-        c4: 'Quran Memorization', c4d: 'Hifz program with revision',
-        c5: 'Learn Tafseer Quran', c5d: 'Understand the meaning of Quran',
+        c1: 'Learn Noorani Qaida Online', c1d: 'Basic Arabic reading for beginners', c1live: 'Live Online Classes', c1cert: 'Certificate', c1btn: '📝 Register Now',
+        c2: 'Learn Quran with Tajweed Online', c2d: 'Recite Quran with proper rules', c2live: 'Live Online Classes', c2cert: 'Certificate', c2btn: '📝 Register Now',
+        c3: 'Quran Reading', c3d: 'Fluent Quran recitation', c3live: 'Live Online Classes', c3cert: 'Certificate', c3btn: '📝 Register Now',
+        c4: 'Quran Memorization', c4d: 'Hifz program with revision', c4live: 'Live Online Classes', c4cert: 'Certificate', c4btn: '📝 Register Now',
+        c5: 'Learn Tafseer Quran', c5d: 'Understand the meaning of Quran', c5live: 'Live Online Classes', c5cert: 'Certificate', c5btn: '📝 Register Now',
         compTitle: '📚 Complementary Courses',
         comp1: 'Learn Ten Qirat', comp1d: 'Master the ten recitation styles',
         comp2: 'Islamic Supplications (Duas)', comp2d: 'Daily duas with meanings',
@@ -407,6 +462,13 @@ const langData = {
         comp5: '6 Kalimas', comp5d: 'Learn all six Kalimas with translation',
         comp6: 'Namaz (Salah)', comp6d: 'Complete Salah guide with steps',
         comp7: 'Ghusal & Wudu', comp7d: 'Learn proper purification methods',
+        c6live: 'Live Online Classes', c6cert: 'Certificate', c6btn: '📝 Register Now',
+        c7live: 'Live Online Classes', c7cert: 'Certificate', c7btn: '📝 Register Now',
+        c8live: 'Live Online Classes', c8cert: 'Certificate', c8btn: '📝 Register Now',
+        c9live: 'Live Online Classes', c9cert: 'Certificate', c9btn: '📝 Register Now',
+        c10live: 'Live Online Classes', c10cert: 'Certificate', c10btn: '📝 Register Now',
+        c11live: 'Live Online Classes', c11cert: 'Certificate', c11btn: '📝 Register Now',
+        c12live: 'Live Online Classes', c12cert: 'Certificate', c12btn: '📝 Register Now',
         studyTitle: '📚 Study Material',
         studyDesc: 'Download PDFs and explore online Islamic libraries for your courses.',
         pdfTitle: '📄 Download PDFs',
@@ -414,7 +476,7 @@ const langData = {
         pdf2: 'Tajweed Rules', pdf2d: 'Complete Tajweed rules PDF',
         pdf3: 'Read Quran', pdf3d: 'Quran reading guide PDF',
         pdf4: 'Essential Duas', pdf4d: 'Daily duas with meanings',
-        pdf5: 'Umrah Guide 2025', pdf5d: 'Complete Umrah guide PDF',
+        pdf5: 'Umrah Guide', pdf5d: 'Complete Umrah guide PDF',
         pdfPreview1: '👁️ Preview', pdfPreview2: '👁️ Preview', pdfPreview3: '👁️ Preview', pdfPreview4: '👁️ Preview', pdfPreview5: '👁️ Preview',
         pdfBtn1: '📥 Download', pdfBtn2: '📥 Download', pdfBtn3: '📥 Download', pdfBtn4: '📥 Download', pdfBtn5: '📥 Download',
         libraryTitle: '📚 Online Libraries',
@@ -444,16 +506,20 @@ const langData = {
         footerPrivacy: 'Privacy Policy',
         footerTerms: 'Terms of Service',
         footerContact: 'Contact Us',
+        privacyTitle: '🔒 Privacy Policy',
+        termsTitle: '📜 Terms & Conditions',
         direction: 'ltr',
         align: 'left'
     },
     ur: {
         siteTitle: '🏛️ ال شہران عربی اسٹڈیز',
         navHome: 'ہوم', navAbout: 'تعارف', navCourses: 'کورسز', navStudy: 'تعلیمی مواد', navRegister: 'رجسٹریشن', navContact: 'رابطہ',
-        langBtn: ' اردو',
+        langBtn: '🇵🇰 اردو',
         heroTitle: 'ال شہران عربی اسٹڈیز',
         heroSub: 'قرآن اور اسلامی تعلیمات سیکھیں آن لائن',
-        heroBtn1: 'آج داخلہ لیں', heroBtn2: 'کورسز دیکھیں',
+        heroTrial: '🎓 مفت ٹرائل کلاس – 3 دن',
+        heroTagline: '⭐ ہر ٹائم زون میں 24/7 تجربہ کار مرد و خواتین اساتذہ کے ساتھ سیکھیں۔',
+        heroBtn1: 'مفت ٹرائل شروع کریں', heroBtn2: 'کورسز دیکھیں',
         stat1: 'کورسز', stat2: 'طلباء',
         aboutTitle: 'ہمارا تعارف',
         aboutText: '<strong>ال شہران عربی اسٹڈیز</strong> آن لائن <strong>القرآن</strong> اور <strong>اسلامی</strong> تعلیم فراہم کرنے کے لیے وقف ہے۔ ہزار نگر، مظفرنگر، یوپی میں واقع، ہم تمام عمر اور سطح کے لیے کورسز پیش کرتے ہیں۔',
@@ -470,11 +536,11 @@ const langData = {
         visionLabel: 'نظریہ:',
         aboutVision: 'ایک ایسی نسل تیار کرنا جو قرآن اور سنت کو سمجھے اور اس پر عمل کرے۔',
         coursesTitle: 'ہمارے کورسز',
-        c1: 'نورانی قاعدہ سیکھیں آن لائن', c1d: 'ابتدائی عربی پڑھائی',
-        c2: 'تجوید کے ساتھ قرآن سیکھیں', c2d: 'قرآن کو صحیح قواعد کے ساتھ پڑھیں',
-        c3: 'قرآن پڑھنا', c3d: 'قرآن کی روانی سے تلاوت',
-        c4: 'قرآن حفظ', c4d: 'حفظ قرآن پروگرام',
-        c5: 'تفسیر قرآن سیکھیں', c5d: 'قرآن کے معانی سمجھیں',
+        c1: 'نورانی قاعدہ سیکھیں آن لائن', c1d: 'ابتدائی عربی پڑھائی', c1live: 'لائیو آن لائن کلاسز', c1cert: 'سرٹیفکیٹ', c1btn: '📝 اندراج کریں',
+        c2: 'تجوید کے ساتھ قرآن سیکھیں', c2d: 'قرآن کو صحیح قواعد کے ساتھ پڑھیں', c2live: 'لائیو آن لائن کلاسز', c2cert: 'سرٹیفکیٹ', c2btn: '📝 اندراج کریں',
+        c3: 'قرآن پڑھنا', c3d: 'قرآن کی روانی سے تلاوت', c3live: 'لائیو آن لائن کلاسز', c3cert: 'سرٹیفکیٹ', c3btn: '📝 اندراج کریں',
+        c4: 'قرآن حفظ', c4d: 'حفظ قرآن پروگرام', c4live: 'لائیو آن لائن کلاسز', c4cert: 'سرٹیفکیٹ', c4btn: '📝 اندراج کریں',
+        c5: 'تفسیر قرآن سیکھیں', c5d: 'قرآن کے معانی سمجھیں', c5live: 'لائیو آن لائن کلاسز', c5cert: 'سرٹیفکیٹ', c5btn: '📝 اندراج کریں',
         compTitle: '📚 اضافی کورسز (Complementary)',
         comp1: 'دس قرات سیکھیں', comp1d: 'دس قرآت کے انداز سیکھیں',
         comp2: 'اسلامی دعائیں', comp2d: 'معانی کے ساتھ روزمرہ کی دعائیں',
@@ -483,6 +549,13 @@ const langData = {
         comp5: 'چھ کلمے', comp5d: 'چھوں کلموں کو ترجمے کے ساتھ سیکھیں',
         comp6: 'نماز (صلوٰۃ)', comp6d: 'مکمل نماز کا طریقہ مراحل کے ساتھ',
         comp7: 'غسل اور وضو', comp7d: 'طہارت کے صحیح طریقے سیکھیں',
+        c6live: 'لائیو آن لائن کلاسز', c6cert: 'سرٹیفکیٹ', c6btn: '📝 اندراج کریں',
+        c7live: 'لائیو آن لائن کلاسز', c7cert: 'سرٹیفکیٹ', c7btn: '📝 اندراج کریں',
+        c8live: 'لائیو آن لائن کلاسز', c8cert: 'سرٹیفکیٹ', c8btn: '📝 اندراج کریں',
+        c9live: 'لائیو آن لائن کلاسز', c9cert: 'سرٹیفکیٹ', c9btn: '📝 اندراج کریں',
+        c10live: 'لائیو آن لائن کلاسز', c10cert: 'سرٹیفکیٹ', c10btn: '📝 اندراج کریں',
+        c11live: 'لائیو آن لائن کلاسز', c11cert: 'سرٹیفکیٹ', c11btn: '📝 اندراج کریں',
+        c12live: 'لائیو آن لائن کلاسز', c12cert: 'سرٹیفکیٹ', c12btn: '📝 اندراج کریں',
         studyTitle: '📚 تعلیمی مواد',
         studyDesc: 'اپنے کورسز کے لیے پی ڈی ایف ڈاؤن لوڈ کریں اور آن لائن اسلامی لائبریریاں دریافت کریں۔',
         pdfTitle: '📄 پی ڈی ایف ڈاؤن لوڈ کریں',
@@ -490,7 +563,7 @@ const langData = {
         pdf2: 'تجوید کے قواعد', pdf2d: 'مکمل تجوید کے قواعد پی ڈی ایف',
         pdf3: 'قرآن پڑھیں', pdf3d: 'قرآن پڑھنے کی گائیڈ پی ڈی ایف',
         pdf4: 'ضروری دعائیں', pdf4d: 'معانی کے ساتھ روزمرہ کی دعائیں',
-        pdf5: 'عمرہ گائیڈ 2025', pdf5d: 'مکمل عمرہ گائیڈ پی ڈی ایف',
+        pdf5: 'عمرہ گائیڈ', pdf5d: 'مکمل عمرہ گائیڈ پی ڈی ایف',
         pdfPreview1: '👁️ دیکھیں', pdfPreview2: '👁️ دیکھیں', pdfPreview3: '👁️ دیکھیں', pdfPreview4: '👁️ دیکھیں', pdfPreview5: '👁️ دیکھیں',
         pdfBtn1: '📥 ڈاؤن لوڈ', pdfBtn2: '📥 ڈاؤن لوڈ', pdfBtn3: '📥 ڈاؤن لوڈ', pdfBtn4: '📥 ڈاؤن لوڈ', pdfBtn5: '📥 ڈاؤن لوڈ',
         libraryTitle: '📚 آن لائن لائبریریاں',
@@ -520,16 +593,20 @@ const langData = {
         footerPrivacy: 'پرائیویسی پالیسی',
         footerTerms: 'استعمال کی شرائط',
         footerContact: 'رابطہ کریں',
+        privacyTitle: '🔒 پرائیویسی پالیسی',
+        termsTitle: '📜 شرائط و ضوابط',
         direction: 'rtl',
         align: 'right'
     },
     hi: {
         siteTitle: '🏛️ अल शाहरान अरबिक स्टडीज',
         navHome: 'होम', navAbout: 'परिचय', navCourses: 'कोर्स', navStudy: 'अध्ययन सामग्री', navRegister: 'पंजीकरण', navContact: 'संपर्क',
-        langBtn: ' हिन्दी',
+        langBtn: '🇮🇳 हिन्दी',
         heroTitle: 'अल शाहरान अरबिक स्टडीज',
         heroSub: 'ऑनलाइन कुरान और इस्लामिक शिक्षा सीखें',
-        heroBtn1: 'आज दाखिला लें', heroBtn2: 'कोर्स देखें',
+        heroTrial: '🎓 मुफ्त ट्रायल क्लास – 3 दिन',
+        heroTagline: '⭐ हर टाइम ज़ोन में 24/7 अनुभवी पुरुष एवं महिला शिक्षकों के साथ सीखें।',
+        heroBtn1: 'मुफ्त ट्रायल शुरू करें', heroBtn2: 'कोर्स देखें',
         stat1: 'कोर्स', stat2: 'छात्र',
         aboutTitle: 'हमारा परिचय',
         aboutText: '<strong>अल शाहरान अरबिक स्टडीज</strong> ऑनलाइन <strong>कुरान</strong> और <strong>इस्लामिक</strong> शिक्षा प्रदान करने के लिए समर्पित है। हज़ूर नगर, मुज़फ्फरनगर, यूपी में स्थित, हम सभी उम्र और स्तर के लिए कोर्स प्रदान करते हैं।',
@@ -546,11 +623,11 @@ const langData = {
         visionLabel: 'दृष्टिकोण:',
         aboutVision: 'एक ऐसी पीढ़ी तैयार करना जो कुरान और सुन्नत को समझे और उस पर अमल करे।',
         coursesTitle: 'हमारे कोर्स',
-        c1: 'नूरानी कायदा सीखें ऑनलाइन', c1d: 'शुरुआती अरबी पढ़ाई',
-        c2: 'तजवीद के साथ कुरान सीखें', c2d: 'कुरान को सही नियमों के साथ पढ़ें',
-        c3: 'कुरान पढ़ना', c3d: 'कुरान की रवानी से तिलावत',
-        c4: 'कुरान हिफ्ज', c4d: 'हिफ्ज कुरान प्रोग्राम',
-        c5: 'तफसीर कुरान सीखें', c5d: 'कुरान के अर्थ समझें',
+        c1: 'नूरानी कायदा सीखें ऑनलाइन', c1d: 'शुरुआती अरबी पढ़ाई', c1live: 'लाइव ऑनलाइन क्लास', c1cert: 'प्रमाणपत्र', c1btn: '📝 पंजीकरण करें',
+        c2: 'तजवीद के साथ कुरान सीखें', c2d: 'कुरान को सही नियमों के साथ पढ़ें', c2live: 'लाइव ऑनलाइन क्लास', c2cert: 'प्रमाणपत्र', c2btn: '📝 पंजीकरण करें',
+        c3: 'कुरान पढ़ना', c3d: 'कुरान की रवानी से तिलावत', c3live: 'लाइव ऑनलाइन क्लास', c3cert: 'प्रमाणपत्र', c3btn: '📝 पंजीकरण करें',
+        c4: 'कुरान हिफ्ज', c4d: 'हिफ्ज कुरान प्रोग्राम', c4live: 'लाइव ऑनलाइन क्लास', c4cert: 'प्रमाणपत्र', c4btn: '📝 पंजीकरण करें',
+        c5: 'तफसीर कुरान सीखें', c5d: 'कुरान के अर्थ समझें', c5live: 'लाइव ऑनलाइन क्लास', c5cert: 'प्रमाणपत्र', c5btn: '📝 पंजीकरण करें',
         compTitle: '📚 पूरक कोर्स (Complementary)',
         comp1: 'दस क़िरात सीखें', comp1d: 'दस क़िरात के अंदाज सीखें',
         comp2: 'इस्लामी दुआएं', comp2d: 'अर्थों के साथ दैनिक दुआएं',
@@ -559,6 +636,13 @@ const langData = {
         comp5: '6 कलिमा', comp5d: 'सभी छह कलिमा अनुवाद के साथ सीखें',
         comp6: 'नमाज़ (सलाह)', comp6d: 'चरणों के साथ पूरी नमाज़ गाइड',
         comp7: 'ग़ुस्ल और वुज़ू', comp7d: 'शुद्धि के सही तरीके सीखें',
+        c6live: 'लाइव ऑनलाइन क्लास', c6cert: 'प्रमाणपत्र', c6btn: '📝 पंजीकरण करें',
+        c7live: 'लाइव ऑनलाइन क्लास', c7cert: 'प्रमाणपत्र', c7btn: '📝 पंजीकरण करें',
+        c8live: 'लाइव ऑनलाइन क्लास', c8cert: 'प्रमाणपत्र', c8btn: '📝 पंजीकरण करें',
+        c9live: 'लाइव ऑनलाइन क्लास', c9cert: 'प्रमाणपत्र', c9btn: '📝 पंजीकरण करें',
+        c10live: 'लाइव ऑनलाइन क्लास', c10cert: 'प्रमाणपत्र', c10btn: '📝 पंजीकरण करें',
+        c11live: 'लाइव ऑनलाइन क्लास', c11cert: 'प्रमाणपत्र', c11btn: '📝 पंजीकरण करें',
+        c12live: 'लाइव ऑनलाइन क्लास', c12cert: 'प्रमाणपत्र', c12btn: '📝 पंजीकरण करें',
         studyTitle: '📚 अध्ययन सामग्री',
         studyDesc: 'अपने कोर्स के लिए पीडीएफ डाउनलोड करें और ऑनलाइन इस्लामिक लाइब्रेरी खोजें।',
         pdfTitle: '📄 पीडीएफ डाउनलोड करें',
@@ -566,7 +650,7 @@ const langData = {
         pdf2: 'तजवीद के नियम', pdf2d: 'पूरे तजवीद नियम पीडीएफ',
         pdf3: 'कुरान पढ़ें', pdf3d: 'कुरान पढ़ने गाइड पीडीएफ',
         pdf4: 'आवश्यक दुआएं', pdf4d: 'अर्थों के साथ दैनिक दुआएं',
-        pdf5: 'उमराह गाइड 2025', pdf5d: 'पूरी उमराह गाइड पीडीएफ',
+        pdf5: 'उमराह गाइड', pdf5d: 'पूरी उमराह गाइड पीडीएफ',
         pdfPreview1: '👁️ देखें', pdfPreview2: '👁️ देखें', pdfPreview3: '👁️ देखें', pdfPreview4: '👁️ देखें', pdfPreview5: '👁️ देखें',
         pdfBtn1: '📥 डाउनलोड', pdfBtn2: '📥 डाउनलोड', pdfBtn3: '📥 डाउनलोड', pdfBtn4: '📥 डाउनलोड', pdfBtn5: '📥 डाउनलोड',
         libraryTitle: '📚 ऑनलाइन लाइब्रेरी',
@@ -596,6 +680,8 @@ const langData = {
         footerPrivacy: 'गोपनीयता नीति',
         footerTerms: 'सेवा की शर्तें',
         footerContact: 'संपर्क करें',
+        privacyTitle: '🔒 गोपनीयता नीति',
+        termsTitle: '📜 सेवा की शर्तें',
         direction: 'ltr',
         align: 'left'
     }
@@ -635,6 +721,8 @@ function applyLanguage(lang) {
     // Hero
     document.getElementById('heroTitle').textContent = data.heroTitle;
     document.getElementById('heroSub').textContent = data.heroSub;
+    document.getElementById('heroTrial').textContent = data.heroTrial;
+    document.getElementById('heroTagline').textContent = data.heroTagline;
     document.getElementById('heroBtn1').textContent = data.heroBtn1;
     document.getElementById('heroBtn2').textContent = data.heroBtn2;
     document.getElementById('stat1').textContent = data.stat1;
@@ -660,14 +748,29 @@ function applyLanguage(lang) {
     document.getElementById('coursesTitle').textContent = data.coursesTitle;
     document.getElementById('c1').textContent = data.c1;
     document.getElementById('c1d').textContent = data.c1d;
+    document.getElementById('c1live').textContent = data.c1live;
+    document.getElementById('c1cert').textContent = data.c1cert;
+    document.getElementById('c1btn').textContent = data.c1btn;
     document.getElementById('c2').textContent = data.c2;
     document.getElementById('c2d').textContent = data.c2d;
+    document.getElementById('c2live').textContent = data.c2live;
+    document.getElementById('c2cert').textContent = data.c2cert;
+    document.getElementById('c2btn').textContent = data.c2btn;
     document.getElementById('c3').textContent = data.c3;
     document.getElementById('c3d').textContent = data.c3d;
+    document.getElementById('c3live').textContent = data.c3live;
+    document.getElementById('c3cert').textContent = data.c3cert;
+    document.getElementById('c3btn').textContent = data.c3btn;
     document.getElementById('c4').textContent = data.c4;
     document.getElementById('c4d').textContent = data.c4d;
+    document.getElementById('c4live').textContent = data.c4live;
+    document.getElementById('c4cert').textContent = data.c4cert;
+    document.getElementById('c4btn').textContent = data.c4btn;
     document.getElementById('c5').textContent = data.c5;
     document.getElementById('c5d').textContent = data.c5d;
+    document.getElementById('c5live').textContent = data.c5live;
+    document.getElementById('c5cert').textContent = data.c5cert;
+    document.getElementById('c5btn').textContent = data.c5btn;
     document.getElementById('compTitle').textContent = data.compTitle;
     document.getElementById('comp1').textContent = data.comp1;
     document.getElementById('comp1d').textContent = data.comp1d;
@@ -683,8 +786,29 @@ function applyLanguage(lang) {
     document.getElementById('comp6d').textContent = data.comp6d;
     document.getElementById('comp7').textContent = data.comp7;
     document.getElementById('comp7d').textContent = data.comp7d;
+    document.getElementById('c6live').textContent = data.c6live;
+    document.getElementById('c6cert').textContent = data.c6cert;
+    document.getElementById('c6btn').textContent = data.c6btn;
+    document.getElementById('c7live').textContent = data.c7live;
+    document.getElementById('c7cert').textContent = data.c7cert;
+    document.getElementById('c7btn').textContent = data.c7btn;
+    document.getElementById('c8live').textContent = data.c8live;
+    document.getElementById('c8cert').textContent = data.c8cert;
+    document.getElementById('c8btn').textContent = data.c8btn;
+    document.getElementById('c9live').textContent = data.c9live;
+    document.getElementById('c9cert').textContent = data.c9cert;
+    document.getElementById('c9btn').textContent = data.c9btn;
+    document.getElementById('c10live').textContent = data.c10live;
+    document.getElementById('c10cert').textContent = data.c10cert;
+    document.getElementById('c10btn').textContent = data.c10btn;
+    document.getElementById('c11live').textContent = data.c11live;
+    document.getElementById('c11cert').textContent = data.c11cert;
+    document.getElementById('c11btn').textContent = data.c11btn;
+    document.getElementById('c12live').textContent = data.c12live;
+    document.getElementById('c12cert').textContent = data.c12cert;
+    document.getElementById('c12btn').textContent = data.c12btn;
 
-    // Study Material - PDFs
+    // Study Material
     document.getElementById('studyTitle').textContent = data.studyTitle;
     document.getElementById('studyDesc').textContent = data.studyDesc;
     document.getElementById('pdfTitle').textContent = data.pdfTitle;
@@ -719,6 +843,10 @@ function applyLanguage(lang) {
     document.getElementById('studyBtn2').textContent = data.studyBtn2;
     document.getElementById('studyBtn3').textContent = data.studyBtn3;
     document.getElementById('studyNote').textContent = data.studyNote;
+
+    // Privacy & Terms
+    document.getElementById('privacyTitle').textContent = data.privacyTitle;
+    document.getElementById('termsTitle').textContent = data.termsTitle;
 
     // Booking
     document.getElementById('bookingTitle').textContent = data.bookingTitle;
@@ -770,6 +898,8 @@ function applyLanguage(lang) {
     });
     document.querySelector('.hero h1').style.textAlign = 'center';
     document.querySelector('.hero .sub').style.textAlign = 'center';
+    document.querySelector('.hero .free-trial').style.textAlign = 'center';
+    document.querySelector('.hero .tagline').style.textAlign = 'center';
     document.querySelector('.section-title').style.textAlign = 'center';
     document.querySelector('.sub-title').style.textAlign = 'center';
     document.querySelector('.complementary-title').style.textAlign = 'center';
