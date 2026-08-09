@@ -29,6 +29,8 @@
         .btn-secondary{background:0 0;color:#fff;border:2px solid #c9a84c}
         .btn-secondary:hover{background:#c9a84c;color:#1a4d2e}
         .btn-sm{padding:8px 20px;font-size:14px}
+        .btn-download{background:#c9a84c;color:#1a4d2e;padding:6px 18px;font-size:13px;border-radius:50px;font-weight:700;text-decoration:none;border:none;cursor:pointer;transition:.3s;display:inline-block;margin-top:10px;align-self:center}
+        .btn-download:hover{background:#e8d5b5;transform:scale(1.05)}
         .stats{display:flex;justify-content:center;gap:50px;flex-wrap:wrap;margin-top:40px}
         .stats div{font-size:16px;opacity:.9}
         .stats span{display:block;font-size:32px;font-weight:700;color:#c9a84c}
@@ -38,13 +40,20 @@
         .card{background:#fff;padding:30px;border-radius:15px;text-align:center;border-bottom:4px solid #c9a84c;transition:.3s;box-shadow:0 5px 15px rgba(0,0,0,.05)}
         .card:hover{transform:translateY(-8px);box-shadow:0 10px 25px rgba(0,0,0,.1)}
         .card i{font-size:40px;color:#1a4d2e;margin-bottom:15px}
-        .card h3{color:#1a4d2e;margin-bottom:10px}
+        .card h3{color:#1a4d2e;margin-bottom:10px;font-size:20px}
+        .card h4{color:#1a4d2e;font-size:16px;margin:8px 0}
+        .card p{font-size:15px;color:#555}
         .card.complementary{background:#f0f7f0;border-bottom-color:#2d7a4a}
         .card.complementary i{color:#2d7a4a}
-        .card.study-card{background:#fff8f0;border-bottom-color:#c9a84c;display:flex;flex-direction:column;justify-content:space-between;height:100%;min-height:260px}
+        .card.study-card{background:#fff8f0;border-bottom-color:#c9a84c;display:flex;flex-direction:column;justify-content:space-between;height:100%;min-height:200px}
         .card.study-card i{color:#c9a84c;font-size:42px}
-        .card.study-card p{flex-grow:1}
+        .card.study-card p{flex-grow:1;font-size:14px}
+        .card.pdf-card{background:#f8faff;border-bottom-color:#3498db;display:flex;flex-direction:column;justify-content:space-between;height:100%;min-height:180px}
+        .card.pdf-card i{color:#e74c3c;font-size:36px;margin-bottom:8px}
+        .card.pdf-card h4{font-size:16px;margin:5px 0}
+        .card.pdf-card p{font-size:13px;color:#555}
         .complementary-title{text-align:center;font-size:28px;color:#1a4d2e;margin:40px 0 10px;padding-bottom:10px;border-bottom:2px dashed #c9a84c}
+        .sub-title{text-align:center;font-size:24px;color:#1a4d2e;margin:30px 0 10px;padding-bottom:10px;border-bottom:2px solid #c9a84c}
         .testimonial{background:#fff;padding:30px;border-radius:15px;border-left:5px solid #c9a84c;margin:10px 0}
         .testimonial p{font-style:italic;font-size:17px;color:#333}
         .testimonial h4{color:#1a4d2e;margin-top:10px}
@@ -171,8 +180,56 @@
 <section id="study" class="container page-section">
     <h2 class="section-title" id="studyTitle">📚 Study Material</h2>
     <p id="studyDesc" style="text-align:center;font-size:18px;color:#555;margin-bottom:30px;">
-        Explore these online Islamic libraries and resources for your courses.
+        Download PDFs and explore online Islamic libraries for your courses.
     </p>
+
+    <!-- PDF DOWNLOAD SECTION -->
+    <h3 class="sub-title" id="pdfTitle">📄 Download PDFs</h3>
+    <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;padding:20px 0;">
+        <div class="card pdf-card">
+            <div>
+                <i class="fas fa-file-pdf"></i>
+                <h4 id="pdf1">Noorani Qaida</h4>
+                <p id="pdf1d">Complete Noorani Qaida PDF</p>
+            </div>
+            <a href="noorani_qaida.pdf" download class="btn-download" id="pdfBtn1">📥 Download</a>
+        </div>
+        <div class="card pdf-card">
+            <div>
+                <i class="fas fa-file-pdf"></i>
+                <h4 id="pdf2">Tajweed Rules</h4>
+                <p id="pdf2d">Complete Tajweed rules PDF</p>
+            </div>
+            <a href="tajweedrules.pdf" download class="btn-download" id="pdfBtn2">📥 Download</a>
+        </div>
+        <div class="card pdf-card">
+            <div>
+                <i class="fas fa-file-pdf"></i>
+                <h4 id="pdf3">Read Quran</h4>
+                <p id="pdf3d">Quran reading guide PDF</p>
+            </div>
+            <a href="Read_Quran.pdf" download class="btn-download" id="pdfBtn3">📥 Download</a>
+        </div>
+        <div class="card pdf-card">
+            <div>
+                <i class="fas fa-file-pdf"></i>
+                <h4 id="pdf4">Essential Duas</h4>
+                <p id="pdf4d">Daily duas with meanings</p>
+            </div>
+            <a href="Essential_Duas.pdf" download class="btn-download" id="pdfBtn4">📥 Download</a>
+        </div>
+        <div class="card pdf-card">
+            <div>
+                <i class="fas fa-file-pdf"></i>
+                <h4 id="pdf5">Umrah Guide 2025</h4>
+                <p id="pdf5d">Complete Umrah guide PDF</p>
+            </div>
+            <a href="Umrah-Guide-2025.pdf" download class="btn-download" id="pdfBtn5">📥 Download</a>
+        </div>
+    </div>
+
+    <!-- LIBRARY LINKS -->
+    <h3 class="sub-title" id="libraryTitle">📚 Online Libraries</h3>
     <div class="grid" style="grid-template-columns:repeat(3,1fr);align-items:stretch;">
         <div class="card study-card">
             <div>
@@ -307,7 +364,15 @@ const langData = {
         comp6: 'Namaz (Salah)', comp6d: 'Complete Salah guide with steps',
         comp7: 'Ghusal & Wudu', comp7d: 'Learn proper purification methods',
         studyTitle: '📚 Study Material',
-        studyDesc: 'Explore these online Islamic libraries and resources for your courses.',
+        studyDesc: 'Download PDFs and explore online Islamic libraries for your courses.',
+        pdfTitle: '📄 Download PDFs',
+        pdf1: 'Noorani Qaida', pdf1d: 'Complete Noorani Qaida PDF',
+        pdf2: 'Tajweed Rules', pdf2d: 'Complete Tajweed rules PDF',
+        pdf3: 'Read Quran', pdf3d: 'Quran reading guide PDF',
+        pdf4: 'Essential Duas', pdf4d: 'Daily duas with meanings',
+        pdf5: 'Umrah Guide 2025', pdf5d: 'Complete Umrah guide PDF',
+        pdfBtn1: '📥 Download', pdfBtn2: '📥 Download', pdfBtn3: '📥 Download', pdfBtn4: '📥 Download', pdfBtn5: '📥 Download',
+        libraryTitle: '📚 Online Libraries',
         study1: 'My Islamic Library', study1d: 'Explore a vast collection of Islamic books and resources.',
         study2: 'Muslim Library', study2d: 'Access a wide range of Islamic literature and PDFs.',
         study3: 'Usul.ai', study3d: 'AI-powered platform for Islamic knowledge and research.',
@@ -367,7 +432,15 @@ const langData = {
         comp6: 'نماز (صلوٰۃ)', comp6d: 'مکمل نماز کا طریقہ مراحل کے ساتھ',
         comp7: 'غسل اور وضو', comp7d: 'طہارت کے صحیح طریقے سیکھیں',
         studyTitle: '📚 تعلیمی مواد',
-        studyDesc: 'اپنے کورسز کے لیے آن لائن اسلامی لائبریریاں اور وسائل دریافت کریں۔',
+        studyDesc: 'اپنے کورسز کے لیے پی ڈی ایف ڈاؤن لوڈ کریں اور آن لائن اسلامی لائبریریاں دریافت کریں۔',
+        pdfTitle: '📄 پی ڈی ایف ڈاؤن لوڈ کریں',
+        pdf1: 'نورانی قاعدہ', pdf1d: 'مکمل نورانی قاعدہ پی ڈی ایف',
+        pdf2: 'تجوید کے قواعد', pdf2d: 'مکمل تجوید کے قواعد پی ڈی ایف',
+        pdf3: 'قرآن پڑھیں', pdf3d: 'قرآن پڑھنے کی گائیڈ پی ڈی ایف',
+        pdf4: 'ضروری دعائیں', pdf4d: 'معانی کے ساتھ روزمرہ کی دعائیں',
+        pdf5: 'عمرہ گائیڈ 2025', pdf5d: 'مکمل عمرہ گائیڈ پی ڈی ایف',
+        pdfBtn1: '📥 ڈاؤن لوڈ', pdfBtn2: '📥 ڈاؤن لوڈ', pdfBtn3: '📥 ڈاؤن لوڈ', pdfBtn4: '📥 ڈاؤن لوڈ', pdfBtn5: '📥 ڈاؤن لوڈ',
+        libraryTitle: '📚 آن لائن لائبریریاں',
         study1: 'مائی اسلامک لائبریری', study1d: 'اسلامی کتب اور وسائل کا وسیع ذخیرہ دریافت کریں۔',
         study2: 'مسلم لائبریری', study2d: 'اسلامی ادب اور پی ڈی ایف تک رسائی حاصل کریں۔',
         study3: 'Usul.ai', study3d: 'اسلامی علم اور تحقیق کے لیے اے آئی سے چلنے والا پلیٹ فارم۔',
@@ -427,7 +500,15 @@ const langData = {
         comp6: 'नमाज़ (सलाह)', comp6d: 'चरणों के साथ पूरी नमाज़ गाइड',
         comp7: 'ग़ुस्ल और वुज़ू', comp7d: 'शुद्धि के सही तरीके सीखें',
         studyTitle: '📚 अध्ययन सामग्री',
-        studyDesc: 'अपने कोर्स के लिए ऑनलाइन इस्लामिक लाइब्रेरी और संसाधन खोजें।',
+        studyDesc: 'अपने कोर्स के लिए पीडीएफ डाउनलोड करें और ऑनलाइन इस्लामिक लाइब्रेरी खोजें।',
+        pdfTitle: '📄 पीडीएफ डाउनलोड करें',
+        pdf1: 'नूरानी कायदा', pdf1d: 'पूरी नूरानी कायदा पीडीएफ',
+        pdf2: 'तजवीद के नियम', pdf2d: 'पूरे तजवीद नियम पीडीएफ',
+        pdf3: 'कुरान पढ़ें', pdf3d: 'कुरान पढ़ने गाइड पीडीएफ',
+        pdf4: 'आवश्यक दुआएं', pdf4d: 'अर्थों के साथ दैनिक दुआएं',
+        pdf5: 'उमराह गाइड 2025', pdf5d: 'पूरी उमराह गाइड पीडीएफ',
+        pdfBtn1: '📥 डाउनलोड', pdfBtn2: '📥 डाउनलोड', pdfBtn3: '📥 डाउनलोड', pdfBtn4: '📥 डाउनलोड', pdfBtn5: '📥 डाउनलोड',
+        libraryTitle: '📚 ऑनलाइन लाइब्रेरी',
         study1: 'माय इस्लामिक लाइब्रेरी', study1d: 'इस्लामिक किताबों और संसाधनों का विशाल संग्रह देखें।',
         study2: 'मुस्लिम लाइब्रेरी', study2d: 'इस्लामिक साहित्य और पीडीएफ की विस्तृत श्रृंखला तक पहुंचें।',
         study3: 'Usul.ai', study3d: 'इस्लामी ज्ञान और शोध के लिए एआई-संचालित प्लेटफॉर्म।',
@@ -471,7 +552,7 @@ function toggleLanguage() {
     let nextIndex = (currentIndex + 1) % languages.length;
     currentLang = languages[nextIndex];
     applyLanguage(currentLang);
-    
+
     const html = document.getElementById('htmlTag');
     html.dir = langData[currentLang].direction;
     html.lang = currentLang;
@@ -480,7 +561,7 @@ function toggleLanguage() {
 
 function applyLanguage(lang) {
     const data = langData[lang];
-    
+
     // Header
     document.getElementById('siteTitle').textContent = data.siteTitle;
     document.getElementById('navHome').textContent = data.navHome;
@@ -490,7 +571,7 @@ function applyLanguage(lang) {
     document.getElementById('navRegister').textContent = data.navRegister;
     document.getElementById('navContact').textContent = data.navContact;
     document.getElementById('langToggle').textContent = data.langBtn;
-    
+
     // Hero
     document.getElementById('heroTitle').textContent = data.heroTitle;
     document.getElementById('heroSub').textContent = data.heroSub;
@@ -499,14 +580,14 @@ function applyLanguage(lang) {
     document.getElementById('heroBtn2').textContent = data.heroBtn2;
     document.getElementById('stat1').textContent = data.stat1;
     document.getElementById('stat2').textContent = data.stat2;
-    
+
     // About
     document.getElementById('aboutTitle').textContent = data.aboutTitle;
     document.getElementById('aboutText').innerHTML = data.aboutText;
     document.getElementById('aboutVision').innerHTML = data.aboutVision;
     document.getElementById('aboutMission').innerHTML = data.aboutMission;
     document.getElementById('aboutTagline').textContent = data.aboutTagline;
-    
+
     // Courses
     document.getElementById('coursesTitle').textContent = data.coursesTitle;
     document.getElementById('c1').textContent = data.c1;
@@ -534,10 +615,27 @@ function applyLanguage(lang) {
     document.getElementById('comp6d').textContent = data.comp6d;
     document.getElementById('comp7').textContent = data.comp7;
     document.getElementById('comp7d').textContent = data.comp7d;
-    
-    // Study Material
+
+    // Study Material - PDFs
     document.getElementById('studyTitle').textContent = data.studyTitle;
     document.getElementById('studyDesc').textContent = data.studyDesc;
+    document.getElementById('pdfTitle').textContent = data.pdfTitle;
+    document.getElementById('pdf1').textContent = data.pdf1;
+    document.getElementById('pdf1d').textContent = data.pdf1d;
+    document.getElementById('pdf2').textContent = data.pdf2;
+    document.getElementById('pdf2d').textContent = data.pdf2d;
+    document.getElementById('pdf3').textContent = data.pdf3;
+    document.getElementById('pdf3d').textContent = data.pdf3d;
+    document.getElementById('pdf4').textContent = data.pdf4;
+    document.getElementById('pdf4d').textContent = data.pdf4d;
+    document.getElementById('pdf5').textContent = data.pdf5;
+    document.getElementById('pdf5d').textContent = data.pdf5d;
+    document.getElementById('pdfBtn1').textContent = data.pdfBtn1;
+    document.getElementById('pdfBtn2').textContent = data.pdfBtn2;
+    document.getElementById('pdfBtn3').textContent = data.pdfBtn3;
+    document.getElementById('pdfBtn4').textContent = data.pdfBtn4;
+    document.getElementById('pdfBtn5').textContent = data.pdfBtn5;
+    document.getElementById('libraryTitle').textContent = data.libraryTitle;
     document.getElementById('study1').textContent = data.study1;
     document.getElementById('study1d').textContent = data.study1d;
     document.getElementById('study2').textContent = data.study2;
@@ -548,7 +646,7 @@ function applyLanguage(lang) {
     document.getElementById('studyBtn2').textContent = data.studyBtn2;
     document.getElementById('studyBtn3').textContent = data.studyBtn3;
     document.getElementById('studyNote').textContent = data.studyNote;
-    
+
     // Booking
     document.getElementById('bookingTitle').textContent = data.bookingTitle;
     document.getElementById('lblName').textContent = data.lblName;
@@ -573,25 +671,25 @@ function applyLanguage(lang) {
     document.getElementById('batch1').textContent = data.batch1;
     document.getElementById('batch2').textContent = data.batch2;
     document.getElementById('bookBtn').textContent = data.bookBtn;
-    
+
     // Testimonials
     document.getElementById('testTitle').textContent = data.testTitle;
     document.getElementById('test1').innerHTML = data.test1;
     document.getElementById('test2').innerHTML = data.test2;
     document.getElementById('test3').innerHTML = data.test3;
-    
+
     // Contact
     document.getElementById('contactAddress').innerHTML = data.contactAddress;
     document.getElementById('contactPhone').textContent = data.contactPhone;
     document.getElementById('contactWhatsApp').textContent = data.contactWhatsApp;
-    
+
     // Footer
     document.getElementById('footerCopy').textContent = data.footerCopy;
     document.getElementById('footerTagline').textContent = data.footerTagline;
     document.getElementById('footerPrivacy').textContent = data.footerPrivacy;
     document.getElementById('footerTerms').textContent = data.footerTerms;
     document.getElementById('footerContact').textContent = data.footerContact;
-    
+
     // Text alignment
     document.querySelectorAll('p, h1, h2, h3, h4, label, li, a, .card, .testimonial, .contact-bar, footer').forEach(el => {
         if (!el.closest('header') && !el.closest('.hero') && !el.closest('.contact-bar')) {
@@ -602,6 +700,7 @@ function applyLanguage(lang) {
     document.querySelector('.hero .sub').style.textAlign = 'center';
     document.querySelector('.hero .tagline').style.textAlign = 'center';
     document.querySelector('.section-title').style.textAlign = 'center';
+    document.querySelector('.sub-title').style.textAlign = 'center';
     document.querySelector('.complementary-title').style.textAlign = 'center';
 }
 
@@ -617,7 +716,7 @@ function toggleMenu() {
 // =============================================
 document.getElementById('bookingForm')?.addEventListener('submit', function(e) {
     e.preventDefault();
-    
+
     let sname = document.getElementById('sname').value;
     let age = document.getElementById('age').value;
     let pname = document.getElementById('pname').value;
@@ -626,11 +725,11 @@ document.getElementById('bookingForm')?.addEventListener('submit', function(e) {
     let course = document.getElementById('course').value;
     let batch = document.getElementById('batch').value;
     let date = new Date().toLocaleString();
-    
+
     document.getElementById('msg').innerHTML = '✅ Booking successful! We will contact you soon.';
     document.getElementById('msg').style.color = 'green';
     this.reset();
-    
+
     let msg = "📚 *New Booking - Al Shahran Arabic Studies*\n\n";
     msg += "👤 *Student Name:* " + sname + "\n";
     msg += "📅 *Age:* " + age + " years\n";
@@ -640,7 +739,7 @@ document.getElementById('bookingForm')?.addEventListener('submit', function(e) {
     msg += "📖 *Course:* " + course + "\n";
     msg += "🕐 *Batch:* " + batch + "\n";
     msg += "📆 *Date:* " + date;
-    
+
     window.open('https://wa.me/919837983062?text=' + encodeURIComponent(msg), '_blank');
 });
 
