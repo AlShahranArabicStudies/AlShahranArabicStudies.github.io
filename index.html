@@ -167,8 +167,8 @@
             </ul>
         </div>
 
-        <p style="margin-top:15px" id="aboutVision"><strong>Vision:</strong> To create a generation that understands and practices the Quran and Sunnah.</p>
-        <p id="aboutMission"><strong>Mission:</strong> Affordable, accessible, and excellent Islamic education for everyone.</p>
+        <p style="margin-top:15px"><strong id="missionLabel">Mission:</strong> <span id="aboutMission">Affordable, accessible, and excellent Islamic education for everyone.</span></p>
+        <p><strong id="visionLabel">Vision:</strong> <span id="aboutVision">To create a generation that understands and practices the Quran and Sunnah.</span></p>
     </div>
 </section>
 
@@ -206,7 +206,6 @@
     <!-- PDF DOWNLOAD SECTION -->
     <h3 class="sub-title" id="pdfTitle">📄 Download PDFs</h3>
     <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;padding:20px 0;">
-        <!-- PDF 1: Noorani Qaida -->
         <div class="card pdf-card">
             <div>
                 <i class="fas fa-file-pdf"></i>
@@ -218,8 +217,6 @@
                 <a href="noorani_qaida.pdf" download class="btn-download" id="pdfBtn1">📥 Download</a>
             </div>
         </div>
-
-        <!-- PDF 2: Tajweed Rules -->
         <div class="card pdf-card">
             <div>
                 <i class="fas fa-file-pdf"></i>
@@ -231,8 +228,6 @@
                 <a href="tajweedrules.pdf" download class="btn-download" id="pdfBtn2">📥 Download</a>
             </div>
         </div>
-
-        <!-- PDF 3: Read Quran -->
         <div class="card pdf-card">
             <div>
                 <i class="fas fa-file-pdf"></i>
@@ -244,8 +239,6 @@
                 <a href="Read_Quran.pdf" download class="btn-download" id="pdfBtn3">📥 Download</a>
             </div>
         </div>
-
-        <!-- PDF 4: Essential Duas -->
         <div class="card pdf-card">
             <div>
                 <i class="fas fa-file-pdf"></i>
@@ -257,8 +250,6 @@
                 <a href="Essential_Duas.pdf" download class="btn-download" id="pdfBtn4">📥 Download</a>
             </div>
         </div>
-
-        <!-- PDF 5: Umrah Guide 2025 -->
         <div class="card pdf-card">
             <div>
                 <i class="fas fa-file-pdf"></i>
@@ -396,8 +387,10 @@ const langData = {
         f5: 'Easy-to-understand language on various topics',
         f6: 'Online classes via Zoom / WhatsApp / Skype',
         f7: 'Learn 24/7 in every time zone with experienced male and female teachers',
-        aboutVision: '<strong>Vision:</strong> To create a generation that understands and practices the Quran and Sunnah.',
-        aboutMission: '<strong>Mission:</strong> Affordable, accessible, and excellent Islamic education for everyone.',
+        missionLabel: 'Mission:',
+        aboutMission: 'Affordable, accessible, and excellent Islamic education for everyone.',
+        visionLabel: 'Vision:',
+        aboutVision: 'To create a generation that understands and practices the Quran and Sunnah.',
         coursesTitle: 'Our Courses',
         c1: 'Learn Noorani Qaida Online', c1d: 'Basic Arabic reading for beginners',
         c2: 'Learn Quran with Tajweed Online', c2d: 'Recite Quran with proper rules',
@@ -470,8 +463,10 @@ const langData = {
         f5: 'آسان زبان میں مختلف موضوعات پڑھائے جاتے ہیں',
         f6: 'Zoom / WhatsApp / Skype کے ذریعے آن لائن کلاسز',
         f7: 'ہر ٹائم زون میں 24/7 تجربہ کار مرد و خواتین اساتذہ کے ساتھ سیکھیں',
-        aboutVision: '<strong>نظریہ:</strong> ایک ایسی نسل تیار کرنا جو قرآن اور سنت کو سمجھے اور اس پر عمل کرے۔',
-        aboutMission: '<strong>مشن:</strong> ہر فرد کے لیے سستی، قابل رسائی اور بہترین اسلامی تعلیم۔',
+        missionLabel: 'مشن:',
+        aboutMission: 'ہر فرد کے لیے سستی، قابل رسائی اور بہترین اسلامی تعلیم۔',
+        visionLabel: 'نظریہ:',
+        aboutVision: 'ایک ایسی نسل تیار کرنا جو قرآن اور سنت کو سمجھے اور اس پر عمل کرے۔',
         coursesTitle: 'ہمارے کورسز',
         c1: 'نورانی قاعدہ سیکھیں آن لائن', c1d: 'ابتدائی عربی پڑھائی',
         c2: 'تجوید کے ساتھ قرآن سیکھیں', c2d: 'قرآن کو صحیح قواعد کے ساتھ پڑھیں',
@@ -544,8 +539,10 @@ const langData = {
         f5: 'आसान भाषा में विभिन्न विषयों पर पढ़ाया जाता है',
         f6: 'Zoom / WhatsApp / Skype के माध्यम से ऑनलाइन कक्षाएं',
         f7: 'हर टाइम ज़ोन में 24/7 अनुभवी पुरुष एवं महिला शिक्षकों के साथ सीखें',
-        aboutVision: '<strong>दृष्टिकोण:</strong> एक ऐसी पीढ़ी तैयार करना जो कुरान और सुन्नत को समझे और उस पर अमल करे।',
-        aboutMission: '<strong>मिशन:</strong> सभी के लिए सस्ती, सुलभ और उत्कृष्ट इस्लामी शिक्षा।',
+        missionLabel: 'मिशन:',
+        aboutMission: 'सभी के लिए सस्ती, सुलभ और उत्कृष्ट इस्लामी शिक्षा।',
+        visionLabel: 'दृष्टिकोण:',
+        aboutVision: 'एक ऐसी पीढ़ी तैयार करना जो कुरान और सुन्नत को समझे और उस पर अमल करे।',
         coursesTitle: 'हमारे कोर्स',
         c1: 'नूरानी कायदा सीखें ऑनलाइन', c1d: 'शुरुआती अरबी पढ़ाई',
         c2: 'तजवीद के साथ कुरान सीखें', c2d: 'कुरान को सही नियमों के साथ पढ़ें',
@@ -652,8 +649,10 @@ function applyLanguage(lang) {
     document.getElementById('f5').textContent = data.f5;
     document.getElementById('f6').textContent = data.f6;
     document.getElementById('f7').textContent = data.f7;
-    document.getElementById('aboutVision').innerHTML = data.aboutVision;
-    document.getElementById('aboutMission').innerHTML = data.aboutMission;
+    document.getElementById('missionLabel').textContent = data.missionLabel;
+    document.getElementById('aboutMission').textContent = data.aboutMission;
+    document.getElementById('visionLabel').textContent = data.visionLabel;
+    document.getElementById('aboutVision').textContent = data.aboutVision;
 
     // Courses
     document.getElementById('coursesTitle').textContent = data.coursesTitle;
