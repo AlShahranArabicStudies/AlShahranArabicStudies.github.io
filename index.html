@@ -77,6 +77,11 @@
         .page-section h2{text-align:center;color:#1a4d2e;margin-bottom:20px}
         .page-section p{font-size:17px;line-height:1.8;text-align:center;color:#555}
         .about-tagline{text-align:center;font-size:18px;color:#1a4d2e;font-weight:600;margin-top:20px;padding:15px;background:#f8f5f0;border-radius:10px;border-left:4px solid #c9a84c}
+        .features-box{margin-top:25px;padding:20px;background:#f8f5f0;border-radius:10px;border-left:4px solid #c9a84c}
+        .features-box h4{color:#1a4d2e;font-size:20px;margin-bottom:15px;text-align:center}
+        .features-box ul{list-style:none;padding:0;font-size:16px;line-height:2}
+        .features-box ul li{padding:5px 0;border-bottom:1px solid #eee}
+        .features-box ul li:last-child{border-bottom:none}
         .btn-group{display:flex;gap:8px;justify-content:center;margin-top:10px;flex-wrap:wrap}
         @media(max-width:768px){
             .hamburger{display:block}
@@ -90,6 +95,7 @@
             .section-title{font-size:26px}
             .footer-links{gap:12px}
             .grid{grid-template-columns:1fr}
+            .features-box ul{font-size:15px}
         }
         @media(max-width:480px){
             .logo h1{font-size:18px}
@@ -98,6 +104,8 @@
             .card{padding:20px}
             .about-tagline{font-size:15px;padding:12px}
             .btn-group{flex-direction:column;align-items:center}
+            .features-box{padding:15px}
+            .features-box ul{font-size:14px}
         }
     </style>
 </head>
@@ -150,6 +158,20 @@
             is dedicated to providing quality <strong>Quran</strong> and <strong>Islamic</strong> education online. 
             Located in Hazur Nagar, Muzaffarnagar, we offer a wide range of courses for all ages and levels.
         </p>
+
+        <!-- ===== FEATURES LIST ===== -->
+        <div class="features-box">
+            <h4 id="featuresTitle">🌟 What We Offer</h4>
+            <ul>
+                <li>✅ <span id="f1">Certificates provided upon course completion</span></li>
+                <li>✅ <span id="f2">Daily updates & PDFs shared on WhatsApp groups</span></li>
+                <li>✅ <span id="f3">No age limit – open for all</span></li>
+                <li>✅ <span id="f4">Class recordings provided & uploaded on YouTube</span></li>
+                <li>✅ <span id="f5">Easy-to-understand language on various topics</span></li>
+                <li>✅ <span id="f6">Online classes via Zoom / WhatsApp / Skype</span></li>
+            </ul>
+        </div>
+
         <p style="margin-top:15px" id="aboutVision"><strong>Vision:</strong> To create a generation that understands and practices the Quran and Sunnah.</p>
         <p id="aboutMission"><strong>Mission:</strong> Affordable, accessible, and excellent Islamic education for everyone.</p>
         <div class="about-tagline" id="aboutTagline">⭐ Learn 24/7 in every time zone with experienced male and female teachers.</div>
@@ -374,6 +396,13 @@ const langData = {
         stat1: 'Courses', stat2: 'Students',
         aboutTitle: 'About Us',
         aboutText: '<strong>Al Shahran Arabic Studies</strong> is dedicated to providing quality <strong>Quran</strong> and <strong>Islamic</strong> education online. Located in Hazur Nagar, Muzaffarnagar, we offer a wide range of courses for all ages and levels.',
+        featuresTitle: '🌟 What We Offer',
+        f1: 'Certificates provided upon course completion',
+        f2: 'Daily updates & PDFs shared on WhatsApp groups',
+        f3: 'No age limit – open for all',
+        f4: 'Class recordings provided & uploaded on YouTube',
+        f5: 'Easy-to-understand language on various topics',
+        f6: 'Online classes via Zoom / WhatsApp / Skype',
         aboutVision: '<strong>Vision:</strong> To create a generation that understands and practices the Quran and Sunnah.',
         aboutMission: '<strong>Mission:</strong> Affordable, accessible, and excellent Islamic education for everyone.',
         aboutTagline: '⭐ Learn 24/7 in every time zone with experienced male and female teachers.',
@@ -443,6 +472,13 @@ const langData = {
         stat1: 'کورسز', stat2: 'طلباء',
         aboutTitle: 'ہمارا تعارف',
         aboutText: '<strong>ال شہران عربی اسٹڈیز</strong> آن لائن <strong>القرآن</strong> اور <strong>اسلامی</strong> تعلیم فراہم کرنے کے لیے وقف ہے۔ ہزار نگر، مظفرنگر، یوپی میں واقع، ہم تمام عمر اور سطح کے لیے کورسز پیش کرتے ہیں۔',
+        featuresTitle: '🌟 ہم کیا پیش کرتے ہیں',
+        f1: 'کورس مکمل ہونے پر سرٹیفکیٹ فراہم کیے جاتے ہیں',
+        f2: 'WhatsApp گروپس پر روزانہ اپ ڈیٹس اور پی ڈی ایف شیئر کیے جاتے ہیں',
+        f3: 'عمر کی کوئی حد نہیں – سب کے لیے کھلا',
+        f4: 'کلاسز کی ریکارڈنگ فراہم کی جاتی ہے اور YouTube پر اپ لوڈ کی جاتی ہے',
+        f5: 'آسان زبان میں مختلف موضوعات پڑھائے جاتے ہیں',
+        f6: 'Zoom / WhatsApp / Skype کے ذریعے آن لائن کلاسز',
         aboutVision: '<strong>نظریہ:</strong> ایک ایسی نسل تیار کرنا جو قرآن اور سنت کو سمجھے اور اس پر عمل کرے۔',
         aboutMission: '<strong>مشن:</strong> ہر فرد کے لیے سستی، قابل رسائی اور بہترین اسلامی تعلیم۔',
         aboutTagline: '⭐ ہر ٹائم زون میں 24/7 تجربہ کار مرد و خواتین اساتذہ کے ساتھ سیکھیں۔',
@@ -512,6 +548,13 @@ const langData = {
         stat1: 'कोर्स', stat2: 'छात्र',
         aboutTitle: 'हमारा परिचय',
         aboutText: '<strong>अल शाहरान अरबिक स्टडीज</strong> ऑनलाइन <strong>कुरान</strong> और <strong>इस्लामिक</strong> शिक्षा प्रदान करने के लिए समर्पित है। हज़ूर नगर, मुज़फ्फरनगर, यूपी में स्थित, हम सभी उम्र और स्तर के लिए कोर्स प्रदान करते हैं।',
+        featuresTitle: '🌟 हम क्या प्रदान करते हैं',
+        f1: 'पाठ्यक्रम पूरा होने पर प्रमाणपत्र दिए जाते हैं',
+        f2: 'WhatsApp ग्रुप पर दैनिक अपडेट और PDF साझा किए जाते हैं',
+        f3: 'उम्र की कोई सीमा नहीं – सभी के लिए खुला',
+        f4: 'कक्षाओं की रिकॉर्डिंग दी जाती है और YouTube पर अपलोड की जाती है',
+        f5: 'आसान भाषा में विभिन्न विषयों पर पढ़ाया जाता है',
+        f6: 'Zoom / WhatsApp / Skype के माध्यम से ऑनलाइन कक्षाएं',
         aboutVision: '<strong>दृष्टिकोण:</strong> एक ऐसी पीढ़ी तैयार करना जो कुरान और सुन्नत को समझे और उस पर अमल करे।',
         aboutMission: '<strong>मिशन:</strong> सभी के लिए सस्ती, सुलभ और उत्कृष्ट इस्लामी शिक्षा।',
         aboutTagline: '⭐ हर टाइम ज़ोन में 24/7 अनुभवी पुरुष एवं महिला शिक्षकों के साथ सीखें।',
@@ -615,6 +658,13 @@ function applyLanguage(lang) {
     // About
     document.getElementById('aboutTitle').textContent = data.aboutTitle;
     document.getElementById('aboutText').innerHTML = data.aboutText;
+    document.getElementById('featuresTitle').textContent = data.featuresTitle;
+    document.getElementById('f1').textContent = data.f1;
+    document.getElementById('f2').textContent = data.f2;
+    document.getElementById('f3').textContent = data.f3;
+    document.getElementById('f4').textContent = data.f4;
+    document.getElementById('f5').textContent = data.f5;
+    document.getElementById('f6').textContent = data.f6;
     document.getElementById('aboutVision').innerHTML = data.aboutVision;
     document.getElementById('aboutMission').innerHTML = data.aboutMission;
     document.getElementById('aboutTagline').textContent = data.aboutTagline;
